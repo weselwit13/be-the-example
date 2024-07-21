@@ -1,0 +1,206 @@
+body {
+    background-color: #51138A;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.content {
+    position: fixed;
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease-in-out, opacity 1s ease-in-out, height 0.5s ease-in-out;
+}
+
+#start {
+    flex-direction: column;
+    color: #FFC423;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+}
+
+#welcome_box {
+    position: fixed;
+    background-color: #ffc423;
+    color: #51138A;
+    font-weight: 900;
+    font-size: 150%;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 8%;
+    top: 11%;
+    opacity: 0;
+}
+
+.welcome_message {
+
+    font-weight: 900;
+    font-size: 400%;
+    color: #51138A;
+}
+
+#be_the_example_box {
+    display: flex;
+    flex-direction: row; /* Imposta la direzione flex su row */
+    opacity: 0;
+    width: 90%;
+    height: 27%;
+    transform: translateY(100%);
+    justify-content: center; /* Centra gli elementi orizzontalmente */
+    align-items: center; /* Centra gli elementi verticalmente */
+    top: 20%;
+}
+
+.left_baloon {
+    background-color: #FFC423;
+    color: #51138A;
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.beexample_img {
+    width: 85%;
+}
+
+.the_message {
+    font-size: 250%;
+    font-weight: 900;
+    color: #FFC423;
+    margin-top: 16%;
+    margin-left: 2%;
+}
+
+#select_path_box {
+    display: flex;
+    flex-direction: column; /* Imposta la direzione flex su row */
+    opacity: 0;
+    width: 90%;
+    height: 18%;
+    transform: translateY(100%);
+    justify-content: center; /* Centra gli elementi orizzontalmente */
+    top: 48%;
+}
+
+.right_baloon {
+    background-color: #FFC423;
+    color: #51138A;
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.select_path_message {
+    font-size: 70%;
+    font-weight: 600;
+    color: #51138A;
+    width: 60%;
+    text-align: left;
+    position: fixed;
+    top: 40px;
+}
+
+#section_box {
+    display: flex;
+    flex-direction: row; /* Imposta la direzione flex su row */
+    opacity: 0;
+    width: 80%;
+    height: 50%;
+    transform: translateY(0);
+    margin-top: 25%;
+    justify-content: center; /* Centra gli elementi orizzontalmente */
+    align-items: end; /* Centra gli elementi verticalmente */
+    transition: transform 0.5s ease-in-out, opacity 1s ease-in-out, height 0.5s ease-in-out;
+}
+
+.section {
+    background-color: #51138A;
+    width: 50%;
+    height: 100%;
+    margin: 2%;
+    border-radius: 25px;
+}
+
+.toys_massage {
+    color: #FFC423;
+    font-size: 90%;
+    margin-top: 90%;
+    font-weight: 900;
+}
+
+#kids_path {
+    display: flex;
+    flex-direction: column; /* Imposta la direzione flex su row */
+    opacity: 0;
+    width: 90%;
+    height: 100%;
+    transform: translateY(100%);
+}
+
+.right_purple_baloon{
+    background-color: #51138A;
+    color: #FFC423;
+    width: 100%;
+    height: 38%;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#toy_img{
+    transition: src 0.5s ease-in-out;
+}
+
+.circle_button{
+    display: flex;
+    justify-content:center; /* Centra gli elementi orizzontalmente */
+    align-items: center;
+    background-color: #51138A;
+    color: #FFC423;
+    border-radius: 15px;
+    width: 30px;
+    height: 30px;
+    margin-bottom: 120%;
+    margin-right: 95%;
+    transition: transform 0.5s ease-in-out, opacity 1s ease-in-out, height 0.5s ease-in-out;
+}
+
+.bubble {
+    position: absolute;
+    background-color: #BCDBFF;
+    border-radius: 50%;
+    opacity: 0.3;
+    animation: floatUp 2s linear infinite;
+}
