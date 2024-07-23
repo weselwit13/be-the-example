@@ -1,77 +1,160 @@
+/* 
+Struttura dell'applicazione
+viene settato il colore di sfondo
+il font
+e il tipo di display
+*/
+
+
 body {
     background-color: #51138A;
     font-family: 'Montserrat', sans-serif;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    min-height: 500vh;
     margin: 0;
     text-align: center;
-    overflow-y: hidden;
     overflow-x: hidden;
     transition: background-color 0.5s ease-in-out;
 }
 
-.content {
+/*SHADER*/
+
+canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top:0;
+}
+
+#glCanvasPurple{
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+#glCanvasYellow{
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+
+/*
+Area adibita al pulsante indietro e al pulsante del controllo audio
+*/
+#top_content {
     position: fixed;
     width: 90%;
-    height: 100%;
+    height: 6%;
+    top: 9%;
+    left: 5%;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    transition: transform 0.5s ease-in-out, opacity 0.2s ease-in-out, height 0.5s ease-in-out;
+}
+
+/*COMPONENTI*/
+
+/*
+bottone circolare
+forma e colore
+*/
+.circle_button{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    font-weight: 900;
+    background-color: #51138A;
+    color: #FFC423;
+    border-radius: 100%;
+    width: 10%;
+    height: 70%;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, height 0.5s ease-in-out;
+}
+
+/*
+bottoni e immagini specifici
+margini dall'immagine centrale
+opacità per animarli
+*/
+
+#back_audio_menu {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: transform 0.5s ease-in-out, opacity 1s ease-in-out, height 0.5s ease-in-out;
-}
-
-#start {
-    flex-direction: column;
-    color: #FFC423;
-    top: 0;
     width: 100%;
     height: 100%;
-
 }
 
-#welcome_box {
+#back_button{
+    opacity: 0;
+}
+
+#audio_button{
+    opacity: 0;
+}
+
+#back_and_audio_img{
+    align-self: center;
+}
+
+/*
+logo geomag
+serve per dare la giusta spaziatura ai bottoni
+*/
+#geomag_logo{
+    opacity: 0;
+    width: 80%;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, height 0.5s ease-in-out;
+}
+
+/*logo geomag che si vede*/
+#geomag_logo_animation{
+    opacity: 0;
     position: fixed;
-    background-color: #ffc423;
-    color: #51138A;
-    font-weight: 900;
-    font-size: 150%;
+    width: 34.5%;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/*
+logo geomag
+il logo che effettivamente viene visto nel top content
+parte dal baloon be example ed arriva nella barra in alto
+
+#geomag_logo_animation{
+    opacity: 0;
+    position: fixed;
+    width: 18%;
+    margin-top: 147.5%;
+    margin-right: 54%;
+    transition: opacity 0s ease-in-out, margin-top 0.5s ease-in-out, margin-right 0.5s ease-in-out, width 0.5s ease-in-out;
+}
+*/
+
+/*
+baloon generici
+viene settata la posizione
+la forma
+i margini
+e il tipo di display
+
+ogni baloon poi avrà il suo id
+dove verranno settate le dimensioni
+la flex direction
+i colori dello sfondo e del testo al suo interno
+*/
+/*---- CB ----*/
+.central_baloon{
     border-radius: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 90%;
-    height: 8%;
-    top: 11%;
-    opacity: 0;
+    align-self: center;
+    margin-top: 1.25%;
+    transition: transform 0.5s ease-in-out, opacity 0.1s ease-in-out, height 0.5s ease-in-out;
 }
 
-.welcome_message {
-
-    font-weight: 900;
-    font-size: 400%;
-    color: #51138A;
-}
-
-#be_the_example_box {
-    display: flex;
-    flex-direction: row; /* Imposta la direzione flex su row */
-    opacity: 0;
-    width: 90%;
-    height: 27%;
-    transform: translateY(100%);
-    justify-content: center; /* Centra gli elementi orizzontalmente */
-    align-items: center; /* Centra gli elementi verticalmente */
-    top: 20%;
-}
-
+/*---- LB ----*/
 .left_baloon {
-    background-color: #FFC423;
-    color: #51138A;
-    width: 100%;
-    height: 100%;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
@@ -79,36 +162,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    align-self: flex-start;
+    margin-top: 1.25%;
+    transition: transform 0.5s ease-in-out, height 0.5s ease-in-out;
 }
 
-.beexample_img {
-    width: 85%;
-}
-
-.the_message {
-    font-size: 250%;
-    font-weight: 900;
-    color: #FFC423;
-    margin-top: 16%;
-    margin-left: 2%;
-}
-
-#select_path_box {
-    display: flex;
-    flex-direction: column; /* Imposta la direzione flex su row */
-    opacity: 0;
-    width: 90%;
-    height: 18%;
-    transform: translateY(100%);
-    justify-content: center; /* Centra gli elementi orizzontalmente */
-    top: 48%;
-}
-
+/*---- RB ----*/
 .right_baloon {
-    background-color: #FFC423;
-    color: #51138A;
-    width: 100%;
-    height: 100%;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
     border-bottom-right-radius: 0px;
@@ -116,91 +176,174 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    align-self: flex-end;
+    margin-left: auto;
+    margin-top: 1.25%;
+    transition: transform 0.5s ease-in-out, height 0.5s ease-in-out;
 }
 
-.select_path_message {
-    font-size: 70%;
-    font-weight: 600;
-    color: #51138A;
-    width: 60%;
-    text-align: left;
+/*
+Pagina iniziale
+*/
+#start {
     position: fixed;
-    top: 40px;
-}
-
-#section_box {
-    display: flex;
-    flex-direction: row; /* Imposta la direzione flex su row */
-    opacity: 0;
-    width: 80%;
-    height: 50%;
-    transform: translateY(0);
-    margin-top: 25%;
-    justify-content: center; /* Centra gli elementi orizzontalmente */
-    align-items: end; /* Centra gli elementi verticalmente */
-    transition: transform 0.5s ease-in-out, opacity 1s ease-in-out, height 0.5s ease-in-out;
-}
-
-.section {
-    background-color: #51138A;
-    width: 50%;
-    height: 100%;
-    margin: 2%;
-    border-radius: 25px;
-}
-
-.toys_massage {
     color: #FFC423;
-    font-size: 90%;
-    margin-top: 90%;
-    font-weight: 900;
+    width: 90%;
+    height: 85%;
+    top: 50%;
+    left: 5%;
 }
 
-#kids_path {
+/*---------------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------*/
+
+/*
+Pagina di benvenuto
+*/
+#welcome_page{
+    position: fixed;
     display: flex;
-    flex-direction: column; /* Imposta la direzione flex su row */
+    flex-direction: column;
+    top: 15%;
+    left: 5%;
+    width: 90%;
+    height: 85%;
+    align-items: center;
+    transition: transform 1s ease-in-out;
+}
+
+/*
+baloon centrale(CB) di benvenuto
+*/
+#welcome_box_CB {
+    position: fixed;
+    color: #ffc423;
+    font-weight: 900;
+    font-size: 150%;
     opacity: 0;
     width: 90%;
-    height: 100%;
-    transform: translateY(100%);
+    height: 8%;
+    transition: transform 1s ease-in-out;
 }
 
-.right_purple_baloon{
-    background-color: #51138A;
-    color: #FFC423;
+/*
+baloon con le immagini be example e geomag
+*/
+#be_example_LB{
+    background: radial-gradient(#FFC423, #FFA20A);
+    color: #51138A;
     width: 100%;
-    height: 38%;
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
-    border-bottom-right-radius: 0px;
-    border-bottom-left-radius: 50px;
+    height: 42%;
+    flex-direction: column;
+    align-items: flex-start;
+    transform: translateY(600%);
+}
+
+/*
+immagine logo geomag all'interno del baloon
+*/
+#geomag_logo_bex{
+    margin-top: 0%;
+    margin-left: 10%;
+    width: 20%;
+}
+
+/*
+immagine be example all'interno del baloon
+*/
+#img_bx{
+    width: 80%;
+    height: 65%;
+    margin-top: 5%;
+    margin-left: 10%;
+}
+
+/*
+messaggio che ti dice di scegliere il tuo ruolo
+*/
+#select_path_message_CB{
+    color: #ffc423;
+    font-weight: 600;
+    font-size: 80%;
+    opacity: 1;
+    width: 60%;
+    height: 8%;
+    margin-top: 5%;
+    transform: translateY(700%);
+}
+
+
+/*
+Box dove saranno contenute le due scelte da fare
+*/
+#select_path_box_CB{
+    font-weight: 600;
+    font-size: 80%;
+    opacity: 1;
+    width: 90%;
+    height: 40%;    
+    transform: translateY(700%);
+}
+
+/*
+Box della sezione kids and adults
+*/
+.section {
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 200%;
+    font-weight: 900;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 45%;
+    height: 55%;
+    border-radius: 25px;
+}  
+
+#Kids_section{
+    transform: rotate(-15deg);
+    margin-top: 10%;
+    margin-right: 5%;
+    align-self:flex-start;
+    animation: kidsSectionAnimation 2.3s ease-in-out alternate infinite;
 }
 
-#toy_img{
-    transition: src 0.5s ease-in-out;
+ /* Definisci l'animazione della sezione kids*/
+ @keyframes kidsSectionAnimation {
+    0% {
+        margin-top: 17%;
+        margin-right: 2%;
+        transform: rotate(-15deg) rotate3d(1,1,1, 20deg);
+    }
+    100% {
+        margin-top: 10%;
+        margin-right: 5%;
+        transform: rotate(-5deg) rotate3d(1,1,1, -20deg);
+    }
 }
 
-.circle_button{
-    display: flex;
-    justify-content:center; /* Centra gli elementi orizzontalmente */
-    align-items: center;
-    background-color: #51138A;
-    color: #FFC423;
-    border-radius: 15px;
-    width: 30px;
-    height: 30px;
-    margin-bottom: 120%;
-    margin-right: 95%;
-    transition: transform 0.5s ease-in-out, opacity 1s ease-in-out, height 0.5s ease-in-out;
+#Adults_section{
+    transform: rotate(15deg);
+    margin-bottom: 10%;
+    margin-left: 5%;
+    align-self: flex-end;
+    animation: adultsSectionAnimation 2.5s ease-in-out alternate infinite;
 }
 
-.bubble {
-    position: absolute;
-    background-color: #BCDBFF;
-    border-radius: 50%;
-    opacity: 0.3;
-    animation: floatUp 2s linear infinite;
+/* Definisci l'animazione della sezione adults*/
+@keyframes adultsSectionAnimation {
+    0% {
+        margin-bottom: 3%;
+        margin-left: 5%;
+        transform: rotate(15deg) rotate3d(1,1,1, -20deg);
+    }
+    100% {
+        margin-bottom: 10%;
+        margin-left: 2%;
+        transform: rotate(5deg) rotate3d(1,1,1, 20deg);
+    }
 }
+
+/*---------------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------*/

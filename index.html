@@ -1,59 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#FFCE32">
+    <meta name="msapplication-navbutton-color" content="#FFCE32">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#FFCE32">
     <title>Test</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <div class="content" id="start">
-        <p>Swipe up to interact</p>
-        <img src="src/Yellow Arrow Up.png" alt="Arrow-image">
-    </div>
 
-    <div class="content" id="welcome_box">
-        <p class="welcome-message">Welcome to...</p>
-    </div>
+    <canvas id="glCanvasPurple"></canvas>
 
-    <div class="content" id="be_the_example_box">
-        <div class="left_baloon">
-            <img class="beexample_img" src="src/Be Example.png" alt="be_example-image">
-        </div>
-        <div class="the_message">
-            the
-        </div>
-    </div>
+    <canvas id="glCanvasYellow"></canvas>
 
-    <div class="content" id="select_path_box">
-        <div class="right_baloon">
-            <p class="select_path_message">Step into a world of wonder! Scroll up to choose your role and begin your adventure!</p>
-
-            <div id="section_box">
-
-                <div class="section" id="Kids_section">
-                    <p class="toys_massage">Kids</p>
-                </div>
-                
-                <div class="section" id="Adults_section">
-                    <p class="toys_massage">Adults</p>
-                </div>
-
+    <div id="top_content">
+        <div id="back_audio_menu">
+            <div class="circle_button" id="back_button">
+                <img src="src/back.png" alt="back-image" id="back_and_audio_img">
+            </div>
+            <img src="src/geomag.png" alt="geomag" id="geomag_logo">
+            <img src="src/geomag.png" alt="geomag" id="geomag_logo_animation">
+            <div class="circle_button" id="audio_button">
+                <img src="src/audio.png" alt="audio-image" id="back_and_audio_img">
             </div>
         </div>
-    </div>
 
-    <div class="content" id="kids_path">
-
-        <div class="circle_button" id="back_button">
-            <p style="font-weight: 900; font-size: 200%; height: 100%; margin-bottom: 40px;"><</p>
+        <div class="central_baloon" id="welcome_box_CB">
+            <p>Welcome to...</p>
         </div>
         
-        <div class="right_purple_baloon" id="toy_to_wash">
-            <img src="src/0.png" alt="Toy-image" id="toy_img">
-        </div>
     </div>
+
+    <div>
+        <div id="start">
+            <div id="text_arrow_container">
+                <p>Swipe up to interact</p>
+                <img src="src/Yellow_Arrow.png" alt="Arrow-image">
+            </div>
+        </div>
+
+        <div id="welcome_page">
+
+            <div class="left_baloon" id="be_example_LB">
+                <img src="src/Be_Example.png" alt="be_example-image" id="img_bx">
+                <img src="src/geomag.png" alt="geomag" id="geomag_logo_bex">
+            </div>
+
+            <div class="central_baloon" id="select_path_message_CB">
+                <p>Step into a world of wonder! Choose your role to begin!</p>
+            </div>
+
+            <div class="central_baloon" id="select_path_box_CB">
+
+                    <div class="section" id="Kids_section">
+                        <p>KIDS</p>
+                    </div>
+                    
+                    <div class="section" id="Adults_section">
+                        <p>ADULTS</p>
+                    </div>
+
+            </div>
+
+        </div> 
+    </div>
+
     <script src="script.js"></script>
+    <script src="shaderPurple.js"></script>
+    <script src="shaderYellow.js"></script>
+
 </body>
+
 </html>
