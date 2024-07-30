@@ -27,10 +27,9 @@ function pageScrollAnimation(currentPosition){
     selectPathBoxCB(currentPosition);
     yellowGradient(currentPosition);
     purpleGradient(currentPosition);
-    welcomePage();
 }
 
-// ---------------------- FUNZIONI CHE GESTISCONO I VARI COMPONENTI ---------------------------
+
 function textArrowContainer(currentPosition){
     if(pageStatus === 0){
         //START PAGE PART
@@ -49,7 +48,9 @@ function textArrowContainer(currentPosition){
         else if(currentPosition >199){
             document.getElementById('text_arrow_container').style.opacity = '0';
         } 
-    } 
+    } else{
+        document.getElementById('text_arrow_container').style.opacity = '0';
+    }
 }
 
 function welcomeBoxCB(currentPosition){
@@ -69,9 +70,10 @@ function welcomeBoxCB(currentPosition){
         else if (currentPosition >299){
             document.getElementById('welcome_box_CB').style.opacity = '1';
         }
-    }else{
-        document.getElementById('welcome_box_CB').style.transform = 'translateY(-800%)';
-    } 
+    } else{
+        document.getElementById('welcome_box_CB').style.opacity = '0';
+        document.getElementById('welcome_box_CB').style.transform = 'translateY(-200%)';
+    }    
 }
 
 function beExampleLB(currentPosition){
@@ -90,7 +92,9 @@ function beExampleLB(currentPosition){
         } else if (currentPosition >599){
             document.getElementById('be_example_LB').style.transform = 'translateY(0%)';
         } 
-    } 
+    } else{
+        document.getElementById('be_example_LB').style.transform = 'translateY(600%)';
+    }
     
 }
 
@@ -112,7 +116,9 @@ function select_path_message_CB(currentPosition){
         } else if (currentPosition >1000){
             document.getElementById('select_path_message_CB').style.transform = 'translateY(0%)';
         }        
-    } 
+    } else{
+        document.getElementById('select_path_message_CB').style.transform = 'translateY(700%)';
+    }
 
 }
 
@@ -134,19 +140,12 @@ function selectPathBoxCB(currentPosition){
         } else if (currentPosition >1700){
             document.getElementById('select_path_box_CB').style.transform = 'translateY(0%)';
         } 
-    } 
-}
-
-function welcomePage(){
-    if(pageStatus === 0){
-        document.getElementById('welcome_page').style.transform = 'translateY(0%)';
-    }else if(pageStatus === 1){
-        document.getElementById('welcome_page').style.transform = 'translateY(-200%)';
+    } else{
+        document.getElementById('select_path_box_CB').style.transform = 'translateY(700%)';
     }
 }
 
 
-//--------------------FUNZIONI DEI BOTTONI-------------------------
 document.getElementById('Kids_section').addEventListener('click', GoToKidsSection);
 
 function GoToKidsSection(){
@@ -163,12 +162,9 @@ function GoToKidsSection(){
 
         //logo geomag che si sposta dal baloom be example al top content
         document.getElementById('geomag_logo_animation').style.opacity = '1';
-
-        /* script per animazione
         document.getElementById('geomag_logo_animation').style.marginTop = '0%';
         document.getElementById('geomag_logo_animation').style.marginRight = '0%';
         document.getElementById('geomag_logo_animation').style.width = '34.5%';
-        */
     }
 }
 
@@ -188,12 +184,9 @@ function BackButton() {
 
         //logo geomag che si sposta dal baloom be example al top content
         document.getElementById('geomag_logo_animation').style.opacity = '0';
-
-        /* script per animazione
         document.getElementById('geomag_logo_animation').style.marginTop = '147.5%';
         document.getElementById('geomag_logo_animation').style.marginRight = '54%';
         document.getElementById('geomag_logo_animation').style.width = '18%';
-        */
     }
 }
 
