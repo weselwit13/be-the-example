@@ -21,14 +21,51 @@ function pageScrollAnimation(currentPosition){
     //START
     textArrowContainer(currentPosition);
     //WELCOME PAGE
+    welcomePage();
+    purpleGradient(currentPosition);
     welcomeBoxCB(currentPosition);
     beExampleLB(currentPosition);
     select_path_message_CB(currentPosition)
     selectPathBoxCB(currentPosition);
-    yellowGradient(currentPosition);
-    purpleGradient(currentPosition);
+    //TUTORIAL KIDS PAGE
+    tutorialKidsPage();
+    yellowTutorialGradient(currentPosition);
+    swipeUpTutorialMessage(currentPosition);
+    purpleArrowTutorialPage(currentPosition);
+    audioButtonTutorialPage(currentPosition);
+    firstBaloonCBTutorial(currentPosition);
+    secondBaloonCBTutorial(currentPosition);
+    letsGoBaloonCBTutorial(currentPosition);
+    //KIDS PART 1
 }
 
+// ---------------------- FUNZIONI CHE GESTISCONO I VARI COMPONENTI ---------------------------
+//-----COMPONENTI GENERICI
+
+function purpleGradient(currentPosition){
+    if(pageStatus === 0){
+        document.getElementById('glCanvasPurple').style.opacity = '1';
+    }else if(pageStatus === 1){
+        document.getElementById('glCanvasPurple').style.opacity = '0';
+    }
+}
+
+function yellowTutorialGradient(currentPosition){
+    if(pageStatus === 0){
+        document.getElementById('glCanvasYellowTutorial').style.opacity = '0';
+    }else if(pageStatus === 1){
+        document.getElementById('glCanvasYellowTutorial').style.opacity = '1';
+    }
+}
+
+//-----COMPONENTI WELCOME PAGE
+function welcomePage(){
+    if(pageStatus === 0){
+        document.getElementById('welcome_page').style.transform = 'translateY(0%)';
+    }else if(pageStatus === 1){
+        document.getElementById('welcome_page').style.transform = 'translateY(-200%)';
+    }
+}
 
 function textArrowContainer(currentPosition){
     if(pageStatus === 0){
@@ -48,9 +85,7 @@ function textArrowContainer(currentPosition){
         else if(currentPosition >199){
             document.getElementById('text_arrow_container').style.opacity = '0';
         } 
-    } else{
-        document.getElementById('text_arrow_container').style.opacity = '0';
-    }
+    } 
 }
 
 function welcomeBoxCB(currentPosition){
@@ -70,10 +105,9 @@ function welcomeBoxCB(currentPosition){
         else if (currentPosition >299){
             document.getElementById('welcome_box_CB').style.opacity = '1';
         }
-    } else{
-        document.getElementById('welcome_box_CB').style.opacity = '0';
-        document.getElementById('welcome_box_CB').style.transform = 'translateY(-200%)';
-    }    
+    }else{
+        document.getElementById('welcome_box_CB').style.transform = 'translateY(-800%)';
+    } 
 }
 
 function beExampleLB(currentPosition){
@@ -92,9 +126,7 @@ function beExampleLB(currentPosition){
         } else if (currentPosition >599){
             document.getElementById('be_example_LB').style.transform = 'translateY(0%)';
         } 
-    } else{
-        document.getElementById('be_example_LB').style.transform = 'translateY(600%)';
-    }
+    } 
     
 }
 
@@ -116,9 +148,7 @@ function select_path_message_CB(currentPosition){
         } else if (currentPosition >1000){
             document.getElementById('select_path_message_CB').style.transform = 'translateY(0%)';
         }        
-    } else{
-        document.getElementById('select_path_message_CB').style.transform = 'translateY(700%)';
-    }
+    } 
 
 }
 
@@ -140,12 +170,162 @@ function selectPathBoxCB(currentPosition){
         } else if (currentPosition >1700){
             document.getElementById('select_path_box_CB').style.transform = 'translateY(0%)';
         } 
-    } else{
-        document.getElementById('select_path_box_CB').style.transform = 'translateY(700%)';
+    } 
+}
+
+//-----COMPONENTI TUTORIAL KIDS PAGE
+function tutorialKidsPage(){
+    if(pageStatus === 0){
+        document.getElementById('tutorial_kids_page').style.transform = 'translateY(100%)';
+    }else if(pageStatus === 1){
+        document.getElementById('tutorial_kids_page').style.transform = 'translateY(0%)';
     }
 }
 
+function swipeUpTutorialMessage(currentPosition){
+    if(pageStatus === 0){
+        document.getElementById('swipe_up_tutorial').style.bottom = '-40%';
+    }else if(pageStatus === 1){
+        setTimeout(() => {
+            //pagina tutorial
+            document.getElementById('swipe_up_tutorial').style.bottom = '60%';
+          }, 1000);
 
+        // FIRST SCROLL
+        if(currentPosition < 1){
+            document.getElementById('swipe_up_message').style.opacity = '1';
+        }else if(currentPosition > 0 && currentPosition < 200){
+            let opacity = (200-currentPosition)/200;
+            document.getElementById('swipe_up_message').style.opacity = opacity;
+        } else if(currentPosition > 199){
+            document.getElementById('swipe_up_message').style.opacity = '0';
+        }
+    }
+}
+
+let pageKidsTutorialLoaded = false;
+
+function purpleArrowTutorialPage(currentPosition){
+    if(pageStatus === 0){
+        document.getElementById('Purple_Arrow').style.opacity = '0';
+        document.getElementById('Purple_Arrow').style.bottom = '-45%';
+    }else if(pageStatus === 1){
+        document.getElementById('Purple_Arrow').style.opacity = '1';
+        // FIRST SCROLL
+        if(currentPosition < 1){
+            if(pageKidsTutorialLoaded)
+                document.getElementById('Purple_Arrow').style.bottom = '45%';
+            document.getElementById('Purple_Arrow').style.left = '45%';
+            document.getElementById('Purple_Arrow').style.transform = 'rotate(0deg)';
+            document.getElementById('Purple_Arrow').style.height = '15%';
+        }else if(currentPosition > 0 && currentPosition < 200){
+            let opacity = (200-currentPosition)/200;
+            document.getElementById('Purple_Arrow').style.opacity = opacity;
+            document.getElementById('Purple_Arrow').style.bottom = 45+currentPosition/2 + '%';
+        } else if(currentPosition > 199 && currentPosition < 300){
+            document.getElementById('Purple_Arrow').style.opacity = '0';
+            document.getElementById('Purple_Arrow').style.bottom = '95%';
+            document.getElementById('Purple_Arrow').style.transform = 'rotate(0deg)';
+        } else if(currentPosition > 299 && currentPosition < 400){
+            document.getElementById('Purple_Arrow').style.opacity = '0';
+            document.getElementById('Purple_Arrow').style.bottom = '95%';
+            document.getElementById('Purple_Arrow').style.transform = 'rotate(180deg)';
+        } else if(currentPosition > 399 && currentPosition < 600){
+            let opacity = (600-currentPosition)/200;
+            document.getElementById('Purple_Arrow').style.opacity = opacity;
+            document.getElementById('Purple_Arrow').style.bottom = 95-currentPosition/10.5 +'%';
+            document.getElementById('Purple_Arrow').style.transform = 'rotate(180deg)';
+        } else if(currentPosition > 599){
+            document.getElementById('Purple_Arrow').style.opacity = '1';
+            document.getElementById('Purple_Arrow').style.bottom = '37%';
+            document.getElementById('Purple_Arrow').style.transform = 'rotate(180deg)';
+        } 
+    }
+}
+
+function audioButtonTutorialPage(currentPosition){
+    if(pageStatus === 0){
+    }else if(pageStatus === 1){
+        // FIRST SCROLL
+        if(currentPosition < 200){
+            document.getElementById('audio_button').style.width = '10%';
+            document.getElementById('audio_button').style.height = '70%';
+            document.getElementById('audio_button').style.backgroundColor = '#51138A';
+            if(!audioButtonPressed){
+                document.getElementById('audio_img').src = 'src/audio_yellow.png';
+            } else{
+                if(audioOn){
+                    document.getElementById('audio_img').src = 'src/audio_yellow.png';
+                } else{
+                    //va sostituita con l'immagine dell'audio off
+                    document.getElementById('audio_img').src = 'src/audio_black.png';
+                }
+            }
+        }else if(currentPosition > 199){
+            if(!audioButtonPressed){
+                document.getElementById('audio_button').style.width = '15%';
+                document.getElementById('audio_button').style.height = '90%';
+                document.getElementById('audio_button').style.backgroundColor = '#ffffff';
+                document.getElementById('audio_img').src = 'src/audio_black.png';
+            } else {
+                document.getElementById('audio_button').style.width = '10%';
+                document.getElementById('audio_button').style.height = '70%';
+                document.getElementById('audio_button').style.backgroundColor = '#51138A';
+                if(audioOn){
+                    document.getElementById('audio_img').src = 'src/audio_yellow.png';
+                } else{
+                    //va sostituita con l'immagine dell'audio off
+                    document.getElementById('audio_img').src = 'src/audio_black.png';
+                }
+                
+            }
+        }
+    }
+}
+
+function firstBaloonCBTutorial(currentPosition){
+    if(pageStatus === 0){
+        document.getElementById('first_Baloon_CB').style.transform = 'translateY(700%)';
+    }else if(pageStatus === 1){
+        if(currentPosition < 1){
+            document.getElementById('first_Baloon_CB').style.transform = 'translateY(700%)';
+        } else if(currentPosition > 0 && currentPosition < 200){
+            let baloonPosition = 600-(currentPosition*3);
+            document.getElementById('first_Baloon_CB').style.transform = 'translateY(' + (baloonPosition) + '%)';
+        } else if(currentPosition > 199){
+            document.getElementById('first_Baloon_CB').style.transform = 'translateY(0%)';
+        }
+    }
+}
+
+function secondBaloonCBTutorial(currentPosition){
+    if(pageStatus === 0){
+        document.getElementById('second_Baloon_CB').style.transform = 'translateY(700%)';
+    }else if(pageStatus === 1){
+        if(currentPosition < 200){
+            document.getElementById('second_Baloon_CB').style.transform = 'translateY(700%)';
+        } else if(currentPosition > 199 && currentPosition < 400){
+            let baloonPosition = 600-((currentPosition-200)*3);
+            document.getElementById('second_Baloon_CB').style.transform = 'translateY(' + (baloonPosition) + '%)';
+        } else if(currentPosition > 399){
+            document.getElementById('second_Baloon_CB').style.transform = 'translateY(0%)';
+        }
+    }
+}
+
+function letsGoBaloonCBTutorial(currentPosition){
+    if(pageStatus === 0){
+        document.getElementById('letsGo_Baloon_CB').style.bottom = '-22%';
+    }else if(pageStatus === 1){
+        if(currentPosition < 600){
+            document.getElementById('letsGo_Baloon_CB').style.bottom = '-22%';
+        } else if(currentPosition > 599){
+            document.getElementById('letsGo_Baloon_CB').style.bottom = '22%';
+        } 
+    }
+}
+
+//--------------------FUNZIONI DEI BOTTONI-------------------------
 document.getElementById('Kids_section').addEventListener('click', GoToKidsSection);
 
 function GoToKidsSection(){
@@ -160,12 +340,22 @@ function GoToKidsSection(){
         document.getElementById('back_button').style.opacity = '1';
         document.getElementById('audio_button').style.opacity = '1';
 
+        setTimeout(() => {
+            //pagina tutorial
+            document.getElementById('Purple_Arrow').style.bottom = '45%';
+            pageKidsTutorialLoaded = true;
+          }, 1500);
+
         //logo geomag che si sposta dal baloom be example al top content
         document.getElementById('geomag_logo_animation').style.opacity = '1';
+
+        /* script per animazione
         document.getElementById('geomag_logo_animation').style.marginTop = '0%';
         document.getElementById('geomag_logo_animation').style.marginRight = '0%';
         document.getElementById('geomag_logo_animation').style.width = '34.5%';
-    }
+        */
+
+        }
 }
 
 document.getElementById('back_button').addEventListener('click', BackButton);
@@ -181,27 +371,31 @@ function BackButton() {
         //rendo visibili gli elementi del top content
         document.getElementById('back_button').style.opacity = '0';
         document.getElementById('audio_button').style.opacity = '0';
-
+        pageKidsTutorialLoaded = false;
         //logo geomag che si sposta dal baloom be example al top content
         document.getElementById('geomag_logo_animation').style.opacity = '0';
+
+        /* script per animazione
         document.getElementById('geomag_logo_animation').style.marginTop = '147.5%';
         document.getElementById('geomag_logo_animation').style.marginRight = '54%';
         document.getElementById('geomag_logo_animation').style.width = '18%';
+        */
     }
 }
 
-function purpleGradient(currentPosition){
-    if(pageStatus === 0){
-        document.getElementById('glCanvasPurple').style.opacity = '1';
-    }else if(pageStatus === 1){
-        document.getElementById('glCanvasPurple').style.opacity = '0';
-    }
-}
+document.getElementById('audio_button').addEventListener('click', AudioButton);
 
-function yellowGradient(currentPosition){
-    if(pageStatus === 0){
-        document.getElementById('glCanvasYellow').style.opacity = '0';
-    }else if(pageStatus === 1){
-        document.getElementById('glCanvasYellow').style.opacity = '1';
+let audioOn = false;
+let audioButtonPressed = false;
+
+function AudioButton() {
+    if(window.scrollY > 99){
+        audioButtonPressed = true;
+        window.scrollTo(0, window.scrollY+1)
     }
+    if(audioButtonPressed){
+        audioOn = !audioOn;
+        window.scrollTo(0, window.scrollY+1)
+    }
+    console.log(audioOn);
 }

@@ -31,6 +31,11 @@ canvas {
     transition: opacity 1s ease-in-out;
 }
 
+#glCanvasYellowTutorial{
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
 #glCanvasYellow{
     opacity: 0;
     transition: opacity 1s ease-in-out;
@@ -68,7 +73,7 @@ forma e colore
     border-radius: 100%;
     width: 10%;
     height: 70%;
-    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, height 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, height 0.5s ease-in-out, width 0.5s ease-in-out, background-color 0.5s ease-in-out;
 }
 
 /*
@@ -93,7 +98,11 @@ opacità per animarli
     opacity: 0;
 }
 
-#back_and_audio_img{
+#audio_img{
+    align-self: center;
+}
+
+#back_img{
     align-self: center;
 }
 
@@ -107,11 +116,19 @@ serve per dare la giusta spaziatura ai bottoni
     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, height 0.5s ease-in-out;
 }
 
+/*logo geomag che si vede*/
+#geomag_logo_animation{
+    opacity: 0;
+    position: fixed;
+    width: 34.5%;
+    transition: opacity 0.5s ease-in-out;
+}
+
 /*
 logo geomag
 il logo che effettivamente viene visto nel top content
 parte dal baloon be example ed arriva nella barra in alto
-*/
+
 #geomag_logo_animation{
     opacity: 0;
     position: fixed;
@@ -120,6 +137,7 @@ parte dal baloon be example ed arriva nella barra in alto
     margin-right: 54%;
     transition: opacity 0s ease-in-out, margin-top 0.5s ease-in-out, margin-right 0.5s ease-in-out, width 0.5s ease-in-out;
 }
+*/
 
 /*
 baloon generici
@@ -200,6 +218,7 @@ Pagina di benvenuto
     width: 90%;
     height: 85%;
     align-items: center;
+    transition: transform 1s ease-in-out;
 }
 
 /*
@@ -209,10 +228,11 @@ baloon centrale(CB) di benvenuto
     position: fixed;
     color: #ffc423;
     font-weight: 900;
-    font-size: 150%;
+    font-size: 22px;
     opacity: 0;
     width: 90%;
     height: 8%;
+    transition: transform 1s ease-in-out;
 }
 
 /*
@@ -253,11 +273,11 @@ messaggio che ti dice di scegliere il tuo ruolo
 #select_path_message_CB{
     color: #ffc423;
     font-weight: 600;
-    font-size: 80%;
+    font-size: 16px;
     opacity: 1;
-    width: 60%;
-    height: 8%;
-    margin-top: 5%;
+    width: 70%;
+    height: 10%;
+    margin-top:10%;
     transform: translateY(700%);
 }
 
@@ -336,3 +356,121 @@ Box della sezione kids and adults
 
 /*---------------------------------------------------------------------------------------------------*/
 /*---------------------------------------------------------------------------------------------------*/
+
+
+/*
+Pagina del tutorial
+*/
+#tutorial_kids_page {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 15%;
+    left: 5%;
+    width: 90%;
+    height: 85%;
+    align-items: center;
+    transform: translateY(100%);
+    transition: transform 1s ease-in-out;
+}
+
+#hello_box_CB {
+    background: radial-gradient(#51138a, #491177);
+    color: #ffc423;
+    font-weight: 900;
+    font-size: 130%;
+    width: 100%;
+    height: 8%;
+}
+
+#swipe_up_tutorial {
+    position: fixed;
+    color: #51138A;
+    bottom: -40%;
+    width: 100%;
+    transition: transform 0.5s ease-in-out, opacity 1s ease-in-out, height 0.5s ease-in-out, bottom 0.5s ease-in-out;
+}
+
+#swipe_up_message{
+    transition: opacity 0.5s ease-in-out;
+}
+
+#Purple_Arrow{
+    position: fixed;
+    left: 45%;
+    bottom: -45%;
+    height: 15%;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, bottom 0.5s ease-in-out, height 0.5s ease-in-out, left 0.5s ease-in-out;
+}
+
+#first_Baloon_CB{
+    background: radial-gradient(#51138a, #491177);
+    color: #ffc423;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20.1px;
+    text-align: left;
+    opacity: 1;
+    width: 100%;
+    height: 18%;
+    transform: translateY(600%);
+    border-radius: 90px;
+}
+
+#first_Baloon_CB_message{
+    width: 70%;
+}
+
+#second_Baloon_CB{
+    background: radial-gradient(#51138a, #491177);
+    color: #ffc423;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20.1px;
+    text-align: left;
+    opacity: 1;
+    width: 100%;
+    height: 14%;
+    transform: translateY(600%);
+    border-radius: 90px;
+}
+
+#second_Baloon_CB_message{
+    width: 70%;
+}
+
+#letsGo_Baloon_CB{
+    background: #FFFFFF;
+    color: #000000;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 20.1px;
+    text-align: left;
+    opacity: 1;
+    width: 59%;
+    height: 9.5%;
+    position: fixed;
+    bottom: -22%;
+    text-align: center;
+    border-radius: 90px;
+    animation: letsGoAnimation 2.5s ease-in-out alternate infinite;
+    transition: bottom 0.5s ease-in-out;
+}
+
+/* Definisci l'animazione della sezione adults*/
+@keyframes letsGoAnimation {
+    0% {
+        margin-bottom: 3%;
+        margin-left: -1.5%;
+        transform: rotate(10deg) rotate3d(1,1,1, -20deg);
+    }
+    100% {
+        margin-bottom: 8%;
+        margin-left: 1.5%;
+        transform: rotate(-10deg) rotate3d(1,1,1, 20deg);
+    }
+}
+
+#letsGo_Baloon_CB_message{
+    width: 80%;
+}
