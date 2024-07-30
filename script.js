@@ -3,6 +3,7 @@ let pageStatus = 0;
 PAGE STATUS LEGENDA
 pagestatus == 0 -> welcome page
 pagestatus == 1 -> kids tutorial
+pagestatus == 2 -> kids story
 */
 
 let bubbleCreated = 0;
@@ -528,27 +529,47 @@ function select_place_box_RB(currentPosition){
     }
 }
 
+// SCELTA DEL LUOGO
+
 document.getElementById('place_Baloon_garden').addEventListener('click', gardenOpen);
 
 let gardenButtonPressed = false;
 
 function gardenOpen(){
     console.log('place_Baloon_garden premuta');
+    const gardenBaloon = document.getElementById('place_Baloon_garden');
+    const gardenImage = document.getElementById('garden_image');
+    const gardenChosen = document.getElementById('garden_button_choice');
+    const atticMoved = document.getElementById('place_Baloon_attic');
+    const parkMoved = document.getElementById('place_Baloon_park');
 
     if (gardenButtonPressed) {
         gardenButtonPressed = false;
+        document.getElementById('place_Baloon_garden').style.animationPlayState = 'running';
+        gardenBaloon.classList.remove('straight');
         document.getElementById('place_Baloon_garden').style.height = '9.5%';
-        document.getElementById('place_Baloon_garden').style.animation = 'placeAnimationGardenPark 1.3s ease-in-out alternate infinite';
+        document.getElementById('place_Baloon_garden').style.borderRadius = '100px';
+        gardenImage.style.display = 'none';
+        gardenChosen.style.display = 'none';
+        atticMoved.classList.remove('movedAttic');
+        parkMoved.classList.remove('movedPark');
     }
 
     else {
         gardenButtonPressed = true;
-        document.getElementById('place_Baloon_garden').style.height = '20%';
-        document.getElementById('place_Baloon_garden').style.animationPlayState;
+        document.getElementById('place_Baloon_garden').style.animationPlayState = 'paused';
+        gardenBaloon.classList.add('straight');
+        document.getElementById('place_Baloon_garden').style.height = '60%';
+        document.getElementById('place_Baloon_garden').style.borderRadius = '30px';
+        document.getElementById('place_Baloon_garden').style.borderBottomRightRadius = '0px';
+        gardenImage.style.display = 'block';
+        gardenChosen.style.display = 'block';
+        atticMoved.classList.add('movedAttic');
+        parkMoved.classList.add('movedPark');
     }
 /*
 variabile fuori dalla funzione (se il bottone è premuto o meno)
-Interrompere l'animazione
+Interrompere l'animazione FATTO
 Aggiungere stile aperto e stile altri due bottoni
 
 ALTRA FUNZIONE

@@ -549,11 +549,12 @@ Pagina del tutorial
     position: fixed;
     top: 10%;
     left:7%;
+    flex-direction: column;
     text-align: center;
     border-radius: 90px;
     padding: 20px 10px;
     animation: placeAnimationGardenPark 1.3s ease-in-out alternate infinite;
-    transition: bottom 0.5s ease-in-out heigt 0.2s ease-in-out;
+    transition: bottom 0.5s ease-in-out, height 0.2s ease-in-out;
 }
 
 #place_Baloon_attic{
@@ -595,6 +596,48 @@ Pagina del tutorial
     padding: 20px 10px;
     animation: placeAnimationGardenPark 1.5s ease-in-out alternate infinite;
     transition: bottom 0.5s ease-in-out;
+}
+
+.straight {
+    transform: none !important;
+    margin-bottom: 0% !important;
+    margin-left: 0% !important;
+    transition: 0.5s ease-in-out;
+}
+
+.movedAttic {
+    transform: translateY(-145%) !important;
+    animation-play-state: paused !important;
+    scale: 70%;
+    rotate: 90deg;
+    transition: 0.5s ease-in-out;
+}
+
+.movedPark {
+    transform: translateY(70%) !important;
+    animation-play-state: paused !important;
+    scale: 70%;
+    transition: 0.5s ease-in-out;
+}
+
+#garden_image, #attic_image, #park_image {
+    width: 80%;
+    height: auto;
+    display: none;
+    border-radius: 18px;
+    margin-top: -15px;
+    transition: 0.5s ease-in-out;
+}
+
+#garden_button_choice {
+    display: none;
+    background-color: #000000;
+    color: #F8F8FF;
+    padding: 15px 15px;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    transition: 0.5s ease-in-out;
 }
 
 @keyframes placeAnimationGardenPark {
