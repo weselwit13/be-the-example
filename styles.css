@@ -28,16 +28,19 @@ canvas {
 
 #glCanvasPurple{
     opacity: 1;
+    scale: 101%;
     transition: opacity 1s ease-in-out;
 }
 
 #glCanvasYellowTutorial{
     opacity: 0;
+    scale: 101%;
     transition: opacity 1s ease-in-out;
 }
 
 #glCanvasYellow{
     opacity: 0;
+    scale: 101%;
     transition: opacity 1s ease-in-out;
 }
 
@@ -289,6 +292,7 @@ Box dove saranno contenute le due scelte da fare
     font-weight: 600;
     font-size: 80%;
     opacity: 1;
+    margin-top: -8%;
     width: 90%;
     height: 40%;    
     transform: translateY(700%);
@@ -298,7 +302,7 @@ Box dove saranno contenute le due scelte da fare
 Box della sezione kids and adults
 */
 .section {
-    background-color: #ffffff;
+    background-color: #F8F8FF;
     color: #000000;
     font-size: 200%;
     font-weight: 900;
@@ -375,7 +379,7 @@ Pagina del tutorial
 }
 
 #hello_box_CB {
-    background: radial-gradient(#51138a, #491177);
+    background: radial-gradient(#51138a, #3c0c63);
     color: #ffc423;
     font-weight: 900;
     font-size: 130%;
@@ -404,7 +408,7 @@ Pagina del tutorial
 }
 
 #first_Baloon_CB{
-    background: radial-gradient(#51138a, #491177);
+    background: radial-gradient(#51138a, #3c0c63);
     color: #ffc423;
     font-weight: 500;
     font-size: 14px;
@@ -422,7 +426,7 @@ Pagina del tutorial
 }
 
 #second_Baloon_CB{
-    background: radial-gradient(#51138a, #491177);
+    background: radial-gradient(#51138a, #3c0c63);
     color: #ffc423;
     font-weight: 500;
     font-size: 14px;
@@ -440,7 +444,7 @@ Pagina del tutorial
 }
 
 #letsGo_Baloon_CB{
-    background: #FFFFFF;
+    background: #F8F8FF;
     color: #000000;
     font-weight: 900;
     font-size: 30px;
@@ -455,6 +459,19 @@ Pagina del tutorial
     border-radius: 90px;
     animation: letsGoAnimation 2.5s ease-in-out alternate infinite;
     transition: bottom 0.5s ease-in-out;
+}
+
+#kids_story {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 15%;
+    left: 5%;
+    width: 90%;
+    height: 85%;
+    align-items: center;
+    transform: translateY(100%);
+    transition: transform 1s ease-in-out;
 }
 
 /* Definisci l'animazione della sezione adults*/
@@ -473,4 +490,135 @@ Pagina del tutorial
 
 #letsGo_Baloon_CB_message{
     width: 80%;
+}
+
+
+#narrator_Baloon_CB{
+    background: radial-gradient(#51138a, #3c0c63);
+    color: #ffc423;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20.1px;
+    text-align: left;
+    opacity: 1;
+    width: 100%;
+    height: 18%;
+    transform: translateY(600%);
+    border-radius: 90px;
+}
+
+#narrator_Baloon_CB_message{
+    width: 70%;
+}
+
+#choice_box_CB {
+    background: radial-gradient(#51138a, #3c0c63);
+    transform: translateY(1100%);
+    color: #ffc423;
+    font-weight: 900;
+    font-size: 130%;
+    width: 98%;
+    height: 8%;
+}
+
+#select_place_box_RB{
+    background: radial-gradient(#51138a, #3c0c63);
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 50px;
+    font-weight: 600;
+    font-size: 80%;
+    opacity: 1;
+    width: 100%;
+    height: 65%;    
+    transform: translateY(1100%);
+}
+
+#place_Baloon_garden{
+    background: #F8F8FF;
+    color: #000000;
+    transform: translateY(600%);
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 20.1px;
+    text-align: left;
+    opacity: 1;
+    width: 59%;
+    height: 9.5%;
+    position: fixed;
+    top: 10%;
+    left:7%;
+    text-align: center;
+    border-radius: 90px;
+    padding: 20px 10px;
+    animation: placeAnimationGardenPark 1.3s ease-in-out alternate infinite;
+    transition: bottom 0.5s ease-in-out heigt 0.2s ease-in-out;
+}
+
+#place_Baloon_attic{
+    background: #F8F8FF;
+    color: #000000;
+    transform: translateY(600%);
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 20.1px;
+    text-align: left;
+    opacity: 1;
+    width: 59%;
+    height: 9.5%;
+    position: fixed;
+    top: 40%;
+    left: 30%;
+    text-align: center;
+    border-radius: 90px;
+    padding: 20px 10px;
+    animation: placeAnimationAttic 1.7s ease-in-out alternate infinite;
+    transition: bottom 0.5s ease-in-out;
+}
+
+#place_Baloon_park{
+    background: #F8F8FF;
+    color: #000000;
+    transform: translateY(600%);
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 20.1px;
+    text-align: left;
+    opacity: 1;
+    width: 50%;
+    height: 10%;
+    position: fixed;
+    top: 70%;
+    text-align: center;
+    border-radius: 90px;
+    padding: 20px 10px;
+    animation: placeAnimationGardenPark 1.5s ease-in-out alternate infinite;
+    transition: bottom 0.5s ease-in-out;
+}
+
+@keyframes placeAnimationGardenPark {
+    0% {
+        margin-bottom: 0%;
+        margin-left: -1.5%;
+        transform: rotate(10deg) rotate3d(1,1,1, 5deg);
+    }
+    100% {
+        margin-bottom: 10%;
+        margin-left: 1.5%;
+        transform: rotate(-15deg) rotate3d(1,1,1, 10deg);
+    }
+}
+
+@keyframes placeAnimationAttic {
+    0% {
+        margin-bottom: 0%;
+        margin-left: -1.5%;
+        transform: rotate(-10deg) rotate3d(1,1,1, -5deg);
+    }
+    100% {
+        margin-bottom: 10%;
+        margin-left: 1.5%;
+        transform: rotate(15deg) rotate3d(1,1,1, -10deg);
+    }
 }
