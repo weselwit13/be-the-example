@@ -554,7 +554,7 @@ Pagina del tutorial
     border-radius: 90px;
     padding: 20px 10px;
     animation: placeAnimationGardenPark 1.3s ease-in-out alternate infinite;
-    transition: bottom 0.5s ease-in-out, height 0.2s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 
 #place_Baloon_attic{
@@ -575,7 +575,7 @@ Pagina del tutorial
     border-radius: 90px;
     padding: 20px 10px;
     animation: placeAnimationAttic 1.7s ease-in-out alternate infinite;
-    transition: bottom 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 
 #place_Baloon_park{
@@ -595,14 +595,14 @@ Pagina del tutorial
     border-radius: 90px;
     padding: 20px 10px;
     animation: placeAnimationGardenPark 1.5s ease-in-out alternate infinite;
-    transition: bottom 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 
 .straight {
     transform: none !important;
     margin-bottom: 0% !important;
     margin-left: 0% !important;
-    transition: 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 
 .movedAttic {
@@ -610,14 +610,14 @@ Pagina del tutorial
     animation-play-state: paused !important;
     scale: 70%;
     rotate: 90deg;
-    transition: 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 
 .movedPark {
     transform: translateY(70%) !important;
     animation-play-state: paused !important;
     scale: 70%;
-    transition: 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 
 #garden_image, #attic_image, #park_image {
@@ -626,7 +626,7 @@ Pagina del tutorial
     display: none;
     border-radius: 18px;
     margin-top: -15px;
-    transition: 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 
 #garden_button_choice {
@@ -637,7 +637,7 @@ Pagina del tutorial
     font-size: 20px;
     margin-top: 10px;
     margin-bottom: 40px;
-    transition: 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 
 @keyframes placeAnimationGardenPark {
@@ -664,4 +664,17 @@ Pagina del tutorial
         margin-left: 1.5%;
         transform: rotate(15deg) rotate3d(1,1,1, -10deg);
     }
+}
+
+#garden {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 15%;
+    left: 5%;
+    width: 90%;
+    height: 85%;
+    align-items: center;
+    transform: translateY(100%);
+    transition: transform 1s ease-in-out;
 }

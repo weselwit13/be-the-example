@@ -1,9 +1,11 @@
 let pageStatus = 0;
+let locationVariant = 0;
 /*
 PAGE STATUS LEGENDA
 pagestatus == 0 -> welcome page
 pagestatus == 1 -> kids tutorial
 pagestatus == 2 -> kids story
+pagestatus == 3 -> kids 
 */
 
 let bubbleCreated = 0;
@@ -45,6 +47,8 @@ function pageScrollAnimation(currentPosition){
     narrator_Baloon_CB(currentPosition);
     choice_box_CB(currentPosition);
     select_place_box_RB(currentPosition);
+    //GARDEN
+    // GardenPage(currentPosition);
 }
 // ---------------------- FUNZIONI CHE GESTISCONO I VARI COMPONENTI ---------------------------
 //-----COMPONENTI GENERICI
@@ -455,7 +459,7 @@ function letsGoBaloonCBTutorial(currentPosition){
     }
 }
 
-
+//----PASSAGGIO PAGINA SCELTA LUOGO
 document.getElementById('letsGo_Baloon_CB').addEventListener('click', GoToKidsStory);
 
 function GoToKidsStory(){
@@ -567,12 +571,51 @@ function gardenOpen(){
         atticMoved.classList.add('movedAttic');
         parkMoved.classList.add('movedPark');
     }
-/*
-variabile fuori dalla funzione (se il bottone è premuto o meno)
-Interrompere l'animazione FATTO
-Aggiungere stile aperto e stile altri due bottoni
+}
 
-ALTRA FUNZIONE
-1. al click di let's go cambia la pagina
-*/
+
+//----PASSAGGIO PAGINA POSTO
+document.getElementById('garden_button_choice').addEventListener('click', () => placeChoice('garden'));
+document.getElementById('attic_button_choice').addEventListener('click', () => placeChoice('attic'));
+document.getElementById('park_button_choice').addEventListener('click', () => placeChoice('park'));
+
+function placeChoice(place) {
+    console.log(`${place}_button_choice premuta`);
+    console.log('PAGE STATUS: ' + pageStatus);
+
+    if (pageStatus === 2) {
+        pageStatus = 3;
+        switch (place) {
+            case 'garden':
+                locationVariant = 1;
+                break;
+            case 'attic':
+                locationVariant = 2;
+                break;
+            case 'park':
+                locationVariant = 3;
+                break;
+        }
+        window.scrollTo(0, 0);
+        console.log('Page status aggiornato, PAGE STATUS: ' + pageStatus);
+        PlacePage();
+    }
+}
+
+function PlacePage(){
+    if(pageStatus === 2 || pageStatus === 1 || pageStatus === 0){
+        document.getElementById('garden').style.transform = 'translateY(100%)';
+        document.getElementById('attic').style.transform = 'translateY(100%)';
+        document.getElementById('park').style.transform = 'translateY(100%)';
+    }else if(pageStatus === 3 && locationVariant === 1){
+        document.getElementById('garden').style.transform = 'translateY(0%)';
+    }else if(pageStatus === 3 && locationVariant === 2){
+        document.getElementById('attic').style.transform = 'translateY(0%)';
+    }else if(pageStatus === 3 && locationVariant === 3){
+        document.getElementById('park').style.transform = 'translateY(0%)';
+    }else if(pageStatus === 4){
+        document.getElementById('garden').style.transform = 'translateY(-200%)';
+        document.getElementById('attic').style.transform = 'translateY(-200%)';
+        document.getElementById('park').style.transform = 'translateY(-200%)';
+}
 }
