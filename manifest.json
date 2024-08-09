@@ -1,0 +1,21 @@
+{
+    "name": "BE_the_Example",
+    "short_name": "BtE",
+    "start_url": "/index.html",
+    "display": "fullscreen",
+    "background_color": "#51138A",
+    "theme_color": "#51138A",
+    "orientation": "portrait",
+    "icons": [
+        {
+            "src": "src/4.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "src/4.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
