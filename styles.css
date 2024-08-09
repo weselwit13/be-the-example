@@ -32,13 +32,13 @@ canvas {
     transition: opacity 1s ease-in-out;
 }
 
-#glCanvasYellowTutorial{
+#glCanvasYellow{
     opacity: 0;
     scale: 101%;
     transition: opacity 1s ease-in-out;
 }
 
-#glCanvasYellow{
+#glCanvasBlue{
     opacity: 0;
     scale: 101%;
     transition: opacity 1s ease-in-out;
@@ -127,20 +127,6 @@ serve per dare la giusta spaziatura ai bottoni
     transition: opacity 0.5s ease-in-out;
 }
 
-/*
-logo geomag
-il logo che effettivamente viene visto nel top content
-parte dal baloon be example ed arriva nella barra in alto
-
-#geomag_logo_animation{
-    opacity: 0;
-    position: fixed;
-    width: 18%;
-    margin-top: 147.5%;
-    margin-right: 54%;
-    transition: opacity 0s ease-in-out, margin-top 0.5s ease-in-out, margin-right 0.5s ease-in-out, width 0.5s ease-in-out;
-}
-*/
 
 /*
 baloon generici
@@ -461,19 +447,6 @@ Pagina del tutorial
     transition: bottom 0.5s ease-in-out;
 }
 
-#kids_story {
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    top: 15%;
-    left: 5%;
-    width: 90%;
-    height: 85%;
-    align-items: center;
-    transform: translateY(100%);
-    transition: transform 1s ease-in-out;
-}
-
 /* Definisci l'animazione della sezione adults*/
 @keyframes letsGoAnimation {
     0% {
@@ -492,6 +465,19 @@ Pagina del tutorial
     width: 80%;
 }
 
+/*----------KIDS STORY START-----------*/
+#kids_story {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 15%;
+    left: 5%;
+    width: 90%;
+    height: 85%;
+    align-items: center;
+    transform: translateY(100%);
+    transition: transform 1s ease-in-out;
+}
 
 #narrator_Baloon_CB{
     background: radial-gradient(#51138a, #3c0c63);
@@ -535,138 +521,168 @@ Pagina del tutorial
     transform: translateY(1100%);
 }
 
+/*------GARDEN PART--------*/
 #place_Baloon_garden{
     background: #F8F8FF;
     color: #000000;
-    transform: translateY(600%);
     font-weight: 900;
     font-size: 30px;
-    line-height: 20.1px;
-    text-align: left;
     opacity: 1;
-    width: 59%;
-    height: 9.5%;
+    width: 62%;
+    height: 20%;
     position: fixed;
     top: 10%;
     left:7%;
     flex-direction: column;
-    text-align: center;
+    justify-content: start;
     border-radius: 90px;
-    padding: 20px 10px;
-    animation: placeAnimationGardenPark 1.3s ease-in-out alternate infinite;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.15s ease-in-out;
 }
 
-#place_Baloon_attic{
-    background: #F8F8FF;
-    color: #000000;
-    transform: translateY(600%);
-    font-weight: 900;
-    font-size: 30px;
-    line-height: 20.1px;
-    text-align: left;
-    opacity: 1;
-    width: 59%;
-    height: 9.5%;
-    position: fixed;
-    top: 40%;
-    left: 30%;
-    text-align: center;
-    border-radius: 90px;
-    padding: 20px 10px;
-    animation: placeAnimationAttic 1.7s ease-in-out alternate infinite;
-    transition: all 0.5s ease-in-out;
-}
-
-#place_Baloon_park{
-    background: #F8F8FF;
-    color: #000000;
-    transform: translateY(600%);
-    font-weight: 900;
-    font-size: 30px;
-    line-height: 20.1px;
-    text-align: left;
-    opacity: 1;
-    width: 50%;
-    height: 10%;
-    position: fixed;
-    top: 70%;
-    text-align: center;
-    border-radius: 90px;
-    padding: 20px 10px;
-    animation: placeAnimationGardenPark 1.5s ease-in-out alternate infinite;
-    transition: all 0.5s ease-in-out;
-}
-
-.straight {
-    transform: none !important;
+.straight_garden_baloon {
     margin-bottom: 0% !important;
     margin-left: 0% !important;
-    transition: all 0.5s ease-in-out;
-}
-
-.movedAttic {
-    transform: translateY(-145%) !important;
-    animation-play-state: paused !important;
-    scale: 70%;
-    rotate: 90deg;
-    transition: all 0.5s ease-in-out;
-}
-
-.movedPark {
-    transform: translateY(70%) !important;
-    animation-play-state: paused !important;
-    scale: 70%;
-    transition: all 0.5s ease-in-out;
-}
-
-#garden_image, #attic_image, #park_image {
-    width: 80%;
-    height: auto;
-    display: none;
-    border-radius: 18px;
-    margin-top: -15px;
-    transition: all 0.5s ease-in-out;
+    border-radius: 60px !important;
+    height: 70% !important;
+    width: 67% !important;
+    text-align: start !important;
 }
 
 #garden_button_choice {
     display: none;
     background-color: #000000;
     color: #F8F8FF;
-    padding: 15px 15px;
     font-size: 20px;
     margin-top: 10px;
-    margin-bottom: 40px;
+    width: 55%;
+    height: 15%;
+    opacity: 1;
     transition: all 0.5s ease-in-out;
 }
 
-@keyframes placeAnimationGardenPark {
-    0% {
-        margin-bottom: 0%;
-        margin-left: -1.5%;
-        transform: rotate(10deg) rotate3d(1,1,1, 5deg);
-    }
-    100% {
-        margin-bottom: 10%;
-        margin-left: 1.5%;
-        transform: rotate(-15deg) rotate3d(1,1,1, 10deg);
-    }
+
+/*------ATTIC PART--------*/
+#place_Baloon_attic{
+    background: #F8F8FF;
+    color: #000000;
+    font-weight: 900;
+    font-size: 30px;
+    opacity: 1;
+    width: 62%;
+    height: 20%;
+    position: fixed;
+    top: 40%;
+    left:30%;
+    flex-direction: column;
+    justify-content: start;
+    border-radius: 90px;
+    transition: all 0.15s ease-in-out;
 }
 
-@keyframes placeAnimationAttic {
-    0% {
-        margin-bottom: 0%;
-        margin-left: -1.5%;
-        transform: rotate(-10deg) rotate3d(1,1,1, -5deg);
-    }
-    100% {
-        margin-bottom: 10%;
-        margin-left: 1.5%;
-        transform: rotate(15deg) rotate3d(1,1,1, -10deg);
-    }
+.straight_attic_baloon {
+    margin-bottom: 0% !important;
+    margin-left: 0% !important;
+    border-radius: 60px !important;
+    height: 70% !important;
+    width: 67% !important;
+    top: 10% !important;
+    text-align: start !important;
 }
 
-#garden {
+#attic_button_choice {
+    display: none;
+    background-color: #000000;
+    color: #F8F8FF;
+    font-size: 20px;
+    margin-top: 10px;
+    width: 55%;
+    height: 15%;
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+}
+
+/*------PARK PART--------*/
+#place_Baloon_park{
+    background: #F8F8FF;
+    color: #000000;
+    font-weight: 900;
+    font-size: 30px;
+    opacity: 1;
+    width: 62%;
+    height: 20%;
+    position: fixed;
+    top: 70%;
+    left:7%;
+    flex-direction: column;
+    justify-content: start;
+    border-radius: 90px;
+    transition: all 0.15s ease-in-out;
+}
+
+.straight_park_baloon {
+    margin-bottom: 0% !important;
+    margin-left: 0% !important;
+    border-radius: 60px !important;
+    height: 70% !important;
+    width: 67% !important;
+    top: 20% !important;
+    text-align: start !important;
+}
+
+#park_button_choice {
+    display: none;
+    background-color: #000000;
+    color: #F8F8FF;
+    font-size: 20px;
+    margin-top: 10px;
+    width: 55%;
+    height: 15%;
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+}
+
+
+/*------COMON PART--------*/
+#garden_image, #attic_image, #park_image {
+    display: block;
+    width: 0%;
+    height: auto;
+    border-radius: 18px;
+    margin-top: -12%;
+    opacity: 0;
+    transition: all 0.15s ease-in-out;
+}
+
+.movedGardenUp {
+    transform: translateY(-70%) !important;
+    scale: 70%;
+    transition: all 0.15s ease-in-out;
+}
+
+.movedGardenLeft {
+    transform: translateY(135%) !important;
+    scale: 70%;
+    rotate: 90deg;
+    transition: all 0.15s ease-in-out;
+}
+
+.movedAttic {
+    transform: translateY(-135%) !important;
+    scale: 70%;
+    rotate: 90deg;
+    transition: all 0.15s ease-in-out;
+}
+
+.movedPark {
+    transform: translateY(70%) !important;
+    scale: 70%;
+    transition: all 0.15s ease-in-out;
+}
+
+
+/*-----KIDS STORY PLACE PART -------*/
+
+#place_page {
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -677,4 +693,228 @@ Pagina del tutorial
     align-items: center;
     transform: translateY(100%);
     transition: transform 1s ease-in-out;
+}
+
+#place_description_CB{
+    background: radial-gradient(#51138a, #3c0c63);
+    color: #ffc423;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20.1px;
+    text-align: left;
+    opacity: 1;
+    width: 100%;
+    height: 20%;
+    transform: translateY(600%);
+    border-radius: 90px;
+}
+
+#place_description_CB_message{
+    width: 70%;
+}
+
+#place_cuby_RB{
+    background: radial-gradient(#51138a, #3c0c63);
+    background-size: 150%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 50px;
+    font-weight: 600;
+    font-size: 80%;
+    opacity: 1;
+    width: 100%;
+    height: 85%;    
+    transform: translateY(700%);
+}
+
+#wait_what_CB{
+    background: radial-gradient(#51138a, #3c0c63);
+    color: #ffc423;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20.1px;
+    text-align: center;
+    opacity: 1;
+    width: 100%;
+    height: 2%;
+    transform: translateY(600%);
+    border-radius: 90px;
+}
+
+#wait_what_CB_message{
+    width: 70%;
+}
+
+#cuby_placed{
+    width: 35%;
+}
+
+/*-----KIDS STORY CLEAN CUBY PART -------*/
+
+#clean_cuby_page {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 15%;
+    left: 5%;
+    width: 90%;
+    height: 85%;
+    align-items: center;
+    transform: translateY(100%);
+    transition: transform 1s ease-in-out;
+}
+
+#dirty_cuby_LB{
+    background: radial-gradient(#51138a, #3c0c63);
+    color: #FFC423;
+    width: 79%;
+    height: 31.5%;
+    align-items: center;
+}
+
+#dirty_cuby_img{
+    position: fixed;
+    width: 50%;
+    transition: opacity 1s ease-in-out;
+}
+
+#oh_look_CB{
+    background: radial-gradient(#51138a, #3c0c63);
+    color: #ffc423;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20.1px;
+    text-align: center;
+    opacity: 1;
+    width: 100%;
+    height: 9.5%;
+    transform: translateY(800%);
+    border-radius: 90px;
+}
+
+#hurry_CB{
+    background: radial-gradient(#51138a, #3c0c63);
+    color: #ffc423;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20.1px;
+    text-align: center;
+    opacity: 1;
+    width: 100%;
+    height: 9.5%;
+    transform: translateY(800%);
+    border-radius: 90px;
+}
+
+#oh_look_hurry_CB_message{
+    width: 70%;
+}
+
+#toy_to_clean_RB{
+    background: radial-gradient(#51138a, #3c0c63);
+    color: #FFC423;
+    width: 100%;
+    height: 38%;
+    transform: translateY(800%);
+}
+
+.toy_img{
+    position: fixed;
+    transition: opacity 1s ease-in-out;
+}
+
+#wonderful_CB{
+    background: radial-gradient(#51138a, #3c0c63);
+    color: #ffc423;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20.1px;
+    text-align: center;
+    opacity: 1;
+    width: 100%;
+    height: 9.5%;
+    transform: translateY(800%);
+    border-radius: 90px;
+}
+
+#wonderful_CB_message{
+    width: 70%;
+}
+
+/*-----KIDS STORY CUBY THANK YOU-------*/
+
+#cuby_thank_you_page {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 15%;
+    left: 5%;
+    width: 90%;
+    height: 85%;
+    align-items: center;
+    transform: translateY(100%);
+    transition: transform 1s ease-in-out;
+}
+
+#cuby_thank_you_img{
+    width: 30%;
+    margin-left: 65%;
+    margin-top: 25%;
+    position: absolute;
+    z-index: 1;
+    transition: margin-top 0.5s ease-in-out;
+}
+
+#thank_you_LB{
+    background: radial-gradient(#51138a, #3c0c63);
+    color: #FFC423;
+    width: 79%;
+    height: 25%;
+    align-items: center;
+}
+
+.thank_you_LB_message{
+    width: 80%;
+    text-align: left;
+}
+
+#lets_go_LB{
+    background: radial-gradient(#51138a, #3c0c63);
+    color: #ffffff;
+    width: 79%;
+    height: 40%;
+    transform: translateY(800%);
+    flex-direction: column;
+}
+
+.lets_go_LB_message{
+    width: 80%;
+    font-weight: 900;
+    font-size: 120%;
+    margin-bottom: 50%;
+    text-align: left;
+}
+
+#letsGo_Baloon_05_CB{
+    background: #F8F8FF;
+    color: #000000;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 20.1px;
+    text-align: left;
+    opacity: 1;
+    width: 71%;
+    height: 20%;
+    position: fixed;
+    margin-top: 30%;
+    border-radius: 90px;
+    animation: letsGoAnimation 2.5s ease-in-out alternate infinite;
+    transition: bottom 0.5s ease-in-out;
+}
+
+#letsGo_Baloon_05_CB_message{
+    width: 80%;
 }

@@ -18,9 +18,9 @@
 
     <canvas id="glCanvasPurple"></canvas>
 
-    <canvas id="glCanvasYellowTutorial"></canvas>
-
     <canvas id="glCanvasYellow"></canvas>
+
+    <canvas id="glCanvasBlue"></canvas>
 
     <div id="top_content">
         <div id="back_audio_menu">
@@ -41,6 +41,7 @@
     </div>
 
     <div>
+        <!--START-->
         <div id="start">
             <div id="text_arrow_container">
                 <p>Swipe up to interact</p>
@@ -48,6 +49,7 @@
             </div>
         </div>
 
+        <!--WELCOME PAGE-->
         <div id="welcome_page">
 
             <div class="left_baloon" id="be_example_LB">
@@ -73,6 +75,7 @@
 
         </div>
 
+        <!--KIDS PART TUTORIAL-->
         <div id="tutorial_kids_page">
 
             <div class="central_baloon" id="hello_box_CB">
@@ -99,9 +102,10 @@
 
         </div>
 
+        <!--KIDS STORY-->
         <div id="kids_story">
             <div class="central_baloon" id="narrator_Baloon_CB">
-                <p id="narrator_Baloon_CB_message">The air is filled with a sense of adventure, and you can feel that something special is about to happen.</p>
+                <p id="narrator_Baloon_CB_message">The air is filled with a sense <br> of adventure, and you can <br> feel that something special <br> is about to happen.</p>
             </div>
             <div class="central_baloon" id="choice_box_CB">
                 <p>Where will you begin?</p>
@@ -109,29 +113,105 @@
             <div class="right_baloon" id="select_place_box_RB">
                 <div class="central_baloon" id="place_Baloon_garden">
                     <p>GARDEN</p>
-                    <img id="garden_image" src="src/01_garden.jpg" style="display: none;"></img>
-                    <div class="central_baloon" id="garden_button_choice" style="display: none;">LET'S GO!</div>
+                    <img id="garden_image" src="src/01_garden.jpg"></img>
+                    <div class="central_baloon" id="garden_button_choice">LET'S GO!</div>
                 </div>
                 <div class="central_baloon" id="place_Baloon_attic">
                     <p>ATTIC</p>
+                    <img id="attic_image" src="src/01_attic.jpg"></img>
+                    <div class="central_baloon" id="attic_button_choice">LET'S GO!</div>
                 </div>
                 <div class="central_baloon" id="place_Baloon_park">
                     <p>PARK</p>
+                    <img id="park_image" src="src/01_park.jpg"></img>
+                    <div class="central_baloon" id="park_button_choice">LET'S GO!</div>
                 </div>
             </div>
         </div>
 
-        <div id="garden">
-            <div class="central_baloon">
-                <p id="">SIAMO IN GIARDINO!</p>
+        <div id="place_page">
+            <div class="central_baloon" id="place_description_CB">
+                <p id="place_description_CB_message">description message</p>
+            </div>
+
+            <div class="right_baloon" id="place_cuby_RB">
+                <div>
+                    <img src="src/0.png" alt="Toy-image" id="cuby_placed">
+                </div>
+            </div>
+
+            <div class="central_baloon" id="wait_what_CB">
+                <p id="wait_what_CB_message">Wait, what’s that? <br> Click on it and see what it is!</p>
             </div>
         </div>
+
+        <div id="clean_cuby_page">
+
+            <div class="left_baloon" id="dirty_cuby_LB">
+                <img src="src/0.png" alt="Toy-image" id="dirty_cuby_img">
+            </div>
+
+            <div class="central_baloon" id="oh_look_CB">
+                <p id="oh_look_hurry_CB_message">Oh, look! <br> It’s a toy! But, it’s all dirty...</p>
+            </div>
+
+            <div class="central_baloon" id="hurry_CB">
+                <p id="oh_look_hurry_CB_message">Hurry! <br> Wipe it with your finger to <br> clean it!</p>
+            </div>
+
+            <div class="right_baloon" id="toy_to_clean_RB">
+                <img src="src/4.png" alt="Toy-image" class="toy_img" id="toy_img_4">
+                <img src="src/3.png" alt="Toy-image" class="toy_img" id="toy_img_3">
+                <img src="src/2.png" alt="Toy-image" class="toy_img" id="toy_img_2">
+                <img src="src/1.png" alt="Toy-image" class="toy_img" id="toy_img_1">
+                <img src="src/0.png" alt="Toy-image" class="toy_img" id="toy_img_0">
+            </div>
+
+            <div class="central_baloon" id="wonderful_CB">
+                <p id="wonderful_CB_message">Wonderful! <br> Brand new again!</p>
+            </div>
+
+        </div>
+
+        <div id="cuby_thank_you_page">
+
+            <img src="src/4.png" alt="Toy-image" id="cuby_thank_you_img">
+
+            <div class="left_baloon" id="thank_you_LB">
+                <p class="thank_you_LB_message">Thank you for cleaning me! <br> My name is Cubie! <br> I was trying to reach my <br> friends! You see, there’s a <br> Toy Parade happening!</p>
+            </div>
+
+            <div class="left_baloon" id="lets_go_LB">
+                <p class="lets_go_LB_message">Would you like to <br> come and see <br> what it's all about?</p>
+
+                <div class="central_baloon" id="letsGo_Baloon_05_CB">
+                    <p id="letsGo_Baloon_05_CB_message">LET'S GO!</p>
+                </div>
+            </div>
+
+        </div>
+        
     </div>
 
-    <script src="script.js"></script>
-    <script src="shaderPurple.js"></script>
-    <script src="shaderYellow.js"></script>
-    <script src="shaderYellowTutorial.js"></script>
+    <script src="scripts/mainScript.js"></script>
+    
+    <script src="scripts/00_shaderPurple.js"></script>
+    <script src="scripts/00_shaderYellow.js"></script>
+    <script src="scripts/00_shaderBlue.js"></script>
+    <script src="scripts/00_genericComponent.js"></script>
+    <script src="scripts/00_topContent.js"></script>
+    <script src="scripts/00_animationSelectLocation.js"></script>
+
+    <script src="scripts/01_welcomePage.js"></script>
+    <script src="scripts/01_tutorialKids.js"></script>
+
+    <script src="scripts/02_kidsStoryStart.js"></script>
+
+    <script src="scripts/03_kidsStoryPlacePage.js"></script>
+    
+    <script src="scripts/04_kidsStoryCleanCubyPage.js"></script> 
+
+    <script src="scripts/05_kidsStoryCubyThankYou.js"></script> 
 
 </body>
 
