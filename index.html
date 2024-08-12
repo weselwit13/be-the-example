@@ -17,12 +17,18 @@
 
 <body>
 
+    <!--SHADERS-->
     <canvas id="glCanvasPurple"></canvas>
 
     <canvas id="glCanvasYellow"></canvas>
 
     <canvas id="glCanvasBlue"></canvas>
 
+    <!--COMPONENTI GENERICI-->
+    <!--baloon che viene usato per il passaggio tra i ringrazziamenti di cuby e l'inizio della passeggiata con cuby-->
+    <div class="right_baloon" id="animation_RB"></div>
+
+    <!--BARRA IN ALTO-->
     <div id="top_content">
         <div id="back_audio_menu">
             <div class="circle_button" id="back_button">
@@ -31,7 +37,7 @@
             <img src="src/geomag.png" alt="geomag" id="geomag_logo">
             <img src="src/geomag.png" alt="geomag" id="geomag_logo_animation">
             <div class="circle_button" id="audio_button">
-                <img src="src/audio_off.png" alt="audio-image" id="audio_img">
+                <img src="src/audio_off_yellow.png" alt="audio-image" id="audio_img">
             </div>
         </div>
 
@@ -41,11 +47,12 @@
 
     </div>
 
+    <!--PAGINE-->
     <div>
         <!--START-->
         <div id="start">
             <div id="text_arrow_container">
-                <p>Swipe up to interact</p>
+                <p>Scroll up to interact</p>
                 <img src="src/Yellow_Arrow.png" alt="Arrow-image">
             </div>
         </div>
@@ -84,7 +91,7 @@
             </div>
 
             <div id="swipe_up_tutorial">
-                <p id="swipe_up_message">Swipe up to interact</p>
+                <p id="swipe_up_message">Scroll up to interact</p>
                 <img id="Purple_Arrow" src="src/Purple_Arrow.png" alt="Arrow-image">
             </div>
 
@@ -103,33 +110,42 @@
 
         </div>
 
-        <!--KIDS STORY-->
+        <!--KIDS STORY START-->
         <div id="kids_story">
+
             <div class="central_baloon" id="narrator_Baloon_CB">
-                <p id="narrator_Baloon_CB_message">The air is filled with a sense <br> of adventure, and you can <br> feel that something special <br> is about to happen.</p>
+                <p id="narrator_Baloon_CB_message">The air is filled with a sense of adventure, and you can feel that something special is about to happen.</p>
             </div>
+
             <div class="central_baloon" id="choice_box_CB">
                 <p>Where will you begin?</p>
             </div>
+
             <div class="right_baloon" id="select_place_box_RB">
+
                 <div class="central_baloon" id="place_Baloon_garden">
                     <p>GARDEN</p>
                     <img id="garden_image" src="src/01_garden.jpg"></img>
                     <div class="central_baloon" id="garden_button_choice">LET'S GO!</div>
                 </div>
+
                 <div class="central_baloon" id="place_Baloon_attic">
                     <p>ATTIC</p>
                     <img id="attic_image" src="src/01_attic.jpg"></img>
                     <div class="central_baloon" id="attic_button_choice">LET'S GO!</div>
                 </div>
+
                 <div class="central_baloon" id="place_Baloon_park">
                     <p>PARK</p>
                     <img id="park_image" src="src/01_park.jpg"></img>
                     <div class="central_baloon" id="park_button_choice">LET'S GO!</div>
                 </div>
+
             </div>
+
         </div>
 
+        <!--KIDS STORY SELECT PLACE-->
         <div id="place_page">
             <div class="central_baloon" id="place_description_CB">
                 <p id="place_description_CB_message">description message</p>
@@ -146,6 +162,7 @@
             </div>
         </div>
 
+        <!--KIDS STORY CLEAN CUBY-->
         <div id="clean_cuby_page">
 
             <div class="left_baloon" id="dirty_cuby_LB">
@@ -157,7 +174,7 @@
             </div>
 
             <div class="central_baloon" id="hurry_CB">
-                <p id="oh_look_hurry_CB_message">Hurry! <br> Wipe it with your finger to <br> clean it!</p>
+                <p id="oh_look_hurry_CB_message">Wipe it with your finger <br> to clean it!</p>
             </div>
 
             <div class="right_baloon" id="toy_to_clean_RB">
@@ -169,17 +186,18 @@
             </div>
 
             <div class="central_baloon" id="wonderful_CB">
-                <p id="wonderful_CB_message">Wonderful! <br> Brand new again!</p>
+                <p id="wonderful_CB_message">Wonderful!</p>
             </div>
 
         </div>
 
+        <!--KIDS STORY CUBY THANK YOU-->
         <div id="cuby_thank_you_page">
 
             <img src="src/4.png" alt="Toy-image" id="cuby_thank_you_img">
 
             <div class="left_baloon" id="thank_you_LB">
-                <p class="thank_you_LB_message">Thank you for cleaning me! <br> My name is Cubie! <br> I was trying to reach my <br> friends! You see, there’s a <br> Toy Parade happening!</p>
+                <p class="thank_you_LB_message">Thank you for cleaning me! My name is Cubie! I was trying to reach my friends! You see, there’s a Toy Parade happening!</p>
             </div>
 
             <div class="left_baloon" id="lets_go_LB">
@@ -191,17 +209,213 @@
             </div>
 
         </div>
+
+        <!--KIDS STORY WALK WITH CUBY-->
+        <div id="walk_with_cuby_page">
+
+            <img src="src/4.png" alt="Toy-image" id="cuby_walk_with_you_img">
+
+            <div class="central_baloon" id="magical_path_CB">
+                <p id="magical_path_CB_message">You and Cuby make your way <br> through the magical path,  <br> excitement building with each <br> step. As you continue, <br> the path becomes more vibrant.</p>
+            </div>
+
+            <div class="left_baloon" id="almost_there_LB">
+                <p class="almost_there_LB_message">Look, we're almost there! <br> The Toy Parade is just <br> ahead! Thank you for <br> helping me get here.</p>
+            </div>
+
+            <div class="central_baloon" id="arrival_parade_CB">
+                <p id="arrival_parade_CB_message">You've arrived at <br> the edge of the parade. <br> You notice a special area <br> with some familiar toys that <br> seem to have a special presence.</p>
+            </div>
+
+            <div class="left_baloon" id="cuby_proposal_LB">
+                <p class="cuby_proposal_LB_message">The leggendary toy! <br> Let's meet them! <br> Who would you like to talk to?</p>
+            </div>
+
+        </div>
+
+        <!--KIDS STORY SELECT OLD TOY-->
+        <div id="kids_story_select_old_toy_page">
+
+            <div class="central_baloon" id="your_pick_CB">
+                <p>Take your pick!</p>
+            </div>
+
+            <div class="right_baloon" id="select_toy_box_RB">
+
+                <div class="central_baloon" id="toy_Baloon_cosmo">
+                    <p>COSMO</p>
+
+                    <div id="cosmo_component_container">
+
+                        <p class="old_toy_description">A racing little car that won many races with all the kids that chose him to play.</p>
+                        <img id="cosmo_image" src="src/cosmo.png"></img>
+                        <div class="central_baloon" id="cosmo_button_choice">LET'S GO!</div>
+
+                    </div>
+                    
+                </div>
+
+                <div class="central_baloon" id="toy_Baloon_sphere">
+                    <p>SPHERE</p>
+
+                    <div id="sphere_component_container">
+
+                        <p class="old_toy_description">A magnetic creation toy that taught shape-building with kids at school.</p>
+                        <img id="sphere_image" src="src/sphere.png"></img>                        
+                        <div class="central_baloon" id="sphere_button_choice">LET'S GO!</div>
+
+                    </div>
+                    
+                </div>
+
+                <div class="central_baloon" id="toy_Baloon_piecey">
+                    <p>PIECEY</p>
+
+                    <div id="piecey_component_container">
+
+                        <p class="old_toy_description">A missing puzzle piece sparking endless searches and adventures for kids.</p>
+                        <img id="piecey_image" src="src/piecey.png"></img>                        
+                        <div class="central_baloon" id="piecey_button_choice">LET'S GO!</div>
+
+                    </div>
+                    
+                </div>
+
+            </div>
+
+        </div>
+
+        <!--KIDS STORY OLD TOY SPEAK PART 1-->
+        <div id="walk_with_old_toy_page_1">
+
+            <img src="src/cosmo.png" alt="Toy-image" id="cosmo_speak_with_you_1_img">
+
+            <div class="left_baloon" id="cosmo_hello_LB">
+                <p class="cosmo_hello_LB_message">Hello, little one!</p>
+
+                <div class="central_baloon" id="hi_response_CB">
+                    <p id="hi_response_CB_message">HELLO!</p>
+                </div>
+
+            </div>
+
+            <div class="left_baloon" id="cosmo_remaind_LB">
+                <p class="cosmo_remaind_LB_message">You remind me of my first owner! see...</p>
+            </div>
+
+            <div class="left_baloon" id="cosmo_story_begin_LB">
+                <p class="cosmo_story_begin_LB_message">I was a christmas present for a little kid like you!</p>
+            </div>
+
+        </div>
+
+        <!--KIDS STORY OLD TOY SPEAK PART 2-->
+        <div id="walk_with_old_toy_page_2">
+
+            <img src="src/cosmo.png" alt="Toy-image" id="cosmo_speak_with_you_2_img">
+
+            <div class="left_baloon" id="ran_races_LB">
+                <p class="ran_races_LB_message">We ran many many races, and won them all! Years of fun flew by.</p>
+            </div>
+
+            <div class="left_baloon" id="big_day_LB">
+                <p class="big_day_LB_message">And then, the big day. I was donated to charity.</p>
+            </div>
+
+            <div class="left_baloon" id="found_myself_LB">
+                <p class="found_myself_LB_message">I found myself in an orphanage. There, my life began as a new toy and with more people!</p>
+            </div>
+
+            <div class="left_baloon" id="time_passed_LB">
+                <p class="time_passed_LB_message">As more time passed, i was the chosen one for all the race lovers!</p>
+            </div>
+
+            <div class="left_baloon" id="share_my_story_LB">
+                <p class="share_my_story_LB_message">That’s why i’m here, to share my story to the new toys! In hope that all the toys can have my luck and live the long adventurous life i had!</p>
+            </div>
+
+        </div>
+
+        <!--KIDS STORY CUBY SPEAK-->
+
+        <!--KIDS STORY SELECT NEW TOY-->
+        <div id="kids_story_select_new_toy_page">
+
+            <div class="central_baloon" id="your_choose_CB">
+                <p>Choose someone to lead the parade!</p>
+            </div>
+
+            <div class="right_baloon" id="choose_toy_box_RB">
+
+                <div class="central_baloon" id="toy_Baloon_astra">
+                    <p>ASTRA</p>
+
+                    <div id="astra_component_container">
+
+                        <p class="new_toy_description">A cosmic toy that sparked curiosity and wonder about the universe.</p>
+                        <img id="astra_image" src="src/astra.png"></img>
+                        <div class="central_baloon" id="astra_button_choice">YOU GO!</div>
+
+                    </div>
+                    
+                </div>
+
+                <div class="central_baloon" id="toy_Baloon_zenith">
+                    <p>ZENITH</p>
+
+                    <div id="zenith_component_container">
+
+                        <p class="new_toy_description">A versatile building set that wants to inspire young minds to create.</p>
+                        <img id="zenith_image" src="src/zenith.png"></img>                        
+                        <div class="central_baloon" id="zenith_button_choice">YOU GO!</div>
+
+                    </div>
+                    
+                </div>
+
+                <div class="central_baloon" id="toy_Baloon_soleil">
+                    <p>SOLEIL</p>
+
+                    <div id="soleil_component_container">
+
+                        <p class="new_toy_description">An art palette that wants every child paint their dreams in vibrant colors.</p>
+                        <img id="soleil_image" src="src/soleil.png"></img>                        
+                        <div class="central_baloon" id="soleil_button_choice">YOU GO!</div>
+
+                    </div>
+                    
+                </div>
+
+            </div>
+
+        </div>
+
+        <!--TRANSIZIONE-->
+        <div id="kids_story_watch_parade">
+
+            <div id="text_arrow_container_parade">
+                <p>Scroll up to watch the parade!</p>
+                <img src="src/Pink_Arrow.png" alt="Arrow-image">
+            </div>
+
+        </div>
+        <!--PARATA-->
+
+        <!--FINE-->
         
     </div>
-
-    <script src="scripts/mainScript.js"></script>
     
     <script src="scripts/00_shaderPurple.js"></script>
     <script src="scripts/00_shaderYellow.js"></script>
     <script src="scripts/00_shaderBlue.js"></script>
-    <script src="scripts/00_genericComponent.js"></script>
+
+    <script src="scripts/00_shadersComponent.js"></script>
+
     <script src="scripts/00_topContent.js"></script>
+
     <script src="scripts/00_animationSelectLocation.js"></script>
+    <script src="scripts/00_animationSelectOldToy.js"></script>
+    <script src="scripts/00_animationSelectNewToy.js"></script>
 
     <script src="scripts/01_welcomePage.js"></script>
     <script src="scripts/01_tutorialKids.js"></script>
@@ -213,6 +427,24 @@
     <script src="scripts/04_kidsStoryCleanCubyPage.js"></script> 
 
     <script src="scripts/05_kidsStoryCubyThankYou.js"></script> 
+
+    <script src="scripts/06_kidsStoryWalkWithCuby.js"></script> 
+
+    <script src="scripts/07_kidsStorySelectOldToy.js"></script>
+    
+    <script src="scripts/08_kidsStoryOldToSpeakyPartOne.js"></script>
+
+    <script src="scripts/09_kidsStoryOldToSpeakyPartTw0.js"></script>
+
+
+
+
+
+    <script src="scripts/12_kidsStorySelectNewToy.js"></script> 
+
+    <script src="scripts/13_kidsStoryWatchTheParade.js"></script> 
+
+    <script src="scripts/mainScript.js"></script>
 
 </body>
 

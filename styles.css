@@ -14,10 +14,6 @@ body {
     text-align: center;
     overflow-x: hidden;
     transition: background-color 0.5s ease-in-out;
-    padding-top: env(safe-area-inset-top);
-    padding-bottom: env(safe-area-inset-bottom);
-    padding-left: env(safe-area-inset-left);
-    padding-right: env(safe-area-inset-right);
 }
 
 /*SHADER*/
@@ -62,6 +58,7 @@ Area adibita al pulsante indietro e al pulsante del controllo audio
     display: flex;
     align-items: center;
     transition: transform 0.5s ease-in-out, opacity 0.2s ease-in-out, height 0.5s ease-in-out;
+    z-index: 3;
 }
 
 /*COMPONENTI*/
@@ -151,6 +148,8 @@ i colori dello sfondo e del testo al suo interno
     justify-content: center;
     align-items: center;
     align-self: center;
+    font-size: 14px;
+    line-height: 140%;
     margin-top: 1.25%;
     transition: transform 0.5s ease-in-out, opacity 0.1s ease-in-out, height 0.5s ease-in-out;
 }
@@ -165,6 +164,8 @@ i colori dello sfondo e del testo al suo interno
     justify-content: center;
     align-items: center;
     align-self: flex-start;
+    line-height: 140%;
+    font-size: 14px;
     margin-top: 1.25%;
     transition: transform 0.5s ease-in-out, height 0.5s ease-in-out;
 }
@@ -180,6 +181,8 @@ i colori dello sfondo e del testo al suo interno
     align-items: center;
     align-self: flex-end;
     margin-left: auto;
+    line-height: 140%;
+    font-size: 14px;
     margin-top: 1.25%;
     transition: transform 0.5s ease-in-out, height 0.5s ease-in-out;
 }
@@ -400,9 +403,7 @@ Pagina del tutorial
 #first_Baloon_CB{
     background: radial-gradient(#51138a, #3c0c63);
     color: #ffc423;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 20.1px;
+    font-weight: 600;
     text-align: left;
     opacity: 1;
     width: 100%;
@@ -418,9 +419,7 @@ Pagina del tutorial
 #second_Baloon_CB{
     background: radial-gradient(#51138a, #3c0c63);
     color: #ffc423;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 20.1px;
+    font-weight: 600;
     text-align: left;
     opacity: 1;
     width: 100%;
@@ -438,7 +437,6 @@ Pagina del tutorial
     color: #000000;
     font-weight: 900;
     font-size: 30px;
-    line-height: 20.1px;
     text-align: left;
     opacity: 1;
     width: 59%;
@@ -486,14 +484,12 @@ Pagina del tutorial
 #narrator_Baloon_CB{
     background: radial-gradient(#51138a, #3c0c63);
     color: #ffc423;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 20.1px;
+    font-weight: 600;
     text-align: left;
     opacity: 1;
     width: 100%;
     height: 18%;
-    transform: translateY(600%);
+    transform: translateY(0%);
     border-radius: 90px;
 }
 
@@ -504,7 +500,7 @@ Pagina del tutorial
 #choice_box_CB {
     background: radial-gradient(#51138a, #3c0c63);
     transform: translateY(1100%);
-    color: #ffc423;
+    color: #ffffff;
     font-weight: 900;
     font-size: 130%;
     width: 98%;
@@ -702,14 +698,12 @@ Pagina del tutorial
 #place_description_CB{
     background: radial-gradient(#51138a, #3c0c63);
     color: #ffc423;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 20.1px;
+    font-weight: 600;
     text-align: left;
     opacity: 1;
     width: 100%;
     height: 20%;
-    transform: translateY(600%);
+    transform: translateY(0%);
     border-radius: 90px;
 }
 
@@ -736,10 +730,8 @@ Pagina del tutorial
 
 #wait_what_CB{
     background: radial-gradient(#51138a, #3c0c63);
-    color: #ffc423;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 20.1px;
+    color: #ffffff;
+    font-weight: 600;
     text-align: center;
     opacity: 1;
     width: 100%;
@@ -754,8 +746,14 @@ Pagina del tutorial
 
 #cuby_placed{
     width: 35%;
+    transition: width 0.2s ease-in-out;
 }
 
+#cuby_placed:hover{
+    border-radius: 15px;
+    /*background-color: #4800ff3a;*/
+    width: 60%;
+}
 /*-----KIDS STORY CLEAN CUBY PART -------*/
 
 #clean_cuby_page {
@@ -788,9 +786,7 @@ Pagina del tutorial
 #oh_look_CB{
     background: radial-gradient(#51138a, #3c0c63);
     color: #ffc423;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 20.1px;
+    font-weight: 600;
     text-align: center;
     opacity: 1;
     width: 100%;
@@ -801,14 +797,13 @@ Pagina del tutorial
 
 #hurry_CB{
     background: radial-gradient(#51138a, #3c0c63);
-    color: #ffc423;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 20.1px;
+    color: #ffffff;
+    font-weight: 900;
+    font-size: 120%;
     text-align: center;
     opacity: 1;
     width: 100%;
-    height: 9.5%;
+    height: 12%;
     transform: translateY(800%);
     border-radius: 90px;
 }
@@ -833,13 +828,12 @@ Pagina del tutorial
 #wonderful_CB{
     background: radial-gradient(#51138a, #3c0c63);
     color: #ffc423;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 20.1px;
+    font-weight: 900;
     text-align: center;
     opacity: 1;
     width: 100%;
-    height: 9.5%;
+    font-size: 30px;
+    height: 12%;
     transform: translateY(800%);
     border-radius: 90px;
 }
@@ -877,6 +871,7 @@ Pagina del tutorial
     color: #FFC423;
     width: 79%;
     height: 25%;
+    font-weight: 600;
     align-items: center;
 }
 
@@ -907,7 +902,6 @@ Pagina del tutorial
     color: #000000;
     font-weight: 900;
     font-size: 30px;
-    line-height: 20.1px;
     text-align: left;
     opacity: 1;
     width: 71%;
@@ -921,4 +915,745 @@ Pagina del tutorial
 
 #letsGo_Baloon_05_CB_message{
     width: 80%;
+}
+
+#animation_RB{
+    background: radial-gradient(#5541af, #2b0954);
+    position: fixed;
+    bottom: 0%;
+    right: 0%;
+    width: 0%;
+    height: 0%;
+    justify-self: flex-start;
+    margin-top: auto;
+    z-index: 2;
+    transition: transform 2.5s ease-in-out, height 0.8s ease-in-out, width 0.8s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+/*-----KIDS STORY CUBY WALK WITH YOU-------*/
+
+#walk_with_cuby_page {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 15%;
+    left: 5%;
+    width: 90%;
+    height: 85%;
+    align-items: center;
+    transform: translateY(100%);
+    transition: transform 1s ease-in-out;
+}
+
+#cuby_walk_with_you_img{
+    width: 30%;
+    margin-left: 65%;
+    margin-top: -100%;
+    position: absolute;
+    display: none;
+    z-index: 1;
+    transition: margin-top 0.5s ease-in-out;
+}
+
+#magical_path_CB{
+    background: radial-gradient(#E6B8FD, #D688FB);
+    color: #240A98;
+    font-weight: 600;
+    text-align: center;
+    opacity: 1;
+    width: 100%;
+    height: 18%;
+    transform: translateY(0%);
+    border-radius: 90px;
+}
+
+#magical_path_CB_message{
+    width: 70%;
+}
+
+#almost_there_LB{
+    background: radial-gradient(#E6B8FD, #D688FB);
+    color: #240A98;
+    width: 79%;
+    height: 25%;
+    font-weight: 600;
+    transform: translateY(800%);
+    align-items: center;
+}
+
+.almost_there_LB_message{
+    width: 80%;
+    text-align: left;
+}
+
+#arrival_parade_CB{
+    background: radial-gradient(#E6B8FD, #D688FB);
+    color: #240A98;
+    font-weight: 600;
+    text-align: center;
+    opacity: 1;
+    width: 100%;
+    height: 20%;
+    transform: translateY(800%);
+    border-radius: 90px;
+}
+
+#arrival_parade_CB_message{
+    width: 70%;
+}
+
+#cuby_proposal_LB{
+    background: radial-gradient(#E6B8FD, #D688FB);
+    color: #240A98;
+    width: 79%;
+    height: 20%;
+    transform: translateY(800%);
+    flex-direction: column;
+}
+
+.cuby_proposal_LB_message{
+    width: 80%;
+    font-weight: 600;
+    text-align: left;
+}
+
+/*-----KIDS STORY SELECT OLD TOY-------*/
+#kids_story_select_old_toy_page {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 15%;
+    left: 5%;
+    width: 90%;
+    height: 85%;
+    align-items: center;
+    transform: translateY(100%);
+    transition: transform 1s ease-in-out;
+}
+
+#your_pick_CB {
+    background: radial-gradient(#E6B8FD, #D688FB);
+    color: #ffffff;
+    font-weight: 900;
+    font-size: 130%;
+    width: 98%;
+    height: 8%;
+}
+
+#select_toy_box_RB{
+    background: radial-gradient(#E6B8FD, #D688FB);
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 50px;
+    font-weight: 600;
+    font-size: 80%;
+    opacity: 1;
+    width: 100%;
+    height: 65%;    
+    transform: translateY(1100%);
+}
+
+/*------COSMO PART--------*/
+#toy_Baloon_cosmo{
+    background: #F8F8FF;
+    color: #000000;
+    font-weight: 900;
+    font-size: 30px;
+    opacity: 1;
+    width: 62%;
+    height: 20%;
+    position: fixed;
+    top: 10%;
+    left:7%;
+    flex-direction: column;
+    justify-content: start;
+    border-radius: 90px;
+    transition: all 0.15s ease-in-out;
+}
+
+.straight_cosmo_baloon {
+    margin-bottom: 0% !important;
+    margin-left: 0% !important;
+    border-radius: 60px !important;
+    height: 70% !important;
+    width: 67% !important;
+    text-align: start !important;
+}
+
+#cosmo_button_choice {
+    display: none;
+    background-color: #000000;
+    color: #F8F8FF;
+    font-size: 20px;
+    margin-top: 10px;
+    width: 55%;
+    height: 15%;
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+}
+
+
+/*------SPHERE PART--------*/
+#toy_Baloon_sphere{
+    background: #F8F8FF;
+    color: #000000;
+    font-weight: 900;
+    font-size: 30px;
+    opacity: 1;
+    width: 62%;
+    height: 20%;
+    position: fixed;
+    top: 40%;
+    left:30%;
+    flex-direction: column;
+    justify-content: start;
+    border-radius: 90px;
+    transition: all 0.15s ease-in-out;
+}
+
+.straight_sphere_baloon {
+    margin-bottom: 0% !important;
+    margin-left: 0% !important;
+    border-radius: 60px !important;
+    height: 70% !important;
+    width: 67% !important;
+    top: 10% !important;
+    text-align: start !important;
+}
+
+#sphere_button_choice {
+    display: none;
+    background-color: #000000;
+    color: #F8F8FF;
+    font-size: 20px;
+    margin-top: 10px;
+    width: 55%;
+    height: 15%;
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+}
+
+/*------PIECEY PART--------*/
+#toy_Baloon_piecey{
+    background: #F8F8FF;
+    color: #000000;
+    font-weight: 900;
+    font-size: 30px;
+    opacity: 1;
+    width: 62%;
+    height: 20%;
+    position: fixed;
+    top: 70%;
+    left:7%;
+    flex-direction: column;
+    justify-content: start;
+    border-radius: 90px;
+    transition: all 0.15s ease-in-out;
+}
+
+.straight_piecey_baloon {
+    margin-bottom: 0% !important;
+    margin-left: 0% !important;
+    border-radius: 60px !important;
+    height: 70% !important;
+    width: 67% !important;
+    top: 20% !important;
+    text-align: start !important;
+}
+
+#piecey_button_choice {
+    display: none;
+    background-color: #000000;
+    color: #F8F8FF;
+    font-size: 20px;
+    margin-top: 10px;
+    width: 55%;
+    height: 15%;
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+}
+
+
+/*------COMON PART--------*/
+#cosmo_image, #sphere_image {
+    display: block;
+    width: 0%;
+    height: auto;
+    margin-top: 0%;
+    opacity: 0;
+    transition: all 0.15s ease-in-out;
+}
+
+#piecey_image {
+    display: block;
+    width: 0%;
+    height: auto;
+    margin-top: -3%;
+    opacity: 0;
+    transform: rotate(30deg);
+    transition: all 0.15s ease-in-out;
+}
+
+#cosmo_component_container, #sphere_component_container, #piecey_component_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80%;
+    margin-top: -18%;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.old_toy_description{
+    font-size: 14px;
+    font-weight: 600;
+    width: 75%;
+    line-height: 140%;
+    color: #000000;
+}
+
+.movedCosmoUp {
+    transform: translateY(-70%) !important;
+    scale: 70%;
+    transition: all 0.15s ease-in-out;
+}
+
+.movedCosmoLeft {
+    transform: translateY(135%) !important;
+    scale: 70%;
+    rotate: 90deg;
+    transition: all 0.15s ease-in-out;
+}
+
+.movedSphere {
+    transform: translateY(-135%) !important;
+    scale: 70%;
+    rotate: 90deg;
+    transition: all 0.15s ease-in-out;
+}
+
+.movedPiecey {
+    transform: translateY(70%) !important;
+    scale: 70%;
+    transition: all 0.15s ease-in-out;
+}
+
+/*-----KIDS STORY OLD TOY SPEAK PART 1-----*/
+
+#walk_with_old_toy_page_1 {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 15%;
+    left: 5%;
+    width: 90%;
+    height: 85%;
+    align-items: center;
+    transform: translateY(100%);
+    transition: transform 1s ease-in-out;
+}
+
+#cosmo_speak_with_you_1_img{
+    width: 30%;
+    margin-left: 65%;
+    margin-top: -100%;
+    position: absolute;
+    display: none;
+    z-index: 1;
+    transition: margin-top 0.5s ease-in-out;
+}
+
+#cosmo_hello_LB{
+    background: radial-gradient(#E6B8FD, #D688FB);
+    color: #240A98;
+    width: 79%;
+    height: 25%;
+    font-weight: 600;
+    transform: translateY(0%);
+    align-items: center;
+}
+
+.cosmo_hello_LB_message{
+    width: 80%;
+    margin-top: -10%;
+    text-align: left;
+}
+
+#hi_response_CB{
+    background: #F8F8FF;
+    color: #000000;
+    font-weight: 900;
+    font-size: 30px;
+    text-align: center;
+    opacity: 1;
+    width: 71%;
+    height: 30%;
+    position: fixed;
+    margin-top: 30%;
+    border-radius: 90px;
+    animation: letsGoAnimation 2.5s ease-in-out alternate infinite;
+    transition: bottom 0.5s ease-in-out;
+}
+
+#hi_response_CB_message{
+    width: 80%;
+}
+
+#cosmo_remaind_LB{
+    background: radial-gradient(#E6B8FD, #D688FB);
+    color: #240A98;
+    width: 79%;
+    height: 20%;
+    transform: translateY(800%);
+    flex-direction: column;
+}
+
+.cosmo_remaind_LB_message{
+    width: 80%;
+    font-weight: 600;
+    text-align: left;
+}
+
+#cosmo_story_begin_LB{
+    background: radial-gradient(#E6B8FD, #D688FB);
+    color: #240A98;
+    width: 79%;
+    height: 20%;
+    transform: translateY(800%);
+    flex-direction: column;
+}
+
+.cosmo_story_begin_LB_message{
+    width: 80%;
+    font-weight: 600;
+    text-align: left;
+}
+
+/*-----KIDS STORY OLD TOY SPEAK PART 2-----*/
+#walk_with_old_toy_page_2 {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    background-image: url('src/car_effect_NEW.gif');
+    background-size: 80%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    top: 15%;
+    left: 5%;
+    width: 90%;
+    height: 85%;
+    align-items: center;
+    transform: translateY(100%);
+    transition: transform 1s ease-in-out;
+}
+
+#cosmo_speak_with_you_2_img{
+    width: 30%;
+    margin-left: 65%;
+    margin-top: -100%;
+    position: absolute;
+    display: none;
+    z-index: 1;
+    transition: margin-top 0.5s ease-in-out;
+}
+
+#ran_races_LB{
+    background: radial-gradient(#E6B8FD, #D688FB);
+    color: #240A98;
+    width: 79%;
+    height: 18%;
+    font-weight: 600;
+    transform: translateY(800%);
+    align-items: center;
+}
+
+.ran_races_LB_message{
+    width: 75%;
+    text-align: left;
+}
+
+#big_day_LB{
+    background: radial-gradient(#E6B8FD, #D688FB);
+    color: #240A98;
+    width: 79%;
+    height: 15%;
+    transform: translateY(800%);
+    flex-direction: column;
+}
+
+.big_day_LB_message{
+    width: 75%;
+    font-weight: 600;
+    text-align: left;
+}
+
+#found_myself_LB{
+    background: radial-gradient(#E6B8FD, #D688FB);
+    color: #240A98;
+    width: 79%;
+    height: 18%;
+    transform: translateY(800%);
+    flex-direction: column;
+}
+
+.found_myself_LB_message{
+    width: 75%;
+    font-weight: 600;
+    text-align: left;
+}
+
+#time_passed_LB{
+    background: radial-gradient(#E6B8FD, #D688FB);
+    color: #240A98;
+    width: 79%;
+    height: 20%;
+    transform: translateY(800%);
+    flex-direction: column;
+}
+
+.time_passed_LB_message{
+    width: 80%;
+    font-weight: 600;
+    text-align: left;
+}
+
+#share_my_story_LB{
+    background: radial-gradient(#E6B8FD, #D688FB);
+    color: #240A98;
+    width: 79%;
+    height: 20%;
+    transform: translateY(800%);
+    flex-direction: column;
+}
+
+.share_my_story_LB_message{
+    width: 80%;
+    font-weight: 600;
+    text-align: left;
+}
+
+/*-----KIDS STORY CUBY SPEAK-----*/
+
+/*-----KIDS STORY SELECT NEW TOY-------*/
+#kids_story_select_new_toy_page {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 15%;
+    left: 5%;
+    width: 90%;
+    height: 85%;
+    align-items: center;
+    transform: translateY(100%);
+    transition: transform 1s ease-in-out;
+}
+
+#your_choose_CB {
+    background: radial-gradient(#E6B8FD, #D688FB);
+    color: #ffffff;
+    font-weight: 900;
+    font-size: 130%;
+    width: 98%;
+    height: 15%;
+}
+
+#choose_toy_box_RB{
+    background: radial-gradient(#E6B8FD, #D688FB);
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 50px;
+    font-weight: 600;
+    font-size: 80%;
+    opacity: 1;
+    width: 100%;
+    height: 65%;    
+    transform: translateY(1100%);
+}
+
+/*------ASTRA PART--------*/
+#toy_Baloon_astra{
+    background: #F8F8FF;
+    color: #000000;
+    font-weight: 900;
+    font-size: 30px;
+    opacity: 1;
+    width: 62%;
+    height: 20%;
+    position: fixed;
+    top: 10%;
+    left:7%;
+    flex-direction: column;
+    justify-content: start;
+    border-radius: 90px;
+    transition: all 0.15s ease-in-out;
+}
+
+.straight_astra_baloon {
+    margin-bottom: 0% !important;
+    margin-left: 0% !important;
+    border-radius: 60px !important;
+    height: 70% !important;
+    width: 67% !important;
+    text-align: start !important;
+}
+
+#astra_button_choice {
+    display: none;
+    background-color: #000000;
+    color: #F8F8FF;
+    font-size: 20px;
+    margin-top: 10px;
+    width: 55%;
+    height: 15%;
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+}
+
+
+/*------ZENITH PART--------*/
+#toy_Baloon_zenith{
+    background: #F8F8FF;
+    color: #000000;
+    font-weight: 900;
+    font-size: 30px;
+    opacity: 1;
+    width: 62%;
+    height: 20%;
+    position: fixed;
+    top: 40%;
+    left:30%;
+    flex-direction: column;
+    justify-content: start;
+    border-radius: 90px;
+    transition: all 0.15s ease-in-out;
+}
+
+.straight_zenith_baloon {
+    margin-bottom: 0% !important;
+    margin-left: 0% !important;
+    border-radius: 60px !important;
+    height: 70% !important;
+    width: 67% !important;
+    top: 10% !important;
+    text-align: start !important;
+}
+
+#zenith_button_choice {
+    display: none;
+    background-color: #000000;
+    color: #F8F8FF;
+    font-size: 20px;
+    margin-top: 10px;
+    width: 55%;
+    height: 15%;
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+}
+
+/*------SOLEIL PART--------*/
+#toy_Baloon_soleil{
+    background: #F8F8FF;
+    color: #000000;
+    font-weight: 900;
+    font-size: 30px;
+    opacity: 1;
+    width: 62%;
+    height: 20%;
+    position: fixed;
+    top: 70%;
+    left:7%;
+    flex-direction: column;
+    justify-content: start;
+    border-radius: 90px;
+    transition: all 0.15s ease-in-out;
+}
+
+.straight_soleil_baloon {
+    margin-bottom: 0% !important;
+    margin-left: 0% !important;
+    border-radius: 60px !important;
+    height: 70% !important;
+    width: 67% !important;
+    top: 20% !important;
+    text-align: start !important;
+}
+
+#soleil_button_choice {
+    display: none;
+    background-color: #000000;
+    color: #F8F8FF;
+    font-size: 20px;
+    margin-top: 10px;
+    width: 55%;
+    height: 15%;
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+}
+
+
+/*------COMON PART--------*/
+#astra_image, #zenith_image {
+    display: block;
+    width: 0%;
+    height: auto;
+    margin-top: 0%;
+    opacity: 0;
+    transition: all 0.15s ease-in-out;
+}
+
+#soleil_image {
+    display: block;
+    width: 0%;
+    height: auto;
+    margin-top: -2%;
+    margin-bottom: 3%;
+    opacity: 0;
+    transform: rotate(30deg);
+    transition: all 0.15s ease-in-out;
+}
+
+#astra_component_container, #zenith_component_container, #soleil_component_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80%;
+    margin-top: -18%;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.new_toy_description{
+    font-size: 14px;
+    font-weight: 600;
+    width: 75%;
+    line-height: 140%;
+    color: #000000;
+}
+
+.movedAstraUp {
+    transform: translateY(-70%) !important;
+    scale: 70%;
+    transition: all 0.15s ease-in-out;
+}
+
+.movedAstraLeft {
+    transform: translateY(135%) !important;
+    scale: 70%;
+    rotate: 90deg;
+    transition: all 0.15s ease-in-out;
+}
+
+.movedZenith {
+    transform: translateY(-135%) !important;
+    scale: 70%;
+    rotate: 90deg;
+    transition: all 0.15s ease-in-out;
+}
+
+.movedSoleil {
+    transform: translateY(70%) !important;
+    scale: 70%;
+    transition: all 0.15s ease-in-out;
 }

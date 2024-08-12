@@ -2,7 +2,6 @@
 
 function kidsStoryStartPageComponente(){
     KidsstoryPage();
-    narrator_Baloon_CB();
     choice_box_CB();
     select_place_box_RB();
 }
@@ -15,21 +14,6 @@ function KidsstoryPage(){
         document.getElementById('kids_story').style.transform = 'translateY(0%)';
     }else if(pageStatus === 3){
         document.getElementById('kids_story').style.transform = 'translateY(-200%)';
-    }
-}
-
-function narrator_Baloon_CB(){
-    if(pageStatus === 1){
-        document.getElementById('narrator_Baloon_CB').style.transform = 'translateY(700%)';
-    }else if(pageStatus === 2){
-        if(currentPosition < 1){
-            document.getElementById('narrator_Baloon_CB').style.transform = 'translateY(700%)';
-        } else if(currentPosition > 0 && currentPosition < 200){
-            let baloonPosition = 600-(currentPosition*3);
-            document.getElementById('narrator_Baloon_CB').style.transform = 'translateY(' + (baloonPosition) + '%)';
-        } else if(currentPosition > 199){
-            document.getElementById('narrator_Baloon_CB').style.transform = 'translateY(0%)';
-        }
     }
 }
 

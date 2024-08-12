@@ -42,6 +42,8 @@ function dirtyCubyLB(){
 
 function ohLookCB(){
     if(pageStatus === 4 && !dirtyCubyIsArrived && !cubyIsClean){
+        document.getElementById('oh_look_CB').style.height = '9.5%';
+        document.getElementById('oh_look_CB').style.opacity = '1';
         if(currentPosition < 1){
             document.getElementById('oh_look_CB').style.transform = 'translateY(800%)';
         } else if(currentPosition > 0 && currentPosition < 200){
@@ -147,6 +149,8 @@ function wonderfulCB(){
     if(pageStatus === 4 && cubyIsClean){
         if(currentPosition < 1500){
             document.getElementById('wonderful_CB').style.transform = 'translateY(0%)';
+            document.getElementById('oh_look_CB').style.opacity = '0';
+            document.getElementById('oh_look_CB').style.height = '0%';
         } else if(currentPosition > 1499){
             pageStatus = 5;
             window.scrollTo(0,0);
@@ -156,6 +160,7 @@ function wonderfulCB(){
     }
 }
 
+// FUNZIONE RICHIAMATA IN 00_topContent.js NELLA FUNZIONE DEL BACKBUTTON
 function resetCleanCubyPage(){
     dirtyCubyIsArrived = false;
     cubyIsClean = false;

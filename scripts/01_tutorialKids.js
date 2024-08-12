@@ -136,7 +136,7 @@ function GoToKidsStory(){
 
         setTimeout(() => {
             //pagina kids
-            pageKidsStoryLoaded = true;
+            pageKidsTutorialLoaded = true;
           }, 1500);
         }
 }

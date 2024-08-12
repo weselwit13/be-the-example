@@ -1,12 +1,18 @@
 let pageStatus = 0;
 let currentPosition = 0;
 let locationVariant = 0;
+let oldToyVariant = 0;
+let newToyVariant = 0;
 /*
 PAGE STATUS LEGENDA
-pagestatus == 0 -> welcome page
-pagestatus == 1 -> kids tutorial
-pagestatus == 2 -> kids story
-pagestatus == 3 -> kids find cuby
+pagestatus == 01 -> welcome page e tutorial
+pagestatus == 02 -> kids story start
+pagestatus == 03 -> kids story place page
+pagestatus == 04 -> kids story clean cuby
+pagestatus == 05 -> kids story cuby thank you
+pagestatus == 06 -> kids story walk with cuby
+pagestatus == 07 -> kids story select old toy
+pagestatus == 08 -> kids story old toy story
 */
 
 let bubbleCreated = 0;
@@ -41,4 +47,19 @@ function pageScrollAnimation(currentPosition){
     kidsStoryCleanCubyComponente();
     //KIDS STORY CUBY THANK YOU
     kidsStoryCubyThankYou();
+    //KIDS STORY WALK WITH CUBY
+    kidsStoryWalkWithCuby();
+    //KIDS STORY SELECT OLD TOY
+    kidsStorySelectOldToyPageComponent();
+    //KIDS STORY OLD TOY SPEAK PART 1
+    kidsStoryOldToySpeakPageComponent();
+    //KIDS STORY OLD TOY SPEAK PART 2
+    kidsStoryOldToySpeakPageTwoComponent();
+    //KIDS STORY CUBY SPEAK
+
+    //KIDS STORY SELECT NEW TOY
+    kidsStorySelectNewToyPageComponent();
+
+    //KIDS STORY WATCH THE PARADE
+    //kidsStoryWatchTheParadePageComponent();
 }

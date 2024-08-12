@@ -2,7 +2,6 @@
 
 function kidsStoryPlacePageComponente(){
     PlacePage();
-    placeDescriptionCB();
     placeDescriptionCBMessage();
     placeCubyRB();
     cubyPlaced();
@@ -18,21 +17,6 @@ function PlacePage(){
         document.getElementById('place_page').style.transform = 'translateY(0%)';
     }else if(pageStatus > 3){
         document.getElementById('place_page').style.transform = 'translateY(-200%)';
-    }
-}
-
-function placeDescriptionCB(){
-    if(pageStatus < 3){
-        document.getElementById('place_description_CB').style.transform = 'translateY(700%)';
-    }else if(pageStatus === 3){
-        if(currentPosition < 1){
-            document.getElementById('place_description_CB').style.transform = 'translateY(700%)';
-        } else if(currentPosition > 0 && currentPosition < 200){
-            let baloonPosition = 600-(currentPosition*3);
-            document.getElementById('place_description_CB').style.transform = 'translateY(' + (baloonPosition) + '%)';
-        } else if(currentPosition > 199){
-            document.getElementById('place_description_CB').style.transform = 'translateY(0%)';
-        }
     }
 }
 
@@ -52,10 +36,7 @@ function placeDescriptionCBMessage(){
 
 function placeCubyRB(){
     //position
-    if(pageStatus < 3){
-        document.getElementById('place_cuby_RB').style.transform = 'translateY(700%)';
-        document.getElementById('place_cuby_RB').style.height = '75%';
-    }else if(pageStatus === 3){
+    if(pageStatus === 3){
         if(currentPosition < 200){
             document.getElementById('place_cuby_RB').style.transform = 'translateY(700%)';
             document.getElementById('place_cuby_RB').style.height = '75%';
@@ -103,10 +84,7 @@ function cubyPlaced(){
 }
 
 function waitWhatCB(){
-    if(pageStatus < 3){
-        document.getElementById('wait_what_CB').style.transform = 'translateY(1000%)';
-        document.getElementById('wait_what_CB').style.height = '1%';
-    }else if(pageStatus === 3){
+    if(pageStatus === 3){
         if(currentPosition < 1000){
             document.getElementById('wait_what_CB').style.transform = 'translateY(1000%)';
             document.getElementById('wait_what_CB').style.height = '1%';

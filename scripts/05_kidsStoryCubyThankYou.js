@@ -20,9 +20,9 @@ function CubyThankPage(){
 
 function cubyThankYouImg(){
     if(pageStatus === 5){
-        if(currentPosition < 300){
+        if(currentPosition < 1000){
             document.getElementById('cuby_thank_you_img').style.marginTop = '25%';
-        }else if(currentPosition > 299){
+        }else if(currentPosition > 999){
             document.getElementById('cuby_thank_you_img').style.marginTop = '95%';
         }
         
@@ -31,13 +31,43 @@ function cubyThankYouImg(){
 
 function letsGoLB(){
     if(pageStatus === 5){
-        if(currentPosition < 100){
+        if(currentPosition < 800){
             document.getElementById('lets_go_LB').style.transform = 'translateY(800%)';
-        }else if(currentPosition > 99 && currentPosition < 300){
-            let baloonPosition = 800-currentPosition*2.6;
+        }else if(currentPosition > 799 && currentPosition < 1000){
+            let baloonPosition = 800-currentPosition*0.8;
             document.getElementById('lets_go_LB').style.transform = 'translateY('+ baloonPosition +'%)';
-        }else if(currentPosition > 299){
+        }else if(currentPosition > 999){
             document.getElementById('lets_go_LB').style.transform = 'translateY(0%)';
         }
+    } 
+}
+
+document.getElementById('letsGo_Baloon_05_CB').addEventListener('click', StartWalkingWithCuby);
+
+function StartWalkingWithCuby(){
+    console.log('letsGo_Baloon_05_CB premuta');
+    console.log('PAGE STATUS: '+pageStatus);
+    if(pageStatus === 5){
+
+        //passaggio al nuovo contenuto tramite animazione del baloon
+        document.getElementById('animation_RB').style.height = '120%';
+        document.getElementById('animation_RB').style.width = '110%';
+
+        setTimeout(() => {
+            pageStatus = 6;
+            window.scrollTo(0,0);
+
+            setTimeout(() => {
+                document.getElementById('animation_RB').style.opacity = '0';
+                setTimeout(() => {
+                    document.getElementById('animation_RB').style.height = '0%';
+                    document.getElementById('animation_RB').style.width = '0%';
+                    setTimeout(() => {
+                        document.getElementById('animation_RB').style.opacity = '1';
+                      }, 1500);
+                  }, 500);
+              }, 500);
+          }, 500);
+          console.log('PAGE STATUS: '+pageStatus);
     }
 }
