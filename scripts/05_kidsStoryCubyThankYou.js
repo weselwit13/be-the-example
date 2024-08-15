@@ -13,6 +13,7 @@ function CubyThankPage(){
         document.getElementById('cuby_thank_you_page').style.transform = 'translateY(100%)';
     }else if(pageStatus === 5){
         document.getElementById('cuby_thank_you_page').style.transform = 'translateY(0%)';
+        scrollUpSign(1000);
     }else if(pageStatus > 5){
         document.getElementById('cuby_thank_you_page').style.transform = 'translateY(-200%)';
     }
@@ -36,8 +37,10 @@ function letsGoLB(){
         }else if(currentPosition > 799 && currentPosition < 1000){
             let baloonPosition = 800-currentPosition*0.8;
             document.getElementById('lets_go_LB').style.transform = 'translateY('+ baloonPosition +'%)';
+            pageEnded = false;
         }else if(currentPosition > 999){
             document.getElementById('lets_go_LB').style.transform = 'translateY(0%)';
+            pageEnded = true;
         }
     } 
 }
@@ -55,6 +58,7 @@ function StartWalkingWithCuby(){
 
         setTimeout(() => {
             pageStatus = 6;
+            pageEnded = false;
             window.scrollTo(0,0);
 
             setTimeout(() => {
@@ -64,7 +68,7 @@ function StartWalkingWithCuby(){
                     document.getElementById('animation_RB').style.width = '0%';
                     setTimeout(() => {
                         document.getElementById('animation_RB').style.opacity = '1';
-                      }, 1500);
+                      }, 1000);
                   }, 500);
               }, 500);
           }, 500);

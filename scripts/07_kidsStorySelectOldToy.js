@@ -11,6 +11,7 @@ function kidsStorySelectOldToyPage(){
         document.getElementById('kids_story_select_old_toy_page').style.transform = 'translateY(100%)';
     }else if(pageStatus === 7){
         document.getElementById('kids_story_select_old_toy_page').style.transform = 'translateY(0%)';
+        scrollUpSign(800);
     }else if(pageStatus > 7){
         document.getElementById('kids_story_select_old_toy_page').style.transform = 'translateY(-200%)';
     }

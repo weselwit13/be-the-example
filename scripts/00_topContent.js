@@ -51,22 +51,49 @@ function BackButton() {
         window.scrollTo(0,2400);
     } else if(pageStatus === 8){
         pageStatus = 7;
-        window.scrollTo(0,1200);
-    } else if(pageStatus === 9){
-        pageStatus = 7;
         hiResponsePressed = false;
-        partSpeach = 0;
-        window.scrollTo(0,1700);
+        window.scrollTo(0,1200);
+    } else if(pageStatus === 9 || pageStatus === 9.5){
+        pageStatus = 8;
+        hiResponsePressed = false;
+        pageLoaded = false;
+        partTwo = false;
+        window.scrollTo(0,0);
+    } else if(pageStatus === 10){
+        pageStatus = 8;
+        hiResponsePressed = false;
+        pageLoaded = false;
+        partTwo = false;
+        window.scrollTo(0,0);
+    } else if(pageStatus === 11){
+        pageStatus = 8;
+        hiResponsePressed = false;
+        pageLoaded = false;
+        partTwo = false;
+        window.scrollTo(0,1);
+    } else if(pageStatus === 12){
+        pageStatus = 11;
+        hiResponsePressed = false;
+        pageLoaded = false;
+        partTwo = false;
+        window.scrollTo(0,1);
+    } else if(pageStatus === 13){
+        pageStatus = 12;
+        window.scrollTo(0,0);
     }
+
 }
 
 function BackButoonAspect(){
     if(pageStatus <6){
         document.getElementById('back_button').style.backgroundColor = '#51138A';
         document.getElementById('back_img').src = 'src/back_yellow.png';
-    }else if(pageStatus > 5) {
+    }else if(pageStatus > 5 && pageStatus < 13) {
         document.getElementById('back_button').style.backgroundColor = '#E6B8FD';
         document.getElementById('back_img').src = 'src/back_blue.png';
+    } else if(pageStatus > 12) {
+        document.getElementById('back_button').style.backgroundColor = '#071B71';
+        document.getElementById('back_img').src = 'src/back_yellowFinale.png';
     }
 }
 
@@ -162,7 +189,7 @@ function audioButtonImg(){
         } else {
             document.getElementById('audio_img').src = 'src/audio_off_yellow.png';
         }
-    } else if(pageStatus > 5){
+    } else if(pageStatus > 5 && pageStatus < 13){
         document.getElementById('audio_button').style.width = '10%';
         document.getElementById('audio_button').style.height = '70%';
         document.getElementById('audio_button').style.backgroundColor = '#E6B8FD';
@@ -173,5 +200,33 @@ function audioButtonImg(){
         } else {
             document.getElementById('audio_img').src = 'src/audio_off_blue.png';
         }
+    } else if(pageStatus > 12){
+        document.getElementById('audio_button').style.width = '10%';
+        document.getElementById('audio_button').style.height = '70%';
+        document.getElementById('audio_button').style.backgroundColor = '#071B71';
+            
+        // Controlla lo stato dell'audio
+        if(audioOn){
+            document.getElementById('audio_img').src = 'src/audio_yellowFinale.png';
+        } else {
+            document.getElementById('audio_img').src = 'src/audio_off_yellowFinale.png';
+        }
+    }
+}
+
+function scrollUpSign(pageEndValue, interMin = undefined, interMax = undefined, boolean = undefined){
+    if(currentPosition < pageEndValue){
+        document.getElementById('arrow_scroll_up_sign_img').style.opacity = '1';
+        if(boolean === undefined){
+            if(currentPosition > interMin && currentPosition < interMax)
+                document.getElementById('arrow_scroll_up_sign_img').style.opacity = '0';
+        } else{
+            if(boolean)
+                document.getElementById('arrow_scroll_up_sign_img').style.opacity = '1';
+            else
+                document.getElementById('arrow_scroll_up_sign_img').style.opacity = '0';
+        }
+    } else {
+        document.getElementById('arrow_scroll_up_sign_img').style.opacity = '0';
     }
 }

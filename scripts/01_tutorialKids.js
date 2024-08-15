@@ -11,11 +11,12 @@ function tutorialKidsPageComponent(){
 
 //-----COMPONENTI TUTORIAL KIDS PAGE
 function tutorialKidsPage(){
-    if(pageStatus === 0){
+    if(pageStatus < 1){
         document.getElementById('tutorial_kids_page').style.transform = 'translateY(100%)';
     }else if(pageStatus === 1){
         document.getElementById('tutorial_kids_page').style.transform = 'translateY(0%)';
-    } else if(pageStatus === 2){
+        scrollUpSign(1200);
+    } else if(pageStatus > 1){
         document.getElementById('tutorial_kids_page').style.transform = 'translateY(-200%)';
     }
 }

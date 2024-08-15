@@ -44,6 +44,12 @@ canvas {
     transition: opacity 1s ease-in-out;
 }
 
+#glCanvasYellowFinale{
+    opacity: 0;
+    scale: 101%;
+    transition: opacity 1s ease-in-out;
+}
+
 
 /*
 Area adibita al pulsante indietro e al pulsante del controllo audio
@@ -128,6 +134,14 @@ serve per dare la giusta spaziatura ai bottoni
     transition: opacity 0.5s ease-in-out;
 }
 
+/*freccia che avverte che bisogna scrollare*/
+#arrow_scroll_up_sign_img{
+    position: fixed;
+    bottom: 5%;
+    right: 8%;
+    z-index: 3;
+    transition: opacity 0.5s ease-in-out;
+}
 
 /*
 baloon generici
@@ -167,7 +181,7 @@ i colori dello sfondo e del testo al suo interno
     line-height: 140%;
     font-size: 14px;
     margin-top: 1.25%;
-    transition: transform 0.5s ease-in-out, height 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out, height 0.5s ease-in-out, opacity 0.1s ease-in-out;
 }
 
 /*---- RB ----*/
@@ -184,7 +198,13 @@ i colori dello sfondo e del testo al suo interno
     line-height: 140%;
     font-size: 14px;
     margin-top: 1.25%;
-    transition: transform 0.5s ease-in-out, height 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out, height 0.5s ease-in-out, opacity 0.1s ease-in-out;
+}
+
+.alternative_style{
+    font-size: 15px;
+    font-weight: 900;
+    color: #F8F8FF;
 }
 
 /*
@@ -202,9 +222,7 @@ Pagina iniziale
 /*---------------------------------------------------------------------------------------------------*/
 /*---------------------------------------------------------------------------------------------------*/
 
-/*
-Pagina di benvenuto
-*/
+/*---------01 WELCOME PAGE--------*/
 #welcome_page{
     position: fixed;
     display: flex;
@@ -355,9 +373,7 @@ Box della sezione kids and adults
 /*---------------------------------------------------------------------------------------------------*/
 
 
-/*
-Pagina del tutorial
-*/
+/*---------01 TUTORIAL PAGE---------*/
 #tutorial_kids_page {
     position: fixed;
     display: flex;
@@ -467,7 +483,7 @@ Pagina del tutorial
     width: 80%;
 }
 
-/*----------KIDS STORY START-----------*/
+/*---------- 02 KIDS STORY START-----------*/
 #kids_story {
     position: fixed;
     display: flex;
@@ -680,7 +696,7 @@ Pagina del tutorial
 }
 
 
-/*-----KIDS STORY PLACE PART -------*/
+/*----- 03 KIDS STORY PLACE PART -------*/
 
 #place_page {
     position: fixed;
@@ -754,7 +770,7 @@ Pagina del tutorial
     /*background-color: #4800ff3a;*/
     width: 60%;
 }
-/*-----KIDS STORY CLEAN CUBY PART -------*/
+/*----- 04 KIDS STORY CLEAN CUBY PART -------*/
 
 #clean_cuby_page {
     position: fixed;
@@ -842,7 +858,7 @@ Pagina del tutorial
     width: 70%;
 }
 
-/*-----KIDS STORY CUBY THANK YOU-------*/
+/*----- 05 KIDS STORY CUBY THANK YOU-------*/
 
 #cuby_thank_you_page {
     position: fixed;
@@ -930,7 +946,7 @@ Pagina del tutorial
     transition: transform 2.5s ease-in-out, height 0.8s ease-in-out, width 0.8s ease-in-out, opacity 0.5s ease-in-out;
 }
 
-/*-----KIDS STORY CUBY WALK WITH YOU-------*/
+/*----- 06 KIDS STORY CUBY WALK WITH YOU-------*/
 
 #walk_with_cuby_page {
     position: fixed;
@@ -1017,7 +1033,7 @@ Pagina del tutorial
     text-align: left;
 }
 
-/*-----KIDS STORY SELECT OLD TOY-------*/
+/*----- 07 KIDS STORY SELECT OLD TOY-------*/
 #kids_story_select_old_toy_page {
     position: fixed;
     display: flex;
@@ -1239,7 +1255,7 @@ Pagina del tutorial
     transition: all 0.15s ease-in-out;
 }
 
-/*-----KIDS STORY OLD TOY SPEAK PART 1-----*/
+/*----- 08 KIDS STORY OLD TOY SPEAK PART 1-----*/
 
 #walk_with_old_toy_page_1 {
     position: fixed;
@@ -1330,15 +1346,11 @@ Pagina del tutorial
     text-align: left;
 }
 
-/*-----KIDS STORY OLD TOY SPEAK PART 2-----*/
+/*----- 09 KIDS STORY OLD TOY SPEAK PART 2-----*/
 #walk_with_old_toy_page_2 {
     position: fixed;
     display: flex;
     flex-direction: column;
-    background-image: url('src/car_effect_NEW.gif');
-    background-size: 80%;
-    background-position: bottom;
-    background-repeat: no-repeat;
     top: 15%;
     left: 5%;
     width: 90%;
@@ -1358,13 +1370,24 @@ Pagina del tutorial
     transition: margin-top 0.5s ease-in-out;
 }
 
+#cosmo_background_img{
+    width: 100%;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0)80%);
+}
+
+.cosmo_background{
+    display: flex;
+    position: fixed;
+    bottom: -55%;
+}
+
 #ran_races_LB{
     background: radial-gradient(#E6B8FD, #D688FB);
     color: #240A98;
     width: 79%;
     height: 18%;
     font-weight: 600;
-    transform: translateY(800%);
+    transform: translateY(0%);
     align-items: center;
 }
 
@@ -1377,7 +1400,7 @@ Pagina del tutorial
     background: radial-gradient(#E6B8FD, #D688FB);
     color: #240A98;
     width: 79%;
-    height: 15%;
+    height: 14%;
     transform: translateY(800%);
     flex-direction: column;
 }
@@ -1433,9 +1456,178 @@ Pagina del tutorial
     text-align: left;
 }
 
-/*-----KIDS STORY CUBY SPEAK-----*/
+/*-----10 KIDS STORY CUBY SPEAK-----*/
+#cuby_speak_page {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 15%;
+    left: 5%;
+    width: 90%;
+    height: 85%;
+    align-items: center;
+    transform: translateY(100%);
+    transition: transform 1s ease-in-out;
+}
 
-/*-----KIDS STORY SELECT NEW TOY-------*/
+#cuby_speak_page_img{
+    width: 30%;
+    margin-left: 65%;
+    margin-top: 60%;
+    position: absolute;
+    z-index: 1;
+    display: block;
+    transition: margin-top 0.5s ease-in-out;
+}
+
+#a_problem_CB{
+    background: radial-gradient(#E6B8FD, #D688FB);
+    color: #240A98;
+    font-weight: 600;
+    text-align: center;
+    flex-direction: column;
+    opacity: 1;
+    width: 100%;
+    height: 22%;
+    transform: translateY(0%);
+    border-radius: 90px;
+}
+
+.a_problem_CB_message_1{
+    width: 70%;
+}
+
+.a_problem_CB_message_2{
+    margin-top: -2%;
+    width: 70%;
+}
+
+#allarm_message_container{
+    opacity: 0;
+}
+
+#allarm_message_left{
+    position: fixed;
+    left: 0%;
+    z-index: 3;
+    top: 16%;
+    width: 50%;
+    color: #F8F8FF;
+    font-weight: 900;
+    font-size: 17px;
+    text-shadow: 2px 2px 4px #00000080;
+    animation: messageLeftAnimation 2.2s ease-in-out alternate infinite;
+}
+
+ /* Definisci l'animazione del messaggio di sinistra*/
+ @keyframes messageLeftAnimation {
+    0% {
+        margin-top: 10%;
+        transform: rotate(-5deg);
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    100% {
+        margin-top: 5%;
+        transform: rotate(5deg);
+        opacity: 1;
+    }
+}
+
+#allarm_message_right{
+    position: fixed;
+    left: 55%;
+    z-index: 3;
+    top: 15%;
+    width: 50%;
+    color: #F8F8FF;
+    font-weight: 900;
+    font-size: 17px;
+    text-shadow: 2px 2px 4px #00000080;
+    animation: messageRightAnimation 2.5s ease-in-out alternate infinite;
+}
+
+/* Definisci l'animazione del messaggio di destra*/
+@keyframes messageRightAnimation {
+    0% {
+        margin-top: 5%;
+        transform: rotate(-5deg);
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    100% {
+        margin-top: 10%;
+        transform: rotate(5deg);
+        opacity: 1;
+    }
+}
+
+#whats_happening_LB{
+    background: radial-gradient(#E6B8FD, #D688FB);
+    color: #240A98;
+    width: 79%;
+    height: 10%;
+    font-weight: 600;
+    transform: translateY(800%);
+    align-items: center;
+}
+
+.whats_happening_LB_message{
+    width: 80%;
+    text-align: left;
+}
+
+#leader_left_LB{
+    background: radial-gradient(#E6B8FD, #D688FB);
+    color: #240A98;
+    width: 79%;
+    height: 16%;
+    transform: translateY(800%);
+    flex-direction: column;
+}
+
+.leader_left_LB_message{
+    width: 80%;
+    font-weight: 600;
+    text-align: left;
+}
+
+#look_at_you_CB{
+    background: radial-gradient(#E6B8FD, #D688FB);
+    color: #240A98;
+    font-weight: 600;
+    text-align: center;
+    opacity: 1;
+    width: 100%;
+    height: 14%;
+    transform: translateY(800%);
+    border-radius: 90px;
+}
+
+#look_at_you_CB_message{
+    width: 70%;
+}
+
+#lets_choose_LB{
+    background: radial-gradient(#E6B8FD, #D688FB);
+    color: #240A98;
+    width: 79%;
+    height: 20%;
+    transform: translateY(800%);
+    flex-direction: column;
+}
+
+.lets_choose_LB_message{
+    width: 80%;
+    font-weight: 600;
+    text-align: left;
+}
+
+/*-----11 KIDS STORY SELECT NEW TOY-------*/
 #kids_story_select_new_toy_page {
     position: fixed;
     display: flex;
@@ -1511,7 +1703,15 @@ Pagina del tutorial
     transition: all 0.5s ease-in-out;
 }
 
-
+#astra_image {
+    display: block;
+    width:0%;
+    height: auto;
+    margin-top: -15%;
+    opacity: 0;
+    rotate: 45deg;
+    transition: all 0.15s ease-in-out;
+}
 /*------ZENITH PART--------*/
 #toy_Baloon_zenith{
     background: #F8F8FF;
@@ -1552,6 +1752,14 @@ Pagina del tutorial
     transition: all 0.5s ease-in-out;
 }
 
+#zenith_image {
+    display: block;
+    width: 0%;
+    height: auto;
+    margin-top: 0%;
+    opacity: 0;
+    transition: all 0.15s ease-in-out;
+}
 /*------SOLEIL PART--------*/
 #toy_Baloon_soleil{
     background: #F8F8FF;
@@ -1592,17 +1800,6 @@ Pagina del tutorial
     transition: all 0.5s ease-in-out;
 }
 
-
-/*------COMON PART--------*/
-#astra_image, #zenith_image {
-    display: block;
-    width: 0%;
-    height: auto;
-    margin-top: 0%;
-    opacity: 0;
-    transition: all 0.15s ease-in-out;
-}
-
 #soleil_image {
     display: block;
     width: 0%;
@@ -1613,6 +1810,7 @@ Pagina del tutorial
     transform: rotate(30deg);
     transition: all 0.15s ease-in-out;
 }
+/*------COMON PART--------*/
 
 #astra_component_container, #zenith_component_container, #soleil_component_container {
     display: flex;
@@ -1656,4 +1854,181 @@ Pagina del tutorial
     transform: translateY(70%) !important;
     scale: 70%;
     transition: all 0.15s ease-in-out;
+}
+
+/*-----12 KIDS STORY WATCH THE PARADE-------*/
+#kids_story_watch_parade {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 15%;
+    left: 5%;
+    width: 90%;
+    height: 85%;
+    align-items: center;
+    transform: translateY(100%);
+}
+
+#text_arrow_container_parade{
+    color:#E6B8FD;
+    font-weight: 600;
+    margin-top: 60%;
+}
+
+#toys_img_container{
+    display: flex;
+    margin-top: 100%;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+}
+
+#first_toy_img{
+    width: 50%;
+    animation: toysparadeAnimation 2.1s ease-in-out alternate infinite;
+}
+
+#cuby_toy_img{
+    width: 40%;
+    margin-left: 65%;
+    margin-top: 0%;
+    animation: toysparadeAnimation 2.5s ease-in-out alternate infinite;
+}
+
+#second_toy_img{
+    width: 50%;
+    margin-right: 40%;
+    margin-top: -20%;
+    animation: toysparadeAnimation 2.6s ease-in-out alternate infinite;
+}
+
+#third_toy_img{
+    width: 25%;
+    margin-left: 55%;
+    margin-top: -10%;
+    animation: toysparadeAnimation 2.2s ease-in-out alternate infinite;
+}
+
+#fourth_toy_img{
+    width: 45%;
+    margin-right: 60%;
+    margin-top: -10%;
+    animation: toysparadeAnimation 2.4s ease-in-out alternate infinite;
+}
+
+#fifth_toy_img{
+    width: 40%;
+    margin-left: 60%;
+    margin-top: -5%;
+    animation: toysparadeAnimation 2.3s ease-in-out alternate infinite;
+}
+
+#sixth_toy_img{
+    width: 25%;
+    margin-right: 45%;
+    margin-top: -20%;
+    rotate: 45deg;
+    animation: toysparadeAnimation 2.0s ease-in-out alternate infinite;
+}
+
+/* Definisci l'animazione del messaggio di destra*/
+@keyframes toysparadeAnimation {
+    0% {
+        transform: rotate(-5deg);
+    }
+    25%{
+        transform: rotate(-5deg);
+    }
+    75%{
+        transform: rotate(5deg);
+    }
+    100% {
+        transform: rotate(5deg);
+    }
+}
+
+/*-----14 KIDS STORY WATCH THE PARADE-------*/
+#final_page {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 15%;
+    left: 5%;
+    width: 90%;
+    height: 85%;
+    align-items: center;
+    transform: translateY(100%);
+    transition: transform 1s ease-in-out;
+}
+
+#congratulations_CB {
+    background: radial-gradient(#001D7A, #05175D);
+    color: #FFEC0D;
+    font-weight: 900;
+    font-size: 130%;
+    width: 100%;
+    height: 8%;
+    transform: translateY(0%);
+}
+
+#you_are_CB{
+    color: #001D7A;
+    font-weight: 600;
+    width: 100%;
+    height: 8%;
+    transform: translateY(0%);
+}
+
+#badge_container{
+    width: 80%;
+    height: auto;
+    position: fixed;
+    animation: badgeContainerAnimation 2.5s ease-in-out alternate infinite;
+}
+
+@keyframes badgeContainerAnimation {
+    0% {
+        margin-top: 17%;
+        margin-right: 2%;
+        transform: rotate(-15deg) rotate3d(1,1,1, 20deg);
+    }
+    100% {
+        margin-top: 10%;
+        margin-right: 5%;
+        transform: rotate(-5deg) rotate3d(1,1,1, -20deg);
+    }
+}
+
+#double_message_CB{
+    width: 100%;
+    height: 8%;
+    flex-direction: column;
+    transform: translateY(0%);
+}
+
+#double_message_CB_first_message{
+    color: #000000;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+#double_message_CB_second_message{
+    color: #001D7A;
+    font-weight: 900;
+    font-size: 18px;
+    margin-top: -5%;
+}
+
+#discover_more_CB{
+    color: #000000;
+    font-weight: 500;
+    width: 100%;
+    height: 8%;
+    transform: translateY(0%);
+    flex-direction: row;
+}
+
+#discover_arrow_img{
+    width: 5%;
+    margin-left: 3%;
 }

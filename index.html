@@ -24,9 +24,14 @@
 
     <canvas id="glCanvasBlue"></canvas>
 
+    <canvas id="glCanvasYellowFinale"></canvas>
+
     <!--COMPONENTI GENERICI-->
     <!--baloon che viene usato per il passaggio tra i ringrazziamenti di cuby e l'inizio della passeggiata con cuby-->
     <div class="right_baloon" id="animation_RB"></div>
+
+    <!--SCROLL UP SIGN-->
+    <img src="src/arrow_scroll_up.png" alt="sign-image" id="arrow_scroll_up_sign_img">
 
     <!--BARRA IN ALTO-->
     <div id="top_content">
@@ -49,7 +54,7 @@
 
     <!--PAGINE-->
     <div>
-        <!--START-->
+        <!--01 START-->
         <div id="start">
             <div id="text_arrow_container">
                 <p>Scroll up to interact</p>
@@ -57,7 +62,7 @@
             </div>
         </div>
 
-        <!--WELCOME PAGE-->
+        <!--01 WELCOME PAGE-->
         <div id="welcome_page">
 
             <div class="left_baloon" id="be_example_LB">
@@ -83,7 +88,7 @@
 
         </div>
 
-        <!--KIDS PART TUTORIAL-->
+        <!--01 KIDS PART TUTORIAL-->
         <div id="tutorial_kids_page">
 
             <div class="central_baloon" id="hello_box_CB">
@@ -110,7 +115,7 @@
 
         </div>
 
-        <!--KIDS STORY START-->
+        <!--02 KIDS STORY START-->
         <div id="kids_story">
 
             <div class="central_baloon" id="narrator_Baloon_CB">
@@ -145,7 +150,7 @@
 
         </div>
 
-        <!--KIDS STORY SELECT PLACE-->
+        <!--03 KIDS STORY SELECT PLACE-->
         <div id="place_page">
             <div class="central_baloon" id="place_description_CB">
                 <p id="place_description_CB_message">description message</p>
@@ -158,11 +163,11 @@
             </div>
 
             <div class="central_baloon" id="wait_what_CB">
-                <p id="wait_what_CB_message">Wait, what's that? <br> Click on it and see what it is!</p>
+                <p id="wait_what_CB_message">Wait, what’s that? <br> Click on it and see what it is!</p>
             </div>
         </div>
 
-        <!--KIDS STORY CLEAN CUBY-->
+        <!--04 KIDS STORY CLEAN CUBY-->
         <div id="clean_cuby_page">
 
             <div class="left_baloon" id="dirty_cuby_LB">
@@ -170,7 +175,7 @@
             </div>
 
             <div class="central_baloon" id="oh_look_CB">
-                <p id="oh_look_hurry_CB_message">Oh, look! <br> It's a toy! But, it's all dirty...</p>
+                <p id="oh_look_hurry_CB_message">Oh, look! <br> It’s a toy! But, it’s all dirty...</p>
             </div>
 
             <div class="central_baloon" id="hurry_CB">
@@ -191,7 +196,7 @@
 
         </div>
 
-        <!--KIDS STORY CUBY THANK YOU-->
+        <!--05 KIDS STORY CUBY THANK YOU-->
         <div id="cuby_thank_you_page">
 
             <img src="src/4.png" alt="Toy-image" id="cuby_thank_you_img">
@@ -210,7 +215,7 @@
 
         </div>
 
-        <!--KIDS STORY WALK WITH CUBY-->
+        <!--06 KIDS STORY WALK WITH CUBY-->
         <div id="walk_with_cuby_page">
 
             <img src="src/4.png" alt="Toy-image" id="cuby_walk_with_you_img">
@@ -233,7 +238,7 @@
 
         </div>
 
-        <!--KIDS STORY SELECT OLD TOY-->
+        <!--07 KIDS STORY SELECT OLD TOY-->
         <div id="kids_story_select_old_toy_page">
 
             <div class="central_baloon" id="your_pick_CB">
@@ -285,7 +290,7 @@
 
         </div>
 
-        <!--KIDS STORY OLD TOY SPEAK PART 1-->
+        <!--08 KIDS STORY OLD TOY SPEAK PART 1-->
         <div id="walk_with_old_toy_page_1">
 
             <img src="src/cosmo.png" alt="Toy-image" id="cosmo_speak_with_you_1_img">
@@ -309,7 +314,7 @@
 
         </div>
 
-        <!--KIDS STORY OLD TOY SPEAK PART 2-->
+        <!--09 KIDS STORY OLD TOY SPEAK PART 2-->
         <div id="walk_with_old_toy_page_2">
 
             <img src="src/cosmo.png" alt="Toy-image" id="cosmo_speak_with_you_2_img">
@@ -331,14 +336,51 @@
             </div>
 
             <div class="left_baloon" id="share_my_story_LB">
-                <p class="share_my_story_LB_message">That’s why i’m here, to share my story to the new toys! In hope that all the toys can have my luck and live the long adventurous life i had!</p>
+                <p class="share_my_story_LB_message">That's why i'm here, to share my story to the new toys! In hope that all the toys can have my luck and live the long adventurous life i had!</p>
+            </div>
+
+            <div class="cosmo_background">
+                <img src="src/car_effect_NEW.gif" alt="Cosmo_Background" id="cosmo_background_img">
             </div>
 
         </div>
 
-        <!--KIDS STORY CUBY SPEAK-->
+        <!--10 KIDS STORY CUBY SPEAK-->
+        <div id="cuby_speak_page">
 
-        <!--KIDS STORY SELECT NEW TOY-->
+            <img src="src/4.png" alt="Toy-image" id="cuby_speak_page_img">
+
+            <div id="allarm_message_container">
+
+                <p id="allarm_message_left"></p>
+                <p id="allarm_message_right"></p>
+                
+            </div>
+
+            <div class="central_baloon" id="a_problem_CB">
+                <p class="a_problem_CB_message_1">As you move forward, you reach the front of the parade where the new toys are waiting. </p>
+                <p class="a_problem_CB_message_2">However, there seems to be a problem...</p>
+            </div>
+
+            <div class="left_baloon" id="whats_happening_LB">
+                <p class="whats_happening_LB_message">What is happening here?</p>
+            </div>
+
+            <div class="left_baloon" id="leader_left_LB">
+                <p class="leader_left_LB_message">The leader of this year found a kid! Now we don't have one of us to guide the parade!</p>
+            </div>
+
+            <div class="central_baloon" id="look_at_you_CB">
+                <p id="look_at_you_CB_message">The toys look at you, their eyes filled with hope and anticipation.</p>
+            </div>
+
+            <div class="left_baloon" id="lets_choose_LB">
+                <p class="lets_choose_LB_message">Don't worry, we can help them! Let's choose a new toy to lead the parade.<br> Who will it be?</p>
+            </div>
+
+        </div>
+
+        <!--11 KIDS STORY SELECT NEW TOY-->
         <div id="kids_story_select_new_toy_page">
 
             <div class="central_baloon" id="your_choose_CB">
@@ -394,20 +436,59 @@
         <div id="kids_story_watch_parade">
 
             <div id="text_arrow_container_parade">
-                <p>Scroll up to watch the parade!</p>
+                <p>Scroll up to follow the parade!</p>
                 <img src="src/Pink_Arrow.png" alt="Arrow-image">
+            </div>
+
+            <div id="toys_img_container">
+                <img src="" alt="toy-image" id="first_toy_img">
+
+                <img src="src/4.png" alt="toy-image" id="cuby_toy_img">
+
+                <img src="" alt="toy-image" id="second_toy_img">
+
+                <img src="" alt="toy-image" id="third_toy_img">
+
+                <img src="src/cosmo.png" alt="toy-image" id="fourth_toy_img">
+
+                <img src="src/sphere.png" alt="toy-image" id="fifth_toy_img">
+
+                <img src="src/piecey.png" alt="toy-image" id="sixth_toy_img">
             </div>
 
         </div>
         <!--PARATA-->
 
         <!--FINE-->
-        
+        <div id="final_page">
+
+            <div class="central_baloon" id="congratulations_CB">
+                <p>Congratulations!</p>
+            </div>
+
+            <div class="central_baloon" id="you_are_CB">
+                <p>You are a...</p>
+            </div>
+
+            <div class="central_baloon" id="badge_container"></div>
+
+            <div class="central_baloon" id="double_message_CB">
+                <p id="double_message_CB_first_message">Thank you for joining this adventure <br>and for</p>
+                <p id="double_message_CB_second_message">Being an example!</p>
+            </div>
+
+            <div class="central_baloon" id="discover_more_CB">
+                <p id="discover_more_CB_message">Discover more</p>
+                <img src="src/discover_arrow.png" alt="toy-image" id="discover_arrow_img">
+            </div>
+
+        </div>
     </div>
     
     <script src="scripts/00_shaderPurple.js"></script>
     <script src="scripts/00_shaderYellow.js"></script>
     <script src="scripts/00_shaderBlue.js"></script>
+    <script src="scripts/00_shaderYellowFinale.js"></script>
 
     <script src="scripts/00_shadersComponent.js"></script>
 
@@ -436,13 +517,15 @@
 
     <script src="scripts/09_kidsStoryOldToSpeakyPartTw0.js"></script>
 
+    <script src="scripts/10_cubySpeakPage.js"></script>
+
+    <script src="scripts/11_kidsStorySelectNewToy.js"></script> 
+
+    <script src="scripts/12_kidsStoryWatchTheParade.js"></script> 
 
 
 
-
-    <script src="scripts/12_kidsStorySelectNewToy.js"></script> 
-
-    <script src="scripts/13_kidsStoryWatchTheParade.js"></script> 
+    <script src="scripts/14_finalPage.js"></script> 
 
     <script src="scripts/mainScript.js"></script>
 

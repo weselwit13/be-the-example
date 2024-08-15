@@ -15,6 +15,7 @@ function PlacePage(){
         document.getElementById('place_page').style.transform = 'translateY(100%)';
     }else if(pageStatus === 3){
         document.getElementById('place_page').style.transform = 'translateY(0%)';
+        scrollUpSign(1200);
     }else if(pageStatus > 3){
         document.getElementById('place_page').style.transform = 'translateY(-200%)';
     }

@@ -13,12 +13,14 @@ function kidsStoryCleanCubyComponente(){
 
 let dirtyCubyIsArrived = false;
 let cubyIsClean = false;
+let showSign = false;
 
 function CleanCubyPage(){
     if(pageStatus < 4){
         document.getElementById('clean_cuby_page').style.transform = 'translateY(100%)';
     }else if(pageStatus === 4){
         document.getElementById('clean_cuby_page').style.transform = 'translateY(0%)';
+        scrollUpSign(1500, 0, 0, !showSign);
     }else if(pageStatus > 4){
         document.getElementById('clean_cuby_page').style.transform = 'translateY(-200%)';
     }
@@ -79,6 +81,7 @@ function toyToCleanRB(){
             document.getElementById('toy_to_clean_RB').style.transform = 'translateY(0%)';
             dirtyCubyIsArrived = true;
             window.scrollTo(0,1);
+            showSign = true
             document.body.style.overflow = 'hidden';
         }
     }
@@ -114,6 +117,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             document.body.style.overflow = '';
             dirtyCubyIsArrived = false;
             cubyIsClean = true;
+            showSign = false
         }
         touchStartY = touchEndY; // reset the start position to the current position
       }

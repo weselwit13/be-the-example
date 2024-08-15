@@ -223,7 +223,7 @@ function astraBaloonPressed() {
     //rende visibile l'immagine
     astraContainer.style.opacity = '1';
     astraImage.style.opacity = '1';
-    astraImage.style.width = '55%';
+    astraImage.style.width = '25%';
 
     //rende visibile e abilita il bottone
     astraChosen.style.display = 'flex';

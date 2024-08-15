@@ -1,5 +1,3 @@
-let hiResponsePressed = false;
-
 //----------FUNCTION KIDS STORYWALK WITH COSMO--------------
 
 function kidsStoryOldToySpeakPageComponent(){
@@ -7,6 +5,7 @@ function kidsStoryOldToySpeakPageComponent(){
     cosmoSpeakWithYouOneImg();
     cosmoRemaindLB();
     cosmoStoryBeginLB();
+    hiResponseCB();
 }
 
 //-------KIDS STORY WALK WITH COSMO COMPONENT-----------
@@ -16,6 +15,7 @@ function kidsStoryOldToySpeakPage(){
         document.getElementById('walk_with_old_toy_page_1').style.transform = 'translateY(100%)';
     }else if(pageStatus === 8){
         document.getElementById('walk_with_old_toy_page_1').style.transform = 'translateY(0%)';
+        scrollUpSign(3000, 0, 0, hiResponsePressed);
     }else if(pageStatus > 8){
         document.getElementById('walk_with_old_toy_page_1').style.transform = 'translateY(-200%)';
     }
@@ -65,6 +65,9 @@ function cosmoStoryBeginLB(){
             document.getElementById('cosmo_story_begin_LB').style.transform = 'translateY(0%)';
         } else if(currentPosition > 2999 && hiResponsePressed){
             pageStatus = 9;
+            setTimeout(() => {
+                pageLoaded = true;
+              }, 100);
             window.scrollTo(0,0);
             console.log(pageStatus);
         }   
@@ -79,5 +82,17 @@ function StartTalkWithCosmo(){
         hiResponsePressed = true;
         window.scrollTo(0,850);
         
+    }
+}
+
+function hiResponseCB(){
+    if(hiResponsePressed){
+        document.getElementById('hi_response_CB').style.background = '#240A98';
+        document.getElementById('hi_response_CB').style.color = '#E6B8FD';
+        document.getElementById('hi_response_CB').style.animationPlayState = 'paused';
+    } else {
+        document.getElementById('hi_response_CB').style.background = '#F8F8FF';
+        document.getElementById('hi_response_CB').style.color = '#000000';
+        document.getElementById('hi_response_CB').style.animationPlayState = 'running';
     }
 }

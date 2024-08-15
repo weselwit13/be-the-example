@@ -8,11 +8,12 @@ function kidsStoryStartPageComponente(){
 
 //-----COMPONENTI KIDS STORY
 function KidsstoryPage(){
-    if(pageStatus === 1 || pageStatus === 0){
+    if(pageStatus < 2){
         document.getElementById('kids_story').style.transform = 'translateY(100%)';
     }else if(pageStatus === 2){
         document.getElementById('kids_story').style.transform = 'translateY(0%)';
-    }else if(pageStatus === 3){
+        scrollUpSign(800);
+    }else if(pageStatus > 2){
         document.getElementById('kids_story').style.transform = 'translateY(-200%)';
     }
 }

@@ -12,7 +12,8 @@ function welcomePageComponent(){
 function welcomePage(){
     if(pageStatus === 0){
         document.getElementById('welcome_page').style.transform = 'translateY(0%)';
-    }else if(pageStatus === 1){
+        scrollUpSign(1700);
+    }else if(pageStatus > 0){
         document.getElementById('welcome_page').style.transform = 'translateY(-200%)';
     }
 }

@@ -1,8 +1,11 @@
 let pageStatus = 0;
 let currentPosition = 0;
+
 let locationVariant = 0;
 let oldToyVariant = 0;
 let newToyVariant = 0;
+
+let hiResponsePressed = false;
 /*
 PAGE STATUS LEGENDA
 pagestatus == 01 -> welcome page e tutorial
@@ -56,10 +59,13 @@ function pageScrollAnimation(currentPosition){
     //KIDS STORY OLD TOY SPEAK PART 2
     kidsStoryOldToySpeakPageTwoComponent();
     //KIDS STORY CUBY SPEAK
-
+    CubySpeakPageComponent();
     //KIDS STORY SELECT NEW TOY
     kidsStorySelectNewToyPageComponent();
-
     //KIDS STORY WATCH THE PARADE
-    //kidsStoryWatchTheParadePageComponent();
+    kidsStoryWatchTheParadePageComponent();
+    //KIDS STORY PARADE
+
+    //FINAL PAGE
+    finalPageComponent();
 }

@@ -15,6 +15,7 @@ function WalkWithCubyPage(){
         document.getElementById('walk_with_cuby_page').style.transform = 'translateY(100%)';
     }else if(pageStatus === 6){
         document.getElementById('walk_with_cuby_page').style.transform = 'translateY(0%)';
+        scrollUpSign(3000);
     }else if(pageStatus > 6){
         document.getElementById('walk_with_cuby_page').style.transform = 'translateY(-200%)';
     }
