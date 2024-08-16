@@ -1034,7 +1034,7 @@ Box della sezione kids and adults
     text-align: center;
     opacity: 1;
     width: 100%;
-    height: 18%;
+    height: 20%;
     transform: translateY(0%);
     border-radius: 90px;
 }
@@ -1987,6 +1987,58 @@ Box della sezione kids and adults
     height: 85%;
     align-items: center;
     transform: translateY(100%);
+    transition: transform 3s ease-in-out ;
+}
+
+#following_parade_CB{
+    background: radial-gradient(#001D7A, #05175D);
+    color: #FFEC0D;
+    font-weight: 600;
+    text-align: center;
+    opacity: 1;
+    width: 100%;
+    height: 22%;
+    transform: translateY(0%);
+    border-radius: 90px;
+}
+
+#following_parade_CB_message{
+    width: 70%;
+}
+
+#reach_the_plaza_CB{
+    background: radial-gradient(#001D7A, #05175D);
+    color: #FFEC0D;
+    font-weight: 600;
+    text-align: center;
+    opacity: 1;
+    width: 100%;
+    height: 22%;
+    transform: translateY(800%);
+    border-radius: 90px;
+}
+
+#reach_the_plaza_CB_message{
+    width: 70%;
+}
+
+#stage_RB{
+    background: radial-gradient(#001D7A, #05175D);
+    background-size: 150%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 50px;
+    font-weight: 600;
+    font-size: 80%;
+    opacity: 1;
+    width: 100%;
+    height: 50%;    
+    background-image: url('src/stage.png');
+    background-size: cover;
+    transform: translateY(800%);
 }
 
 /*-----14 KIDS STORY CUBY ON STAGE-------*/
@@ -2002,6 +2054,21 @@ Box della sezione kids and adults
     transform: translateY(100%);
 }
 
+#cuby_on_stage_CB{
+    background: radial-gradient(#001D7A, #05175D);
+    color: #FFEC0D;
+    font-weight: 600;
+    text-align: center;
+    opacity: 1;
+    width: 100%;
+    height: 18%;
+    transform: translateY(0%);
+    border-radius: 90px;
+}
+
+#cuby_on_stage_CB_message{
+    width: 70%;
+}
 /*-----15 KIDS STORY FINAL PAGE-------*/
 #final_page {
     position: fixed;

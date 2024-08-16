@@ -78,6 +78,14 @@ function BackButton() {
         window.scrollTo(0,1);
     } else if(pageStatus === 13){
         pageStatus = 12;
+        stageParadePageLoaded = false;
+        window.scrollTo(0,0);
+    } else if(pageStatus === 14){
+        pageStatus = 13;
+        stageParadePageLoaded = false;
+        window.scrollTo(0,0);
+    } else if(pageStatus === 15){
+        pageStatus = 14;
         window.scrollTo(0,0);
     }
 
