@@ -71,20 +71,16 @@ function initScene(gl) {
 
         void main(void) {
             vec2 st = gl_FragCoord.xy / uResolution;  // Coordinate normalizzate
-
-            st.y = 1.0 - st.y;
-
             vec3 color = vec3(0.0);                   // Inizializza il colore base
 
             // Generazione del colore con gradiente e rumore
-            color = mix(vec3(0.965,0.784,0.306), vec3(0.984,0.925,0.388), st.x * cos(uTime));
-            color = mix(color, vec3(0.961,0.843,0.290), st.y * ((sin(uTime) + 1.0) / 2.0 * 0.5 + 0.5));
-            color = mix(color, vec3(0.608,0.467,0.157), st.y * sin(uTime));
+            color = mix(vec3(0.169,0.020,0.580), vec3(0.333,0.255,0.686), st.x * cos(uTime));
+            color = mix(color, vec3(0.204,0.118,0.580), st.y * ((sin(uTime) + 1.0) / 2.0 * 0.5 + 0.5));
+            color = mix(color, vec3(0.333,0.216,0.863), st.y * sin(uTime));
+            
 
             float noise = random(st * uResolution / 20.0);  // Calcola il rumore
             color += noise * 0.05;  // Aggiunge il rumore al colore
-            
-            color *= 0.9;
 
             gl_FragColor = vec4(color, 1.0);  // Imposta il colore del pixel
         }
@@ -122,7 +118,7 @@ function initScene(gl) {
 
 // Funzione principale che gestisce il caricamento e l'inizializzazione WebGL
 function main() {
-    const canvas = document.getElementById("glCanvasYellowFinale");  // Ottiene il riferimento al canvas HTML
+    const canvas = document.getElementById("glCanvasBlue");  // Ottiene il riferimento al canvas HTML
     canvas.width = window.innerWidth;  // Imposta la larghezza del canvas
     canvas.height = window.innerHeight;  // Imposta l'altezza del canvas
 
