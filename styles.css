@@ -153,14 +153,20 @@ serve per dare la giusta spaziatura ai bottoni
 }
 
 .arrow_effect_1{
+    will-change: opacity;
+    transform: translateZ(0);
     animation: arrowSignScrollUpAnimation1 2.0s ease-in-out infinite;
 }
 
 .arrow_effect_2{
+    will-change: opacity;
+    transform: translateZ(0);
     animation: arrowSignScrollUpAnimation2 2.0s ease-in-out infinite;
 }
 
 .arrow_effect_3{
+    will-change: opacity;
+    transform: translateZ(0);
     animation: arrowSignScrollUpAnimation3 2.0s ease-in-out infinite;
 }
 
