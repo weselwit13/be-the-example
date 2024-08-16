@@ -140,6 +140,9 @@ serve per dare la giusta spaziatura ai bottoni
     bottom: 5%;
     right: 8%;
     z-index: 3;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
     transition: opacity 0.5s ease-in-out;
 }
 
@@ -991,7 +994,7 @@ Box della sezione kids and adults
     background: radial-gradient(#E6B8FD, #D688FB);
     color: #240A98;
     width: 79%;
-    height: 25%;
+    height: 20%;
     font-weight: 600;
     transform: translateY(800%);
     align-items: center;
@@ -1320,31 +1323,24 @@ Box della sezione kids and adults
     background: radial-gradient(#E6B8FD, #D688FB);
     color: #240A98;
     width: 79%;
-    height: 20%;
+    height: 25%;
     transform: translateY(800%);
     flex-direction: column;
 }
 
-.cosmo_remaind_LB_message{
+.cosmo_remaind_LB_message_first{
     width: 80%;
     font-weight: 600;
     text-align: left;
 }
 
-#cosmo_story_begin_LB{
-    background: radial-gradient(#E6B8FD, #D688FB);
-    color: #240A98;
-    width: 79%;
-    height: 20%;
-    transform: translateY(800%);
-    flex-direction: column;
-}
-
-.cosmo_story_begin_LB_message{
+.cosmo_story_begin_LB_message_second{
     width: 80%;
     font-weight: 600;
+    margin-top: -2%;
     text-align: left;
 }
+
 
 /*----- 09 KIDS STORY OLD TOY SPEAK PART 2-----*/
 #walk_with_old_toy_page_2 {
@@ -1367,7 +1363,23 @@ Box della sezione kids and adults
     position: absolute;
     display: none;
     z-index: 1;
+    opacity: 0;
     transition: margin-top 0.5s ease-in-out;
+}
+
+#cuby_in_cosmo_part{
+    width: 30%;
+    margin-left: 100%;
+    margin-top: 20%;
+    position: absolute;
+    z-index: 1;
+    transition: margin-top 0.5s ease-in-out;
+}
+
+.cosmo_background{
+    display: flex;
+    position: fixed;
+    bottom: -57%;
 }
 
 #cosmo_background_img{
@@ -1375,17 +1387,11 @@ Box della sezione kids and adults
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0)80%);
 }
 
-.cosmo_background{
-    display: flex;
-    position: fixed;
-    bottom: -55%;
-}
-
 #ran_races_LB{
     background: radial-gradient(#E6B8FD, #D688FB);
     color: #240A98;
     width: 79%;
-    height: 18%;
+    height: 22%;
     font-weight: 600;
     transform: translateY(0%);
     align-items: center;
@@ -1400,7 +1406,7 @@ Box della sezione kids and adults
     background: radial-gradient(#E6B8FD, #D688FB);
     color: #240A98;
     width: 79%;
-    height: 14%;
+    height: 18%;
     transform: translateY(800%);
     flex-direction: column;
 }
@@ -1415,43 +1421,13 @@ Box della sezione kids and adults
     background: radial-gradient(#E6B8FD, #D688FB);
     color: #240A98;
     width: 79%;
-    height: 18%;
+    height: 15%;
     transform: translateY(800%);
     flex-direction: column;
 }
 
 .found_myself_LB_message{
     width: 75%;
-    font-weight: 600;
-    text-align: left;
-}
-
-#time_passed_LB{
-    background: radial-gradient(#E6B8FD, #D688FB);
-    color: #240A98;
-    width: 79%;
-    height: 20%;
-    transform: translateY(800%);
-    flex-direction: column;
-}
-
-.time_passed_LB_message{
-    width: 80%;
-    font-weight: 600;
-    text-align: left;
-}
-
-#share_my_story_LB{
-    background: radial-gradient(#E6B8FD, #D688FB);
-    color: #240A98;
-    width: 79%;
-    height: 20%;
-    transform: translateY(800%);
-    flex-direction: column;
-}
-
-.share_my_story_LB_message{
-    width: 80%;
     font-weight: 600;
     text-align: left;
 }
@@ -1968,34 +1944,38 @@ Box della sezione kids and adults
     font-size: 130%;
     width: 100%;
     height: 8%;
-    transform: translateY(0%);
+    transform: translateY(500%);
 }
 
 #you_are_CB{
     color: #001D7A;
-    font-weight: 600;
+    font-weight: 900;
     width: 100%;
     height: 8%;
-    transform: translateY(0%);
+    font-size: 16px;
+    transform: translateY(1100%);
 }
 
 #badge_container{
-    width: 80%;
-    height: auto;
+    width: 79.25%;
+    height: 41.7%;
+    top: 16%;
     position: fixed;
+    transform: translateY(1100%);
+}
+
+#badge_img{
+    width: 100%;
+    height: 100%;
     animation: badgeContainerAnimation 2.5s ease-in-out alternate infinite;
 }
 
 @keyframes badgeContainerAnimation {
     0% {
-        margin-top: 17%;
-        margin-right: 2%;
-        transform: rotate(-15deg) rotate3d(1,1,1, 20deg);
+        transform: rotate(-10deg) rotate3d(1,1,1, 10deg);
     }
     100% {
-        margin-top: 10%;
-        margin-right: 5%;
-        transform: rotate(-5deg) rotate3d(1,1,1, -20deg);
+        transform: rotate(10deg) rotate3d(1,1,1, -10deg);
     }
 }
 
@@ -2003,7 +1983,8 @@ Box della sezione kids and adults
     width: 100%;
     height: 8%;
     flex-direction: column;
-    transform: translateY(0%);
+    margin-top: 110%;
+    transform: translateY(1100%);
 }
 
 #double_message_CB_first_message{
@@ -2016,19 +1997,22 @@ Box della sezione kids and adults
     color: #001D7A;
     font-weight: 900;
     font-size: 18px;
-    margin-top: -5%;
+    margin-top: -3%;
 }
 
 #discover_more_CB{
     color: #000000;
     font-weight: 500;
-    width: 100%;
-    height: 8%;
-    transform: translateY(0%);
+    width: 49%;
+    height: 5%;
+    margin-top: 10%;
+    border: solid;
+    font-size: 16px;
+    transform: translateY(1100%);
     flex-direction: row;
 }
 
 #discover_arrow_img{
-    width: 5%;
+    width: 7%;
     margin-left: 3%;
 }

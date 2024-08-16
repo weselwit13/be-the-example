@@ -33,7 +33,7 @@ function cubySpeakPageImg(){
     if(pageStatus === 10){
         setTimeout(() => {
             document.getElementById('cuby_speak_page_img').style.display = 'block';
-          }, 500);
+          }, 650);
         if(currentPosition < 900){
             document.getElementById('cuby_speak_page_img').style.marginTop = '-100%';
         } else if(currentPosition > 899 && currentPosition < 2999){

@@ -15,11 +15,13 @@ function tutorialKidsPage(){
         document.getElementById('tutorial_kids_page').style.transform = 'translateY(100%)';
     }else if(pageStatus === 1){
         document.getElementById('tutorial_kids_page').style.transform = 'translateY(0%)';
-        scrollUpSign(1200);
+        scrollUpSign(1200, 0, 0, showSignTutorialKidsPage);
     } else if(pageStatus > 1){
         document.getElementById('tutorial_kids_page').style.transform = 'translateY(-200%)';
     }
 }
+
+let showSignTutorialKidsPage = false;
 
 function swipeUpTutorialMessage(){
     if(pageStatus === 0){
@@ -32,12 +34,15 @@ function swipeUpTutorialMessage(){
 
         // FIRST SCROLL
         if(currentPosition < 1){
+            showSignTutorialKidsPage = false;
             document.getElementById('swipe_up_message').style.opacity = '1';
         }else if(currentPosition > 0 && currentPosition < 200){
             let opacity = (200-currentPosition)/200;
             document.getElementById('swipe_up_message').style.opacity = opacity;
+            showSignTutorialKidsPage = false;
         } else if(currentPosition > 199){
             document.getElementById('swipe_up_message').style.opacity = '0';
+            showSignTutorialKidsPage = true;
         }
     }
 }

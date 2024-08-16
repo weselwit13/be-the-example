@@ -30,9 +30,9 @@ function cubyWalkWithYouImg(){
             document.getElementById('cuby_walk_with_you_img').style.display = 'block';
             document.getElementById('cuby_walk_with_you_img').style.marginTop = '-100%';
         }else if(currentPosition > 799 && currentPosition < 2400){
-            document.getElementById('cuby_walk_with_you_img').style.marginTop = '65%';
+            document.getElementById('cuby_walk_with_you_img').style.marginTop = '60%';
         } else if(currentPosition > 2399){
-            document.getElementById('cuby_walk_with_you_img').style.marginTop = '155%';
+            document.getElementById('cuby_walk_with_you_img').style.marginTop = '145%';
         }       
     }
 }
@@ -70,9 +70,9 @@ function cubyProposalLB(){
         } else if(currentPosition > 1699 && currentPosition < 2400){
             let baloonPosition = 800-(currentPosition*0.33);
             document.getElementById('cuby_proposal_LB').style.transform = 'translateY('+ baloonPosition +'%)';
-        }else if(currentPosition > 2399 && currentPosition < 3000){
+        }else if(currentPosition > 2399 && currentPosition < 3300){
             document.getElementById('cuby_proposal_LB').style.transform = 'translateY(0%)';
-        } else if(currentPosition > 2999){
+        } else if(currentPosition > 3299){
             pageStatus = 7;
             window.scrollTo(0,0);
             console.log(pageStatus);

@@ -12,16 +12,19 @@ function welcomePageComponent(){
 function welcomePage(){
     if(pageStatus === 0){
         document.getElementById('welcome_page').style.transform = 'translateY(0%)';
-        scrollUpSign(1700);
+        scrollUpSign(1700, 0, 0, showSignWelcomePage);
     }else if(pageStatus > 0){
         document.getElementById('welcome_page').style.transform = 'translateY(-200%)';
     }
 }
 
+let showSignWelcomePage = false;
+
 function textArrowContainer(){
     if(pageStatus === 0){
         //START PAGE PART
         if(currentPosition < 1){
+            showSignWelcomePage = false;
             document.getElementById('text_arrow_container').style.opacity = '1';
             document.getElementById('text_arrow_container').style.transform = 'translateY(0)';
         }else if(currentPosition > 0 && currentPosition < 100){
@@ -30,11 +33,13 @@ function textArrowContainer(){
             let opacity = 1-((currentPosition-100)/100);
             document.getElementById('text_arrow_container').style.transform = 'translateY(' + (-currentPosition) + '%)';
             document.getElementById('text_arrow_container').style.opacity = opacity;
+            showSignWelcomePage = false;
         }
         //WELCOME PAGE PART
         //----welcome to
         else if(currentPosition >199){
             document.getElementById('text_arrow_container').style.opacity = '0';
+            showSignWelcomePage = true;
         } 
     } 
 }

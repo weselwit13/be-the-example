@@ -79,7 +79,7 @@ function initScene(gl) {
             // Generazione del colore con gradiente e rumore
             color = mix(vec3(0.965,0.784,0.306), vec3(0.984,0.925,0.388), st.x * cos(uTime));
             color = mix(color, vec3(0.961,0.843,0.290), st.y * ((sin(uTime) + 1.0) / 2.0 * 0.5 + 0.5));
-            color = mix(color, vec3(0.608,0.467,0.157), st.y * sin(uTime));
+            color = mix(color, vec3(0.910,0.792,0.267), st.y * sin(uTime));
 
             float noise = random(st * uResolution / 20.0);  // Calcola il rumore
             color += noise * 0.05;  // Aggiunge il rumore al colore
