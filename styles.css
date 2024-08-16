@@ -1990,7 +1990,7 @@ Box della sezione kids and adults
 }
 
 /*-----14 KIDS STORY CUBY ON STAGE-------*/
-#kids_story_on_stage {
+#kids_story_cuby_on_stage {
     position: fixed;
     display: flex;
     flex-direction: column;
