@@ -1,20 +1,18 @@
-//----------FUNCTION KIDS STORYWALK WITH CUBY--------------
+//----------FUNCTION KIDS STORY CUBY ON STAGE--------------
 
-function kidsStoryStageParadePageComponent(){
-    kidsStoryStageParadePage();
+function kidsStoryCubyOnStagePageComponent(){
+    kidsStoryCubyOnStagePage();
 }
 
-//-------KIDS STORY WALK WITH CUBY COMPONENT-----------
+//-------FUNCTION KIDS STORY CUBY ON STAGE-----------
 
-let kidsStoryStageParadePageLoaded = false;
-
-function kidsStoryStageParadePage(){
-    if(pageStatus < 13){
-        document.getElementById('kids_story_stage_parade').style.transform = 'translateY(100%)';
-    }else if(pageStatus === 13){
-        document.getElementById('kids_story_stage_parade').style.transform = 'translateY(0%)';
+function kidsStoryCubyOnStagePage(){
+    if(pageStatus < 14){
+        document.getElementById('kids_story_cuby_on_stage').style.transform = 'translateY(100%)';
+    }else if(pageStatus === 14){
+        document.getElementById('kids_story_cuby_on_stage').style.transform = 'translateY(0%)';
         scrollUpSign(3000);
-    }else if(pageStatus > 13){
-        document.getElementById('kids_story_stage_parade').style.transform = 'translateY(-200%)';
+    }else if(pageStatus > 14){
+        document.getElementById('kids_story_cuby_on_stage').style.transform = 'translateY(-200%)';
     }
 }

@@ -1,12 +1,10 @@
-//----------FUNCTION KIDS STORYWALK WITH CUBY--------------
+//----------FUNCTION KIDS STORY STAGE PARADE--------------
 
 function kidsStoryStageParadePageComponent(){
     kidsStoryStageParadePage();
 }
 
-//-------KIDS STORY WALK WITH CUBY COMPONENT-----------
-
-let kidsStoryStageParadePageLoaded = false;
+//-------FUNCTION KIDS STORY STAGE PARADE COMPONENT-----------
 
 function kidsStoryStageParadePage(){
     if(pageStatus < 13){

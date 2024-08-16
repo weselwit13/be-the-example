@@ -15,7 +15,14 @@ pagestatus == 04 -> kids story clean cuby
 pagestatus == 05 -> kids story cuby thank you
 pagestatus == 06 -> kids story walk with cuby
 pagestatus == 07 -> kids story select old toy
-pagestatus == 08 -> kids story old toy story
+pagestatus == 08 -> kids story old toy speak
+pagestatus == 09 -> kids story old toy speak
+pagestatus == 10 -> kids story cuby speak
+pagestatus == 11 -> kids story select new toy
+pagestatus == 12 -> kids story watch parade
+pagestatus == 13 -> kids story stage parade
+pagestatus == 14 -> kids story cuby on stage
+pagestatus == 15 -> kids story final page
 */
 
 let bubbleCreated = 0;
@@ -64,8 +71,10 @@ function pageScrollAnimation(currentPosition){
     kidsStorySelectNewToyPageComponent();
     //KIDS STORY WATCH THE PARADE
     kidsStoryWatchTheParadePageComponent();
-    //KIDS STORY PARADE
-
+    //KIDS STORY STAGE PARADE
+    kidsStoryStageParadePageComponent();
+    //KIDS STORY CUBY ON STAGE
+    kidsStoryCubyOnStagePageComponent();
     //FINAL PAGE
     finalPageComponent();
 }
