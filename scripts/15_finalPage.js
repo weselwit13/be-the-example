@@ -11,19 +11,19 @@ function finalPageComponent(){
 
 //-----COMPONENTI TUTORIAL KIDS PAGE
 function finalPage(){
-    if(pageStatus < 13){
+    if(pageStatus < 15){
         document.getElementById('final_page').style.transform = 'translateY(100%)';
-    }else if(pageStatus === 13){
+    }else if(pageStatus === 15){
         badgeImg();
         document.getElementById('final_page').style.transform = 'translateY(0%)';
         scrollUpSign(3300);
-    } else if(pageStatus > 13){
+    } else if(pageStatus > 15){
         document.getElementById('final_page').style.transform = 'translateY(-200%)';
     }
 }
 
 function congratulationsCB(){
-    if(pageStatus === 13){
+    if(pageStatus === 15){
         if(currentPosition < 400){
             document.getElementById('congratulations_CB').style.transform = 'translateY(500%)';
         } else if(currentPosition > 399 && currentPosition < 1000){
@@ -36,7 +36,7 @@ function congratulationsCB(){
 }
 
 function youAreCB(){
-    if(pageStatus === 13){
+    if(pageStatus === 15){
         if(currentPosition < 1000){
             document.getElementById('you_are_CB').style.transform = 'translateY(1100%)';
         } else if(currentPosition > 999 && currentPosition < 1200){
@@ -49,7 +49,7 @@ function youAreCB(){
 }
 
 function badgeContainer(){
-    if(pageStatus === 13){
+    if(pageStatus === 15){
         if(currentPosition < 1200){
             document.getElementById('badge_container').style.transform = 'translateY(1100%)';
         } else if(currentPosition > 1199 && currentPosition < 1800){

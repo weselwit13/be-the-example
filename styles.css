@@ -1970,7 +1970,33 @@ Box della sezione kids and adults
     }
 }
 
-/*-----14 KIDS STORY WATCH THE PARADE-------*/
+/*-----13 KIDS STORY STAGE PARADE-------*/
+#kids_story_stage_parade {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 15%;
+    left: 5%;
+    width: 90%;
+    height: 85%;
+    align-items: center;
+    transform: translateY(100%);
+}
+
+/*-----14 KIDS STORY CUBY ON STAGE-------*/
+#kids_story_on_stage {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 15%;
+    left: 5%;
+    width: 90%;
+    height: 85%;
+    align-items: center;
+    transform: translateY(100%);
+}
+
+/*-----15 KIDS STORY FINAL PAGE-------*/
 #final_page {
     position: fixed;
     display: flex;

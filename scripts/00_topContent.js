@@ -62,20 +62,19 @@ function BackButton() {
     } else if(pageStatus === 10){
         pageStatus = 8;
         hiResponsePressed = false;
+        cubySpeakPageLoaded = false;
         pageLoaded = false;
         partTwo = false;
         window.scrollTo(0,0);
     } else if(pageStatus === 11){
         pageStatus = 8;
         hiResponsePressed = false;
+        cubySpeakPageLoaded = false;
         pageLoaded = false;
         partTwo = false;
         window.scrollTo(0,1);
     } else if(pageStatus === 12){
         pageStatus = 11;
-        hiResponsePressed = false;
-        pageLoaded = false;
-        partTwo = false;
         window.scrollTo(0,1);
     } else if(pageStatus === 13){
         pageStatus = 12;
