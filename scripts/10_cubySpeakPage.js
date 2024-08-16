@@ -11,6 +11,8 @@ function CubySpeakPageComponent(){
 
 //-------KIDS STORY WALK WITH CUBY COMPONENT-----------
 
+let cubySpeakPageLoaded = false;
+
 function CubySpeakPage(){
     if(pageStatus < 10){
         document.getElementById('cuby_speak_page').style.transform = 'translateY(100%)';
@@ -20,6 +22,7 @@ function CubySpeakPage(){
         if(document.getElementById('allarm_message_container').style.opacity === '0'){
             setTimeout(() => {
                 document.getElementById('allarm_message_container').style.opacity = '1';
+                cubySpeakPageLoaded = true;
               }, 1000);
         }
         scrollUpSign(3000);
@@ -94,7 +97,7 @@ function letsChooseLB(){
             document.getElementById('lets_choose_LB').style.transform = 'translateY('+ baloonPosition +'%)';
         } else if(currentPosition > 2999 && currentPosition < 3300){
             document.getElementById('lets_choose_LB').style.transform = 'translateY(0%)';
-        } else if(currentPosition > 3300){
+        } else if(currentPosition > 3300 && cubySpeakPageLoaded){
             pageStatus = 11;
             window.scrollTo(0,0);
         } 

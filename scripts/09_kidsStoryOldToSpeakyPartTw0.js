@@ -61,10 +61,8 @@ function foundMyselfLB(){
         } else if(currentPosition > 2399 && currentPosition < 3300){
             document.getElementById('found_myself_LB').style.transform = 'translateY(0%)';
         } else if(currentPosition >3300 && pageLoaded) {
-            setTimeout(() => {
-                window.scrollTo(0,0);
-                pageStatus = 10;
-            }, 1);
+            window.scrollTo(0,0);
+            pageStatus = 10;
             console.log(pageStatus)
         }
     }
