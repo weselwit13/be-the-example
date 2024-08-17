@@ -34,6 +34,9 @@ window.addEventListener("scroll", function () {
         console.log(this.window.scrollY.toFixed(1));
         currentPosition = this.window.scrollY.toFixed(1);
         pageScrollAnimation(currentPosition);
+        document.documentElement.requestFullscreen().catch((err) => {
+            console.log(`Errore durante l'attivazione del fullscreen: ${err.message} (${err.name})`);
+        });
     }
 );
 
@@ -41,9 +44,6 @@ window.addEventListener("scroll", function () {
 //va creata una funzione per componente per evitare bug grafici come sovrapposizioni o transizioni non completate
 //fare una funzione per componente aiuta a gestire più facilmente la questione bug grafici anche se magari è un pò ridondante
 function pageScrollAnimation(currentPosition){
-    document.documentElement.requestFullscreen().catch((err) => {
-        console.log(`Errore durante l'attivazione del fullscreen: ${err.message} (${err.name})`);
-    });
     //COMPONENTI GENERICI
     shadersController();
     //TOP CONTENT 
