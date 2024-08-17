@@ -24,7 +24,6 @@ pagestatus == 13 -> kids story stage parade
 pagestatus == 14 -> kids story cuby on stage
 pagestatus == 15 -> kids story final page
 */
-document.documentElement.requestFullscreen();
 
 let bubbleCreated = 0;
 let touchStartY = 0;
@@ -42,6 +41,9 @@ window.addEventListener("scroll", function () {
 //va creata una funzione per componente per evitare bug grafici come sovrapposizioni o transizioni non completate
 //fare una funzione per componente aiuta a gestire più facilmente la questione bug grafici anche se magari è un pò ridondante
 function pageScrollAnimation(currentPosition){
+    document.documentElement.requestFullscreen().catch((err) => {
+        console.log(`Errore durante l'attivazione del fullscreen: ${err.message} (${err.name})`);
+    });
     //COMPONENTI GENERICI
     shadersController();
     //TOP CONTENT 
