@@ -24,6 +24,7 @@ pagestatus == 13 -> kids story stage parade
 pagestatus == 14 -> kids story cuby on stage
 pagestatus == 15 -> kids story final page
 */
+document.documentElement.requestFullscreen();
 
 let bubbleCreated = 0;
 let touchStartY = 0;
