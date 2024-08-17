@@ -1,7 +1,7 @@
 {
     "name": "BE_the_Example",
     "short_name": "BtE",
-    "start_url": "https://weselwit13.github.io/be-the-example/index.html",
+    "start_url": "index.html",
     "display": "fullscreen",
     "background_color": "#51138A",
     "theme_color": "#51138A",
