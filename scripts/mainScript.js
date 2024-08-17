@@ -32,7 +32,7 @@ let touchEndY = 0;
 //aggiungo l'ascoltatore dell'evento scroll alla finestra, e per ogni scroll attiva la funzione pageScrollAnimation passandogli la posizione di scroll
 window.addEventListener("scroll", function () {
         console.log(this.window.scrollY.toFixed(1));
-        currentPosition = this.window.scrollY.toFixed(1);
+        currentPosition = this.window.scrollY;
         pageScrollAnimation(currentPosition);
         document.documentElement.requestFullscreen().catch((err) => {
             console.log(`Errore durante l'attivazione del fullscreen: ${err.message} (${err.name})`);

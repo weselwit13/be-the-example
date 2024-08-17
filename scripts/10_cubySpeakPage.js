@@ -52,11 +52,17 @@ function whatsHappeningLB(){
     if(pageStatus === 10){
         if(currentPosition < 200){
             document.getElementById('whats_happening_LB').style.transform = 'translateY(800%)'; 
+            document.getElementById('allarm_message_left').style.display = 'block';
+            document.getElementById('allarm_message_right_1').style.display = 'block';
+            document.getElementById('allarm_message_right_2').style.display = 'block';
         } else if(currentPosition > 199 && currentPosition < 900){
             let baloonPosition = 800-(currentPosition*0.88);
             document.getElementById('whats_happening_LB').style.transform = 'translateY('+ baloonPosition +'%)';
         }else if(currentPosition > 899){
             document.getElementById('whats_happening_LB').style.transform = 'translateY(0%)';
+            document.getElementById('allarm_message_left').style.display = 'none';
+            document.getElementById('allarm_message_right_1').style.display = 'none';
+            document.getElementById('allarm_message_right_2').style.display = 'none';
         }
     }
 }
@@ -104,10 +110,12 @@ function letsChooseLB(){
 }
 
 // ALLARM MESSAGE FUNCTION
-const leftMessage = document.getElementById('allarm_message_left');
-const rightMessage = document.getElementById('allarm_message_right');
 
-function changeTextWhenOpacityZero(element, otherElement) {
+const leftMessage = document.getElementById('allarm_message_left');
+const rightMessage1 = document.getElementById('allarm_message_right_1');
+const rightMessage2 = document.getElementById('allarm_message_right_2');
+
+function changeTextWhenOpacityZero(element, otherElements) {
     function checkOpacity() {
         const opacity = parseFloat(window.getComputedStyle(element).getPropertyValue('opacity'));
         if (opacity < 0.05) {
@@ -120,10 +128,12 @@ function changeTextWhenOpacityZero(element, otherElement) {
                 'How do we move forward?!'
             ];
 
-            // Rimuovi il testo già selezionato dall'altro elemento
-            if (otherElement && otherElement.textContent) {
-                phrases = phrases.filter(phrase => phrase !== otherElement.textContent);
-            }
+            // Rimuovi il testo già selezionato dagli altri elementi
+            otherElements.forEach(otherElement => {
+                if (otherElement && otherElement.textContent) {
+                    phrases = phrases.filter(phrase => phrase !== otherElement.textContent);
+                }
+            });
 
             // Seleziona una frase casuale
             element.textContent = phrases[Math.floor(Math.random() * phrases.length)];
@@ -134,9 +144,11 @@ function changeTextWhenOpacityZero(element, otherElement) {
     requestAnimationFrame(checkOpacity);
 }
 
-// Avvia il controllo per entrambi gli elementi
-if (leftMessage) changeTextWhenOpacityZero(leftMessage, rightMessage);
-if (rightMessage) changeTextWhenOpacityZero(rightMessage, leftMessage);
+// Avvia il controllo per tutti e tre gli elementi
+if (leftMessage) changeTextWhenOpacityZero(leftMessage, [rightMessage1, rightMessage2]);
+if (rightMessage1) changeTextWhenOpacityZero(rightMessage1, [leftMessage, rightMessage2]);
+if (rightMessage2) changeTextWhenOpacityZero(rightMessage2, [leftMessage, rightMessage1]);
+
 
 
 // ALLARM MESSAGE FUNCTION

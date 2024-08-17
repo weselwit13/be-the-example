@@ -1550,7 +1550,7 @@ Box della sezione kids and adults
     position: fixed;
     left: 0%;
     z-index: 3;
-    top: 16%;
+    top: 45%;
     width: 50%;
     color: #F8F8FF;
     font-weight: 900;
@@ -1576,17 +1576,30 @@ Box della sezione kids and adults
     }
 }
 
-#allarm_message_right{
+#allarm_message_right_1{
     position: fixed;
-    left: 55%;
+    left: 50%;
     z-index: 3;
-    top: 15%;
+    top: 30%;
     width: 50%;
     color: #F8F8FF;
     font-weight: 900;
     font-size: 17px;
     text-shadow: 2px 2px 4px #00000080;
     animation: messageRightAnimation 2.5s ease-in-out alternate infinite;
+}
+
+#allarm_message_right_2{
+    position: fixed;
+    left: 40%;
+    z-index: 3;
+    top: 60%;
+    width: 50%;
+    color: #F8F8FF;
+    font-weight: 900;
+    font-size: 17px;
+    text-shadow: 2px 2px 4px #00000080;
+    animation: messageRightAnimation 2.0s ease-in-out alternate infinite;
 }
 
 /* Definisci l'animazione del messaggio di destra*/
