@@ -15,11 +15,10 @@ function kidsStoryStageParadePage(){
         document.getElementById('kids_story_stage_parade').style.transition = 'transform 3s ease-in-out';
         stageParadePageLoaded = false;
     }else if(pageStatus === 13){
-        setTimeout(() => {
+        setTimeout(() => { 
             stageParadePageLoaded = true;
         }, 500);
         document.getElementById('kids_story_stage_parade').style.transform = 'translateY(0%)';
-        document.getElementById('kids_story_stage_parade').style.transition = 'transform 3s ease-in-out';
         scrollUpSign(1500);
     }else if(pageStatus > 13){
         document.getElementById('kids_story_stage_parade').style.transform = 'translateY(-200%)';
@@ -45,12 +44,12 @@ function stageRB(){
     if(pageStatus === 13){
         if(currentPosition < 900){
             document.getElementById('stage_RB').style.transform = 'translateY(800%)'; 
-        } else if(currentPosition > 899 && currentPosition < 1500){
-            let baloonPosition = 800-(currentPosition*0.53);
+        } else if(currentPosition > 899 && currentPosition < 1200){
+            let baloonPosition = 800-(currentPosition*0.66);
             document.getElementById('stage_RB').style.transform = 'translateY('+ baloonPosition +'%)';
-        } else if(currentPosition > 1499 && currentPosition < 2000){
+        } else if(currentPosition > 1199 && currentPosition < 2200){
             document.getElementById('stage_RB').style.transform = 'translateY(0%)';
-        } else if(currentPosition > 2000 && stageParadePageLoaded){
+        } else if(currentPosition > 2200 && stageParadePageLoaded){
             pageStatus = 14;
             window.scrollTo(0,0);
             console.log(pageStatus);

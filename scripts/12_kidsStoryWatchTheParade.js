@@ -53,6 +53,7 @@ function toysImgContainer(){
             let baloonPosition = -currentPosition/20;
             document.getElementById('toys_img_container').style.transform = 'translateY(' + baloonPosition + '%)';
         } else if(currentPosition > 2199){
+            document.getElementById('kids_story_stage_parade').style.transition = 'transform 3s ease-in-out';
             pageStatus = 13;
             window.scrollTo(0,0);
         }

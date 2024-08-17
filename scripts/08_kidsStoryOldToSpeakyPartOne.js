@@ -14,7 +14,7 @@ function kidsStoryOldToySpeakPage(){
         document.getElementById('walk_with_old_toy_page_1').style.transform = 'translateY(100%)';
     }else if(pageStatus === 8){
         document.getElementById('walk_with_old_toy_page_1').style.transform = 'translateY(0%)';
-        scrollUpSign(1500, 0, 0, hiResponsePressed);
+        scrollUpSign(1800, 0, 0, hiResponsePressed);
     }else if(pageStatus > 8){
         document.getElementById('walk_with_old_toy_page_1').style.transform = 'translateY(-200%)';
     }
@@ -45,9 +45,9 @@ function cosmoRemaindLB(){
         } else if(currentPosition > 99 && currentPosition < 1000 && hiResponsePressed){
             let baloonPosition = 800-(currentPosition*0.8);
             document.getElementById('cosmo_remaind_LB').style.transform = 'translateY('+ baloonPosition +'%)';
-        }else if(currentPosition > 999 && hiResponsePressed && currentPosition < 1800){
+        }else if(currentPosition > 999 && hiResponsePressed && currentPosition < 1500){
             document.getElementById('cosmo_remaind_LB').style.transform = 'translateY(0%)';
-        } else if(currentPosition > 1800 && hiResponsePressed){
+        } else if(currentPosition > 1500 && hiResponsePressed){
             pageStatus = 9;
             setTimeout(() => {
                 pageLoaded = true;

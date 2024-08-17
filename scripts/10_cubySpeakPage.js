@@ -25,7 +25,7 @@ function CubySpeakPage(){
                 cubySpeakPageLoaded = true;
               }, 1000);
         }
-        scrollUpSign(3000);
+        scrollUpSign(3300);
     }else if(pageStatus > 10){
         document.getElementById('cuby_speak_page').style.transform = 'translateY(-200%)';
         document.getElementById('allarm_message_container').style.opacity = '0';
@@ -34,12 +34,11 @@ function CubySpeakPage(){
 
 function cubySpeakPageImg(){
     if(pageStatus === 10){
-        setTimeout(() => {
-            document.getElementById('cuby_speak_page_img').style.display = 'block';
-          }, 650);
-        if(currentPosition < 900){
+        if(currentPosition < 400){
             document.getElementById('cuby_speak_page_img').style.marginTop = '-100%';
-        } else if(currentPosition > 899 && currentPosition < 2999){
+        } else if(currentPosition > 399 && currentPosition < 900){
+            document.getElementById('cuby_speak_page_img').style.display = 'block';
+        }else if(currentPosition > 899 && currentPosition < 2999){
             document.getElementById('cuby_speak_page_img').style.marginTop = '45%';
         } else if(currentPosition > 2999){
             document.getElementById('cuby_speak_page_img').style.marginTop = '155%';

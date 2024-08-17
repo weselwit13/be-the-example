@@ -2052,6 +2052,17 @@ Box della sezione kids and adults
     height: 85%;
     align-items: center;
     transform: translateY(100%);
+    transition: transform 1s ease-in-out ;
+}
+
+#cuby_on_stage_page_img{
+    width: 30%;
+    margin-left: 65%;
+    margin-top: -100%;
+    position: absolute;
+    z-index: 1;
+    display: none;
+    transition: margin-top 0.5s ease-in-out;
 }
 
 #cuby_on_stage_CB{
@@ -2067,6 +2078,50 @@ Box della sezione kids and adults
 }
 
 #cuby_on_stage_CB_message{
+    width: 70%;
+}
+
+#hello_everyone_LB{
+    background: radial-gradient(#001D7A, #05175D);
+    color: #FFEC0D;
+    width: 79%;
+    height: 17%;
+    font-weight: 600;
+    transform: translateY(800%);
+    align-items: center;
+}
+
+.hello_everyone_LB_message{
+    width: 70%;
+}
+
+#special_friend_LB{
+    background: radial-gradient(#001D7A, #05175D);
+    color: #FFEC0D;
+    width: 79%;
+    height: 21%;
+    font-weight: 600;
+    transform: translateY(800%);
+    align-items: center;
+}
+
+.special_friend_LB_message{
+    width: 70%;
+}
+
+#join_cuby_on_stage_CB{
+    background: radial-gradient(#001D7A, #05175D);
+    color: #FFEC0D;
+    font-weight: 600;
+    text-align: center;
+    opacity: 1;
+    width: 100%;
+    height: 18%;
+    transform: translateY(800%);
+    border-radius: 90px;
+}
+
+#join_cuby_on_stage_CB_message{
     width: 70%;
 }
 /*-----15 KIDS STORY FINAL PAGE-------*/
