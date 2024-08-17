@@ -153,23 +153,25 @@ serve per dare la giusta spaziatura ai bottoni
 }
 
 .arrow{
-    margin-bottom: -10%;
-    width: 80%;
+    width: 55%;
 }
 
 .arrow_effect_1{
+    width: 25%;
     will-change: opacity;
     transform: translateZ(0);
     animation: arrowSignScrollUpAnimation1 2.0s ease-in-out infinite;
 }
 
 .arrow_effect_2{
+    width: 25%;
     will-change: opacity;
     transform: translateZ(0);
     animation: arrowSignScrollUpAnimation2 2.0s ease-in-out infinite;
 }
 
 .arrow_effect_3{
+    width: 25%;
     will-change: opacity;
     transform: translateZ(0);
     animation: arrowSignScrollUpAnimation3 2.0s ease-in-out infinite;
