@@ -226,6 +226,7 @@ i colori dello sfondo e del testo al suo interno
     font-size: 14px;
     line-height: 140%;
     margin-top: 1.25%;
+    will-change: transform;
     transition: transform 0.5s ease-in-out, opacity 0.1s ease-in-out, height 0.5s ease-in-out;
 }
 
@@ -242,6 +243,7 @@ i colori dello sfondo e del testo al suo interno
     line-height: 140%;
     font-size: 14px;
     margin-top: 1.25%;
+    will-change: transform;
     transition: transform 0.5s ease-in-out, height 0.5s ease-in-out, opacity 0.1s ease-in-out;
 }
 
@@ -259,6 +261,7 @@ i colori dello sfondo e del testo al suo interno
     line-height: 140%;
     font-size: 14px;
     margin-top: 1.25%;
+    will-change: transform;
     transition: transform 0.5s ease-in-out, height 0.5s ease-in-out, opacity 0.1s ease-in-out;
 }
 
@@ -979,7 +982,7 @@ Box della sezione kids and adults
     color: #000000;
     font-weight: 900;
     font-size: 30px;
-    text-align: left;
+    text-align: center;
     opacity: 1;
     width: 71%;
     height: 20%;
@@ -991,7 +994,8 @@ Box della sezione kids and adults
 }
 
 #letsGo_Baloon_05_CB_message{
-    width: 80%;
+    font-size: 30px;
+    width: 90%;
 }
 
 #animation_RB{
