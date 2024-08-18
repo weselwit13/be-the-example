@@ -1,4 +1,4 @@
-//-----------FUNCTION TUTORIAL KIDS PAGE-----------------
+//-----------FUNZIONE TUTORIAL KIDS PAGE-----------------
 
 function tutorialKidsPageComponent(){
     tutorialKidsPage();
@@ -28,11 +28,9 @@ function swipeUpTutorialMessage(){
         document.getElementById('swipe_up_tutorial').style.bottom = '-40%';
     }else if(pageStatus === 1){
         setTimeout(() => {
-            //pagina tutorial
             document.getElementById('swipe_up_tutorial').style.bottom = '60%';
           }, 1000);
 
-        // FIRST SCROLL
         if(currentPosition < 1){
             showSignTutorialKidsPage = false;
             document.getElementById('swipe_up_message').style.opacity = '1';
@@ -55,7 +53,6 @@ function purpleArrowTutorialPage(){
         document.getElementById('Purple_Arrow').style.bottom = '-45%';
     }else if(pageStatus === 1){
         document.getElementById('Purple_Arrow').style.opacity = '1';
-        // FIRST SCROLL
         if(currentPosition < 1){
             if(pageKidsTutorialLoaded)
                 document.getElementById('Purple_Arrow').style.bottom = '45%';
@@ -141,7 +138,6 @@ function GoToKidsStory(){
         console.log('Page status aggiornato, PAGE STATUS: '+pageStatus);
 
         setTimeout(() => {
-            //pagina kids
             pageKidsTutorialLoaded = true;
           }, 1500);
         }

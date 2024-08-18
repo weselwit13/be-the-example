@@ -29,7 +29,7 @@ let bubbleCreated = 0;
 let touchStartY = 0;
 let touchEndY = 0;
 
-//aggiungo l'ascoltatore dell'evento scroll alla finestra, e per ogni scroll attiva la funzione pageScrollAnimation passandogli la posizione di scroll
+// per ogni scroll attiva la funzione pageScrollAnimation passandogli la posizione di scroll
 window.addEventListener("scroll", function () {
         console.log(this.window.scrollY.toFixed(1));
         currentPosition = this.window.scrollY;
@@ -40,9 +40,8 @@ window.addEventListener("scroll", function () {
     }
 );
 
-//funzione che chiama a sua volta le funzioni di animazione di ogni singolo componente, 
-//va creata una funzione per componente per evitare bug grafici come sovrapposizioni o transizioni non completate
-//fare una funzione per componente aiuta a gestire più facilmente la questione bug grafici anche se magari è un pò ridondante
+//funzione che chiama a sua volta le funzioni di animazione di ogni singolo componente
+
 function pageScrollAnimation(currentPosition){
     //COMPONENTI GENERICI
     shadersController();

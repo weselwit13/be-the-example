@@ -1,4 +1,4 @@
-//---------FUNCTION KIDS STORY START PAGE-----------------
+//---------FUNZIONI KIDS STORY START PAGE-----------------
 
 function kidsStoryStartPageComponente(){
     KidsstoryPage();
@@ -48,7 +48,7 @@ function select_place_box_RB(){
     }
 }
 
-//----PASSAGGIO PAGINA POSTO
+//----PASSAGGIO PLACE PAGE
 document.getElementById('garden_button_choice').addEventListener('click', () => placeChoice('garden_page'));
 document.getElementById('attic_button_choice').addEventListener('click', () => placeChoice('attic_page'));
 document.getElementById('park_button_choice').addEventListener('click', () => placeChoice('park_page'));

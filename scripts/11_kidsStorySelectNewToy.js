@@ -1,11 +1,11 @@
-//---------FUNCTION KIDS STORY START PAGE-----------------
+//---------FUNCTION KIDS STORY SELECT NEW TOY PAGE-----------------
 
 function kidsStorySelectNewToyPageComponent(){
     kidsStorySelectNewToyPage();
     chooseToyBoxRB();
 }
 
-//-----COMPONENTI KIDS STORY
+//-----COMPONENTI KIDS STORY SELECT NEW TOY
 function kidsStorySelectNewToyPage(){
     if(pageStatus < 11){
         document.getElementById('kids_story_select_new_toy_page').style.transform = 'translateY(100%)';
@@ -32,7 +32,7 @@ function chooseToyBoxRB(){
     }
 }
 
-//----PASSAGGIO PAGINA POSTO
+//----ASSEGNAZIONE DELLA VARIANTE DEL GIOCATTOLO NUOVO
 document.getElementById('astra_button_choice').addEventListener('click', () => toySelected('astra_page'));
 document.getElementById('zenith_button_choice').addEventListener('click', () => toySelected('zenith_page'));
 document.getElementById('soleil_button_choice').addEventListener('click', () => toySelected('soleil_page'));

@@ -221,6 +221,8 @@ function audioButtonImg(){
     }
 }
 
+//--------FUNZIONE CHE GESTISCE L'ICONA DELLO SCROLL
+
 function scrollUpSign(pageEndValue, interMin = undefined, interMax = undefined, boolean = undefined){
     if(currentPosition < pageEndValue){
         document.getElementById('arrow_scroll_up_sign_img').style.opacity = '1';

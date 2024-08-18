@@ -24,7 +24,6 @@ let showSignParade = false;
 
 function textArrowContainerParade(){
     if(pageStatus === 12){
-        //START PAGE PART
         if(currentPosition < 1){
             document.getElementById('text_arrow_container_parade').style.opacity = '1';
             showSignParade = false;
@@ -46,7 +45,6 @@ function textArrowContainerParade(){
 
 function toysImgContainer(){
     if(pageStatus === 12){
-        //START PAGE PART
         if(currentPosition < 1){
             document.getElementById('toys_img_container').style.transform = 'translateY(0)';
         } else if(currentPosition > 0 && currentPosition < 2200){

@@ -1,5 +1,5 @@
 let pageLoaded = false;
-//----------FUNCTION KIDS STORYWALK WITH COSMO--------------
+//----------FUNCTION KIDS STORYWALK WITH COSMO PART 2--------------
 
 function kidsStoryOldToySpeakPageTwoComponent(){
     kidsStoryOldToySpeakPageTwo();
@@ -8,7 +8,7 @@ function kidsStoryOldToySpeakPageTwoComponent(){
     foundMyselfLB();
 }
 
-//-------KIDS STORY WALK WITH COSMO COMPONENT-----------
+//-------KIDS STORY WALK WITH COSMO PART 2 COMPONENT-----------
 
 function kidsStoryOldToySpeakPageTwo(){
     if(pageStatus < 9){

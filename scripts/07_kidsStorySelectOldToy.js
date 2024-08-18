@@ -1,11 +1,11 @@
-//---------FUNCTION KIDS STORY START PAGE-----------------
+//---------FUNCTION KIDS STORY SELECT OLD TOY PAGE-----------------
 
 function kidsStorySelectOldToyPageComponent(){
     kidsStorySelectOldToyPage();
     selectedToyBoxRB();
 }
 
-//-----COMPONENTI KIDS STORY
+//-----SELECT OLD TOY PAGE COMPONENT
 function kidsStorySelectOldToyPage(){
     if(pageStatus < 7){
         document.getElementById('kids_story_select_old_toy_page').style.transform = 'translateY(100%)';
@@ -32,7 +32,7 @@ function selectedToyBoxRB(){
     }
 }
 
-//----PASSAGGIO PAGINA POSTO
+//----ASSEGNAZIONE DELLA VARIANTE DEL GIOCATTOLO VECCHIO E PASSAGGIO ALLA PAGINA CORRISPONDENTE
 document.getElementById('cosmo_button_choice').addEventListener('click', () => toyChoice('cosmo_page'));
 document.getElementById('sphere_button_choice').addEventListener('click', () => toyChoice('sphere_page'));
 document.getElementById('piecey_button_choice').addEventListener('click', () => toyChoice('piecey_page'));

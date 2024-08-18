@@ -1,4 +1,4 @@
-//----------FUNCTION KIDS STORYWALK WITH COSMO--------------
+//----------FUNCTION KIDS STORY WALK WITH COSMO--------------
 
 function kidsStoryOldToySpeakPageComponent(){
     kidsStoryOldToySpeakPage();

@@ -1,4 +1,4 @@
-//----------FUNCTION KIDS STORY PLACE PAGE--------------
+//----------FUNCTION KIDS STORY CLEAN CUBY PAGE--------------
 
 function kidsStoryCleanCubyComponente(){
     CleanCubyPage();
@@ -9,7 +9,7 @@ function kidsStoryCleanCubyComponente(){
     wonderfulCB();
 }
 
-//-------KIDS STORY PLACE PAGE COMPONENT-----------
+//-------KIDS STORY CLEAN CUBY COMPONENT-----------
 
 let dirtyCubyIsArrived = false;
 let cubyIsClean = false;

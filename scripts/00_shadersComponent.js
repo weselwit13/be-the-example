@@ -1,4 +1,4 @@
-// ---------------------- FUNZIONI CHE GESTISCONO I VARI COMPONENTI ---------------------------
+// ---------------------- FUNZIONE CHE GGESTISCE I VARI SHADER ---------------------------
 
 function shadersController(){
     purpleGradient();
@@ -6,7 +6,7 @@ function shadersController(){
     blueGradient();
     yellowFinaleGradient();
 }
-//-----COMPONENTI GENERICI
+//-----FUNZIONI DEI SINGOLI SHADER
 
 function purpleGradient(){
     if(pageStatus === 0){

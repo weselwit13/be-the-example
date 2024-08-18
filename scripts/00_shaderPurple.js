@@ -1,5 +1,3 @@
-// shader.js
-
 // Funzione per inizializzare il contesto WebGL sul canvas fornito
 function initWebGL(canvas) {
     // Ottiene il contesto WebGL standard o sperimentale

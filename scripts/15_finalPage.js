@@ -1,4 +1,4 @@
-//-----------FUNCTION TUTORIAL KIDS PAGE-----------------
+//-----------FUNCTION KIDS STORY FINAL PAGE-----------------
 
 function finalPageComponent(){
     finalPage();
@@ -9,7 +9,7 @@ function finalPageComponent(){
     discoverMoreCB();
 }
 
-//-----COMPONENTI TUTORIAL KIDS PAGE
+//-----COMPONENTI TUTORIAL KIDS STORY FINAL PAGE
 function finalPage(){
     if(pageStatus < 15){
         document.getElementById('final_page').style.transform = 'translateY(100%)';
